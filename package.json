@@ -4,7 +4,11 @@
   "description": "use a webpack starter for ng4 and this is cli base",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --config config/webpack.dev.js --progress",
+    "test": "karma start",
+    "build": "webpack --config config/webpack.dev.js --progress --profile --bail",
+    "webpack": "webpack",
+    "rimraf": "rimraf"
   },
   "author": "jce",
   "license": "ISC",
@@ -28,6 +32,8 @@
     "@types/node": "^7.0.22",
     "angular2-template-loader": "^0.6.2",
     "awesome-typescript-loader": "^3.1.3",
+    "bootstrap": "^3.3.7",
+    "bootstrap-sass": "^3.3.7",
     "css-loader": "^0.28.2",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.1",
@@ -36,6 +42,7 @@
     "node-sass": "^4.5.3",
     "null-loader": "^0.1.1",
     "raw-loader": "^0.5.1",
+    "reflect-metadata": "^0.1.10",
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.18.0",
