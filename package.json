@@ -4,9 +4,18 @@
   "description": "use a webpack starter for ng4 and this is cli base",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config config/webpack.dev.js --progress --profile --watch --content-base src/",
-    "test": "karma start",
-    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail"
+    "server":"npm run server:dev",
+    "server:dev":"webpack-dev-server --config config/webpack.dev.js --progress --profile --watch --content-base src/",
+    "server:dev:hmr":"npm run server:dev -- --inline --hot",
+    "server:prod":"http-server dist --cors",
+    "start":"npm run server:dev",
+    "start:hmr":"npm run server:dev:hmr",
+    "clean":"npm cache clean && npm run rimraf -- node_modules doc coverage dist",
+    "clear:dist":"npm run rimraf -- dist",
+    "prebuild":"npm run clean:dist",
+    "build":"npm run build:dev",
+    "build:dev":"npm run webpack -- --config config/webpack.dev.js",    
+    "build:prod":"rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail"
   },
   "author": "jce",
   "license": "ISC",

@@ -1,4 +1,5 @@
 const helpers = require('./helpers');
+const path=require('path');
 const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
 const commonConfig = require('./webpack.common');
@@ -43,34 +44,52 @@ module.exports = function(options) {
             }),
             new NamedModulesPlugin(),
             new webpack.LoaderOptionsPlugin({
-                debug: true
+                debug: true,
+                options:{
+                    context:helpers.root('src'),
+                    output:{
+                        path:helpers.root('dist')
+                    },
+                    tslint:{
+                        emitErrors:false,
+                        failOnHint:false,
+                        resourcePath:'src'                                            
+                    }
+                }
             })
         ],
-        // tslint: {
-        //     emitErrors: false,
-        //     failOnHint: false,
-        //     resourcePath: 'src'
-        // },
         devServer: {
             port: METADATA.port,
             host: METADATA.host,
-            historyApiFallback: true,
+            // 监视contentBase文件更改，则整个页面重新加载
+            watchContentBase: true,
+            contentBase: helpers.root('dist'),
+            historyApiFallback: {
+                index:'/index.html'
+            },
             // 监视配置
             watchOptions: {
                 aggregateTimeout: 300,
                 poll: 1000
             },
-            // 监视contentBase文件更改，则整个页面重新加载
-            watchContentBase: true,
-            contentBase: helpers.root('dist')
+            proxy:{
+                '/api':{
+                    target:'http://localhost:8080',
+                    secure:false,
+                    changeOrigin:true,
+                    pathRewrite:{
+                        '^/api':''
+                    }                    
+                }
+            }
         },
-        // node: {
-        //     global: 'window',
-        //     crypto: 'empty',
-        //     process: true,
-        //     module: false,
-        //     clearImmediate: false,
-        //     setImmediate: false
-        // }
+        node: {
+            global: true,
+            crypto: 'empty',
+            process: true,
+            module: false,
+            clearImmediate: false,
+            setImmediate: false
+        }
     });
 }

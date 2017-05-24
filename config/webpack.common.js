@@ -1,5 +1,6 @@
 // 引入库
 const helpers = require('./helpers');
+const path=require('path');
 const webpack = require('webpack');
 
 // webpack plugins
@@ -51,57 +52,59 @@ module.exports = function(options) {
             modules: [
                 helpers.root('src'),
                 'node_modules'
-            ]
+            ],
+            alias:{
+                'src':path.resolve(__dirname,'../src'),
+                'app':path.resolve(__dirname,'../src/app')
+            }
         },
         /**
          * 配置模块解析器
          */
         module: {
-            /**
-             * 预加载器
-             */
-            // preLoader: [{
-            //     test: /\.ts$/,
-            //     loader: 'string-replace-loader',
-            //     query: {
-            //         search: '(System|SystemJS)(.*[\\n\\r]\\s*\\.|\\.)import\\((.+)\\)',
-            //         replace: '$1.import($3).then(mod => (mod.__esModule && mod.default) ? mod.default : mod)',
-            //         flags: ''
-            //     }
-            // }],
-            /**
-             * 自动加载器，解析相应的模块
-             */
-            loaders: [{
-                test: /\.ts$/,
-                loaders: ['awesome-typescript-loader', 'angular2-template-loader'],
-                exclude: [/\.(spec|e2e)\.ts$/]
-            }, {
-                test: /\.json$/,
-                loader: 'json-loader'
-            }, {
-                test: /\.styl$/,
-                loader: 'css-loader!stylus-loader'
-            }, {
-                test: /\.css$/,
-                loaders: ['to-string-loader', 'css-loader']
-            }, {
-                test: /\.scss$/,
-                loaders: ['to-string-loader', 'css-loader', 'sass-loader']
-            }, {
-                test: /\.html$/,
-                loader: 'raw-loader',
-                exclude: [helpers.root('src/index.html')]
-            }, {
-                test: /\.(jpg|png|gif)$/,
-                loader: 'file-loader'
-            }, {
-                test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                loader: 'url-loader?limit=10000&minetype=application/font-woff'
-            }, {
-                test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                loader: 'file-loader'
-            }],
+            exprContextCritical:false,
+            rules:[
+                {
+                    test:/\.ts$/,
+                    loader:'string-replace-loader',
+                    options: {
+                        search: /(System|SystemJS)(.*[\n\r]\s*\.|\.)import\((.+)\)/g,
+                        replace: '$1.import($3).then(mod => (mod.__esModule && mod.default) ? mod.default : mod)'
+                    },
+                    include:[helpers.root('src')],
+                    enforce:'pre'
+                },{
+                    test: /\.ts$/,
+                    loaders: ['awesome-typescript-loader', 'angular2-template-loader'],
+                    exclude: [/\.(spec|e2e)\.ts$/]
+                },{
+                    test: /\.json$/,
+                    loader: 'json-loader'
+                },{
+                    test: /\.styl$/,
+                    loader: 'css-loader!stylus-loader'
+                }, {
+                    test: /\.css$/,
+                    loaders: ['to-string-loader', 'css-loader']
+                }, {
+                    test: /\.scss$/,
+                    loaders: ['to-string-loader', 'css-loader', 'sass-loader']
+                }, {
+                    test: /\.html$/,
+                    loader: 'raw-loader',
+                    exclude: [helpers.root('src/index.html')]
+                }, {
+                    test: /\.(jpg|png|gif)$/,
+                    loader: 'file-loader'
+                }, {
+                    test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                    loader: 'url-loader?limit=10000&minetype=application/font-woff'
+                }, {
+                    test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                    loader: 'file-loader'
+                }
+            ],
+            
             // postLoaders: [{
             //     test: /\.js$/,
             //     loader: 'string-replace-loader',
@@ -144,18 +147,21 @@ module.exports = function(options) {
             // Html打包插件
             new HtmlWebpackPlugin({
                 template: 'src/index.html',
-                chunksSortMode: 'dependency'
+                chunksSortMode: 'dependency',
+                title:METADATA.title,
+                metadata:METADATA,
+                inject:'body'
             }),
             // 热替换插件
             new webpack.HotModuleReplacementPlugin()
         ],
-        // node: {
-        //     global: 'window',
-        //     crypto: 'empty',
-        //     process: true,
-        //     module: false,
-        //     clearImmediate: false,
-        //     setImmediate: false
-        // }
+        node: {
+            global: true,
+            crypto: 'empty',
+            process: true,
+            module: false,
+            clearImmediate: false,
+            setImmediate: false
+        }
     };
 }

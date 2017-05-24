@@ -37,6 +37,8 @@ typings install dt~node --global --save
 
 `https://github.com/IronPans/freeng`
 
+`https://github.com/surmon-china/angular-admin`
+
 ### 4、webpack参考文档
 
 `http://www.css88.com/nav/`
