@@ -1,28 +1,161 @@
-const helpers=require('./helpers');
-const webpack=require('webpack');
+// 引入库
+const helpers = require('./helpers');
+const webpack = require('webpack');
 
-/**
- * webpack plugins
- */
-const HtmlWebpackPlugin=require('html-webpack-plugin');
+// webpack plugins
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('html-webpack-plugin');
+//const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
+const AssetsPlugin = require('assets-webpack-plugin');
+const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
+//const HtmlElementsPlugin = require('./html-elements-plugin');
 
-module.exports={
-    entry:{
-        'polyfills':'./src/ployfills.ts',//运行Angular时所需的一些标准js
-        'vendor':'./src/vendor.ts',//Angular、Lodash、bootstrap.css
-        'app':'./src/app.ts'//应用代码
-    },
-    resolve:{//解析模块路径时的配置
-        extensions:['','.ts','.js','.json'],//指定模块的后缀，在引入模块时就会自动补全
-        root:helpers.root('src'),//根目录
-        modulesDirectories:['node_modules']//移除其他默认值
-    },
-    module:{
-        rules:[//配置类文件加载器
-        {
-            test:/\.ts$/,
-            loaders:['awesome-typescript-loader','angular2-template-loader']
-        }
-        ]
-    }
+// webpack constants
+const HMR = helpers.hasProcessFlag('hot');
+const METADATA = {
+    title: 'ng4 jce',
+    baseUrl: '/',
+    isDevServer: helpers.isWebpackDevServer()
+};
+
+module.exports = function(options) {
+    isProd = options.env === 'production';
+    return {
+        /**
+         * index.html meta 静态数据
+         */
+        //metadata: METADATA,
+        /**
+         * 是否启用缓存,缓存生成模块和多个增量构建块来提高性能
+         */
+        cache: false,
+        /**
+         * 入口文件位置
+         */
+        entry: {
+            'polyfills': './src/polyfills.ts',
+            'vendor': './src/vendor.ts',
+            'main': './src/main.ts'
+        },
+        /**
+         * 配置解析模块路径
+         */
+        resolve: {
+            /**
+             * 指定模块的后缀，在引入模块时自动补全
+             */
+            extensions: ['.ts', '.js', '.json', '.css', '.scss', '.html'],
+            /**
+             * 模块目录，告诉webpack解析模块时应该搜索的目录
+             */
+            modules: [
+                helpers.root('src'),
+                'node_modules'
+            ]
+        },
+        /**
+         * 配置模块解析器
+         */
+        module: {
+            /**
+             * 预加载器
+             */
+            // preLoader: [{
+            //     test: /\.ts$/,
+            //     loader: 'string-replace-loader',
+            //     query: {
+            //         search: '(System|SystemJS)(.*[\\n\\r]\\s*\\.|\\.)import\\((.+)\\)',
+            //         replace: '$1.import($3).then(mod => (mod.__esModule && mod.default) ? mod.default : mod)',
+            //         flags: ''
+            //     }
+            // }],
+            /**
+             * 自动加载器，解析相应的模块
+             */
+            loaders: [{
+                test: /\.ts$/,
+                loaders: ['awesome-typescript-loader', 'angular2-template-loader'],
+                exclude: [/\.(spec|e2e)\.ts$/]
+            }, {
+                test: /\.json$/,
+                loader: 'json-loader'
+            }, {
+                test: /\.styl$/,
+                loader: 'css-loader!stylus-loader'
+            }, {
+                test: /\.css$/,
+                loaders: ['to-string-loader', 'css-loader']
+            }, {
+                test: /\.scss$/,
+                loaders: ['to-string-loader', 'css-loader', 'sass-loader']
+            }, {
+                test: /\.html$/,
+                loader: 'raw-loader',
+                exclude: [helpers.root('src/index.html')]
+            }, {
+                test: /\.(jpg|png|gif)$/,
+                loader: 'file-loader'
+            }, {
+                test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: 'url-loader?limit=10000&minetype=application/font-woff'
+            }, {
+                test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: 'file-loader'
+            }],
+            // postLoaders: [{
+            //     test: /\.js$/,
+            //     loader: 'string-replace-loader',
+            //     query: {
+            //         search: 'var sourceMappingUrl=extractSourceMappingUrl\\(cssText\\);',
+            //         replace: "var sourceMappingUrl='';",
+            //         flags: 'g'
+            //     }
+            // }]
+        },
+        /**
+         * 添加额外的编译器插件
+         */
+        plugins: [
+            // 静态资源插件
+            new AssetsPlugin({
+                path: helpers.root('dist'),
+                filename: 'webpack-asset.json',
+                prettyPrint: true
+            }),
+            // 类型检查插件，在一个单独进程做类型检查，所有webpack不需要等待
+            //new ForkCheckerPlugin(),
+            // 共享打包优化插件，识别通用模块
+            new webpack.optimize.CommonsChunkPlugin({
+                name: [
+                    'prolyfills',
+                    'vendor'
+                ].reverse()
+            }),
+            // Ng上下文注入插件
+            new ContextReplacementPlugin(
+                /angular(\\|\/)core(\\|\/)@angular/,
+                helpers.root('src'), {}
+            ),
+            // 复制插件，复制指定目录或文件到指定路径，主要用于复制静态资源文件
+            new CopyWebpackPlugin([{
+                from: 'src/assets',
+                to: 'assets'
+            }]),
+            // Html打包插件
+            new HtmlWebpackPlugin({
+                template: 'src/index.html',
+                chunksSortMode: 'dependency'
+            }),
+            // 热替换插件
+            new webpack.HotModuleReplacementPlugin()
+        ],
+        // node: {
+        //     global: 'window',
+        //     crypto: 'empty',
+        //     process: true,
+        //     module: false,
+        //     clearImmediate: false,
+        //     setImmediate: false
+        // }
+    };
 }
