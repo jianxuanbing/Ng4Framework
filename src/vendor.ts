@@ -19,3 +19,9 @@ import 'rxjs/BehaviorSubject';
 // Bootsctrap
 // import 'bootstrap/dist/css/bootstrap.css';
 // import 'font-awesome/css/font-awesome.css';
+
+if('production'===ENV){
+    // 生成环境
+}else{
+    // 开发环境
+}

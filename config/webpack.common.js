@@ -1,6 +1,6 @@
 // 引入库
 const helpers = require('./helpers');
-const path=require('path');
+const path = require('path');
 const webpack = require('webpack');
 
 // webpack plugins
@@ -15,6 +15,7 @@ const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin')
 const HMR = helpers.hasProcessFlag('hot');
 const METADATA = {
     title: 'ng4 jce',
+    description: 'NG4基础框架',
     baseUrl: '/',
     isDevServer: helpers.isWebpackDevServer()
 };
@@ -53,58 +54,56 @@ module.exports = function(options) {
                 helpers.root('src'),
                 'node_modules'
             ],
-            alias:{
-                'src':path.resolve(__dirname,'../src'),
-                'app':path.resolve(__dirname,'../src/app')
+            alias: {
+                'src': path.resolve(__dirname, '../src'),
+                'app': path.resolve(__dirname, '../src/app')
             }
         },
         /**
          * 配置模块解析器
          */
         module: {
-            exprContextCritical:false,
-            rules:[
-                {
-                    test:/\.ts$/,
-                    loader:'string-replace-loader',
-                    options: {
-                        search: /(System|SystemJS)(.*[\n\r]\s*\.|\.)import\((.+)\)/g,
-                        replace: '$1.import($3).then(mod => (mod.__esModule && mod.default) ? mod.default : mod)'
-                    },
-                    include:[helpers.root('src')],
-                    enforce:'pre'
-                },{
-                    test: /\.ts$/,
-                    loaders: ['awesome-typescript-loader', 'angular2-template-loader'],
-                    exclude: [/\.(spec|e2e)\.ts$/]
-                },{
-                    test: /\.json$/,
-                    loader: 'json-loader'
-                },{
-                    test: /\.styl$/,
-                    loader: 'css-loader!stylus-loader'
-                }, {
-                    test: /\.css$/,
-                    loaders: ['to-string-loader', 'css-loader']
-                }, {
-                    test: /\.scss$/,
-                    loaders: ['to-string-loader', 'css-loader', 'sass-loader']
-                }, {
-                    test: /\.html$/,
-                    loader: 'raw-loader',
-                    exclude: [helpers.root('src/index.html')]
-                }, {
-                    test: /\.(jpg|png|gif)$/,
-                    loader: 'file-loader'
-                }, {
-                    test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                    loader: 'url-loader?limit=10000&minetype=application/font-woff'
-                }, {
-                    test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                    loader: 'file-loader'
-                }
-            ],
-            
+            exprContextCritical: false,
+            rules: [{
+                test: /\.ts$/,
+                loader: 'string-replace-loader',
+                options: {
+                    search: /(System|SystemJS)(.*[\n\r]\s*\.|\.)import\((.+)\)/g,
+                    replace: '$1.import($3).then(mod => (mod.__esModule && mod.default) ? mod.default : mod)'
+                },
+                include: [helpers.root('src')],
+                enforce: 'pre'
+            }, {
+                test: /\.ts$/,
+                loaders: ['awesome-typescript-loader', 'angular2-template-loader'],
+                exclude: [/\.(spec|e2e)\.ts$/]
+            }, {
+                test: /\.json$/,
+                loader: 'json-loader'
+            }, {
+                test: /\.styl$/,
+                loader: 'css-loader!stylus-loader'
+            }, {
+                test: /\.css$/,
+                loaders: ['to-string-loader', 'css-loader']
+            }, {
+                test: /\.scss$/,
+                loaders: ['to-string-loader', 'css-loader', 'sass-loader']
+            }, {
+                test: /\.html$/,
+                loader: 'raw-loader',
+                exclude: [helpers.root('src/index.html')]
+            }, {
+                test: /\.(jpg|png|gif)$/,
+                loader: 'file-loader'
+            }, {
+                test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: 'url-loader?limit=10000&minetype=application/font-woff'
+            }, {
+                test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: 'file-loader'
+            }],
+
             // postLoaders: [{
             //     test: /\.js$/,
             //     loader: 'string-replace-loader',
@@ -130,7 +129,7 @@ module.exports = function(options) {
             // 共享打包优化插件，识别通用模块
             new webpack.optimize.CommonsChunkPlugin({
                 name: [
-                    'prolyfills',
+                    'polyfills',
                     'vendor'
                 ].reverse()
             }),
@@ -148,16 +147,17 @@ module.exports = function(options) {
             new HtmlWebpackPlugin({
                 template: 'src/index.html',
                 chunksSortMode: 'dependency',
-                title:METADATA.title,
-                metadata:METADATA,
-                inject:'body'
+                title: METADATA.title,
+                metadata: METADATA,
+                inject: 'body'
             }),
-            // 热替换插件
-            new webpack.HotModuleReplacementPlugin()
+            // 热替换插件--使用Hash时，不能使用热替换插件
+            //new webpack.HotModuleReplacementPlugin()
         ],
         node: {
             global: true,
             crypto: 'empty',
+            fs: 'empty',
             process: true,
             module: false,
             clearImmediate: false,

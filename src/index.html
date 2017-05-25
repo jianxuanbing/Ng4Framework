@@ -15,15 +15,31 @@
     <meta name="renderer" content="webkit">
     <!-- 禁止百度SiteAPP转码 -->
     <meta http-equiv="Cache-Control" content="no-siteapp">
-    <meta name="description" content="" />
-
-    <title>Ng4</title>
-    <base href="/" />
+    <meta name="description" content="<%= htmlWebpackPlugin.options.metadata.description %>" />
+    <title>
+        <%= htmlWebpackPlugin.options.metadata.title %>
+    </title>
+    <base href="<%= htmlWebpackPlugin.options.metadata.baseUrl %>" />
 </head>
 
 <body>
     <app>Loading...</app>
     <!--在index.html中没有<script>或<link>标签。 HtmlWebpackPlugin会在运行时动态插入它们。-->
+    <div id="preloader">
+        <div></div>
+    </div>
+    <!-- Google Analytics: change UA-71073175-1 to be your site's ID -->
+    <script>
+        /*(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+         *ga('create', 'UA-71073175-1', 'auto');
+         *ga('send', 'pageview');
+         */
+    </script>
+    <% if(htmlWebpackPlugin.options.metadata.isDevServer){ %>
+        <!-- Webpack Dev Server reload -->
+        <script src="/webpack-dev-server.js"></script>
+
+        <% }%>
 </body>
 
 </html>

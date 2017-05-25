@@ -10,7 +10,6 @@
         "noImplicitAny": true, //是否不忽略类型编译
         "lib": [
             "dom",
-            "es5",
             "es6"
         ],
         "types": [
@@ -19,14 +18,17 @@
         ],
         "suppressImplicitAnyIndexErrors": true,
         "outDir": "./dist/", //编译文件输出目录
-        "baseUrl": "./src" //根目录路径
+        "baseUrl": "./src", //根目录路径
+        "allowUnreachableCode": true
     },
     "include": [
         "src/**/*"
     ],
     "exclude": [
         "node_modules",
-        "dist"
+        "dist",
+        "typings",
+        "typings/index.d.ts"
     ],
     "awesomeTypescriptLoaderOptions": {
         "forkChecker": true,

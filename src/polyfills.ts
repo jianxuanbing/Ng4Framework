@@ -27,7 +27,7 @@ import 'zone.js/dist/zone';
 
 import 'ts-helpers';
 
-if (process.env.ENV === 'production') {
+if (ENV === 'production') {
   // Production
 } else {
   // Development and test
