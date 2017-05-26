@@ -1,3 +1,4 @@
+import { DemoGridModule } from './containers/demo-grid/demo-grid.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -18,6 +19,7 @@ const MODULE_IMPORTS=[
     FormsModule,
     HttpModule,
     ButtonModule,
+    DemoGridModule,
     RouterModule.forRoot(routes,{useHash:false})
 ];
 

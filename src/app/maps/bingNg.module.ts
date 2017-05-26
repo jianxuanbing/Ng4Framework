@@ -1,3 +1,5 @@
+import { CodeModule } from './../components/code/code.module';
+import { TableModule } from './../components/table/table.module';
 
 // Angular Lib
 import { NgModule } from '@angular/core';
@@ -10,7 +12,9 @@ import { ButtonModule } from './../components/button/button.module';
 
 @NgModule({
     imports:[
-        ButtonModule
+        ButtonModule,
+        TableModule,
+        CodeModule        
     ]
 })
 export class BingNgModule {}

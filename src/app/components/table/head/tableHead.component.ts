@@ -1,4 +1,5 @@
-import { Component, OnInit, AfterViewInit, Input,ContentChild,TemplateRef } from '@angular/core';
+import { Component, OnInit, AfterViewInit, Input, ContentChild, TemplateRef, ElementRef } from '@angular/core';
+import { TableComponent } from '../table.component';
 @Component({
     selector:'bing-table-head',
     template:'<ng-content></ng-content>'
@@ -12,5 +13,16 @@ export class TableHeadComponent implements OnInit,AfterViewInit{
     title:string;
     protected table:any;
 
-    constructor(table:TableComponent)
+    constructor(table:TableComponent,private er:ElementRef){
+        this.table=table;
+    }
+
+    ngOnInit() {
+        this.table.addHead(this);
+    }
+
+    ngAfterViewInit() {
+        this.title=this.er.nativeElement.innerHTML;
+        this.headerTemplate=this.template;
+    }
 }
