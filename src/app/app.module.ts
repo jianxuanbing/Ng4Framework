@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { routes } from './maps/routes';
 import { components } from './maps/components';
 import { AppComponent } from './app.component';
+import { ButtonModule } from './components/button/button.module';
 
 /**
  * 导入模块
@@ -16,6 +17,7 @@ const MODULE_IMPORTS=[
     BrowserModule,
     FormsModule,
     HttpModule,
+    ButtonModule,
     RouterModule.forRoot(routes,{useHash:false})
 ];
 

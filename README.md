@@ -60,3 +60,13 @@ typings install dt~node --global --save
 ### 6、Angular4 参考文档
 
 `https://angular.cn/docs/ts/latest/guide/ngmodule.html`
+
+### 7、组件样式参考
+
+`http://mseemann.io/angular2-mdl/layout`
+
+`https://github.com/mseemann/angular2-mdl/tree/master/src/lib/scss/mdl`
+
+`https://github.com/IronPans/freeng/tree/master/src/app/component`
+
+`https://github.com/twbs/bootstrap/tree/v4-dev/scss/mixins`

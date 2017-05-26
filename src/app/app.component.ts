@@ -1,11 +1,11 @@
+import { ButtonModule } from './components/button/button.module';
 import { Component, ViewEncapsulation,ViewContainerRef } from '@angular/core';
-
 
 @Component({
     selector:'app',
     encapsulation:ViewEncapsulation.None,
     templateUrl:'./app.component.html',
-    styleUrls:['./app.component.css']
+    styleUrls:['./app.component.scss']
 })
 export class AppComponent{
     /**
@@ -14,6 +14,7 @@ export class AppComponent{
      * @memberof AppComponent
      */
     isMenuCollapsed:boolean=false;
+    text:string;
     /**
      * 配置是否已初始化
      * @type {boolean}
@@ -78,5 +79,9 @@ export class AppComponent{
     // 初始化时重置路由
     ngOnInit() {
         console.log('Ng初始化事件!');
-    }    
+    }
+
+    showSb(){
+        this.text="傻逗";
+    }
 }

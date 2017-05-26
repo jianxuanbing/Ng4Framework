@@ -1,0 +1,51 @@
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 11;
+    width: 120px;
+    text-align: center;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.spinner>div {
+    width: 12px;
+    height: 12px;
+    background-color: #67CF22;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: bouncedelay 2.8s infinite ease-in-out;
+    animation: bouncedelay 2.8s infinite ease-in-out;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.spinner .bounce1 {
+    background-color: #cd402e;
+}
+
+.spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+    background-color: #b07da8;
+}
+
+.spinner .bounce3 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+    background-color: #f1b428;
+}
+
+.spinner .bounce4 {
+    -webkit-animation-delay: -0.48s;
+    animation-delay: -0.48s;
+    background-color: #06AAA2;
+}
+
+.spinner .bounce5 {
+    -webkit-animation-delay: -0.64s;
+    animation-delay: -0.64s;
+    background-color: #FF0909;
+}

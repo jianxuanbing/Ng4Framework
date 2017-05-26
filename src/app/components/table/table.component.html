@@ -1,0 +1,39 @@
+<div class="bing-table" #container>
+    <table>
+        <thead>
+            <tr>
+                <th class="bing-table-head" *ngIf="selection">
+                    <div class="bing-table-head-inner">
+                        <div class="bing-table-head-text">
+                            <bing-tcheckbox #checkbox (onClick)="optionClick($event)"></bing-tcheckbox>
+                        </div>
+                    </div>
+                </th>
+                <th class="bing-table-head" *ngFor="let head of heads">
+                    <div class="bing-table-head-inner">
+                        <div class="bing-table-head-text">
+                            <span *ngIf="!head.headerTemplate">{{head.title}}</span>
+                            <bing-template *ngIf="head.headerTemplate" [template]="head.headerTemplate"></bing-template>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+
+        <tbody *ngFor="let body of bodys">
+            <tr class="bing-table-row" *ngFor="let row of body.rows;let i=index" (click)="onSelect(row,i)" [class.bing-selected]="row.selected">
+                <td *ngIf="selection" class="bing-table-cell">
+                    <div class="bing-table-cell-inner">
+                        <bing-tcheckbox (onClick)="itemClick($event,row,i)"></bing-tcheckbox>
+                    </div>
+                </td>
+                <td class="bing-table-row" *ngFor="let cell of row.cells" [attr.colspan]="cell.colspan" [attr.rowspan]="cell.rowspan">
+                    <div class="bing-table-cell-inner">
+                        <span *ngIf="!cell.cellTemplate">{{cell.value}}</span>
+                        <bing-template *ngIf="cell.cellTemplate" [template]="cell.cellTemplate"></bing-template>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

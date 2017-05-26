@@ -1,0 +1,37 @@
+.img-circle {
+    border-radius: 50%;
+}
+
+.img-shield {
+    border-radius: 2em / 3em;
+}
+
+.img-skew {
+    border-radius: 3em 1em / 3em 1em;
+}
+
+.img-skew2 {
+    border-radius: 3em 1em 1em / 3em 1em 1em;
+}
+
+.img-ellipse {
+    border-radius: 50%;
+}
+
+.img-ellipse-half {
+    border-radius: 50% 1em 1em 50% / 50% 1em 1em 50%;
+}
+
+.img-ellipse-quarter {
+    border-radius: 100% 0 0;
+}
+
+.img-quarter {
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+
+.img-thumbnail {
+    background: #eee;
+    border: 1px solid #d9d9d9;
+    padding: .25rem;
+}
