@@ -1,0 +1,7 @@
+<label class="bing-switch" #container>
+    <input type="checkbox" [disabled]="disabled" [checked]="checked" (change)="inputChange($event)"/>
+    <div class="bing-switch-media">
+        <span class="switch-label"></span>
+    </div>
+    <div class="bing-switch-inner">{{label}}</div>
+</label>

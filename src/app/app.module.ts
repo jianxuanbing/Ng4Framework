@@ -1,3 +1,4 @@
+import { DemoJsonViewModule } from './containers/demo-json-view/demo-json-view.module';
 import { DemoGridModule } from './containers/demo-grid/demo-grid.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -20,6 +21,7 @@ const MODULE_IMPORTS=[
     HttpModule,
     ButtonModule,
     DemoGridModule,
+    DemoJsonViewModule,
     RouterModule.forRoot(routes,{useHash:false})
 ];
 

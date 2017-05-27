@@ -1,0 +1,21 @@
+<div class="container" style="padding-top:20px;">
+    <div class="panel panel-default">
+        <div class="panel-heading">基本</div>
+        <div class="panel-body">
+            <bing-json-view [data]="data"></bing-json-view>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">带展开参数</div>
+        <div class="panel-body">
+            <bing-json-view [data]="data" [levelOpen]="0"></bing-json-view>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">在线测试</div>
+        <div class="panel-body">
+            <textarea class="form-control" rows="15" [(ngModel)]="customData" (ngModelChange)="ngModelChange($event)"></textarea>
+            <bing-json-view [data]="customJson"></bing-json-view>
+        </div>
+    </div>
+</div>

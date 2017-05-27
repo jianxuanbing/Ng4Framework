@@ -1,10 +1,10 @@
 import { Component, OnInit, AfterViewInit, Input, Output, EventEmitter, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 @Component({
-    selector:'bing-checkbox',
-    templateUrl:'./checkbox.component.html',
-    styleUrls:['./checkbox.component.scss']
+    selector:'bing-radio',
+    templateUrl:'./radio.component.html',
+    styleUrls:['./radio.component.scss']
 })
-export class CheckboxComponent implements OnInit,AfterViewInit{
+export class RadioComponent implements OnInit,AfterViewInit{
     @Input() name:string;
     @Input() label:string;
     @Input() checked:boolean;
@@ -15,11 +15,7 @@ export class CheckboxComponent implements OnInit,AfterViewInit{
     @ViewChild('container') container:ElementRef;
 
     constructor(private renderer2:Renderer2){}
-
-    ngOnInit() {
-        if(!this.checked){
-            this.checked=false;
-        }
+    ngOnInit() {        
     }
 
     ngAfterViewInit() {

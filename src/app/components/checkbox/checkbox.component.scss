@@ -1,0 +1,90 @@
+@import '../../../assets/styles/theme/_variables';
+.bing-checkbox,
+.bing-checkbox-inner,
+.bing-checkbox-ins {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+.bing-sr-only .bing-checkbox-title {
+    display: none;
+}
+
+.bing-checkbox-inner input {
+    -webkit-appearance: none;
+    opacity: 0;
+}
+
+.bing-checkbox-ins {
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 2px;
+    background: rgba(0, 0, 0, 0.26);
+}
+
+.bing-checkbox-ins:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 2px;
+}
+
+.bing-checkbox-ins {
+    &:before,
+    &:after {
+        transform: scale(0);
+        transition: all .3s cubic-bezier(.25, .8, .25, 1);
+    }
+}
+
+.bing-checkbox-ins::after {
+    content: "";
+    width: 6px;
+    height: 13px;
+    position: absolute;
+    top: 1px;
+    left: 8px;
+    border: 2px solid #fff;
+    border-top: 0;
+    border-left: 0;
+    opacity: 0;
+    transform: rotate(45deg) scale3D(.15, .15, 1);
+    ;
+}
+
+.bing-checkbox-inner>input:checked+.bing-checkbox-ins::after {
+    opacity: 1;
+    transform: rotate(45deg) scale3D(1, 1, 1);
+    ;
+}
+
+.bing-checkbox-inner>input:checked+.bing-checkbox-ins:before {
+    background: $theme-green;
+    transform: scale(1);
+}
+
+.bing-checkbox-inner>input:disabled+.bing-checkbox-ins {
+    opacity: .8;
+}
+
+.bing-checkbox-inner>input:disabled+.bing-checkbox-ins:before {
+    background: transparent !important;
+}
+
+.bing-checkbox-inner {
+    padding-right: .3rem;
+}
+
+@each $theme,
+$color in $theme {
+    .bing-checkbox.bing-#{$theme} {
+        .bing-checkbox-inner>input:checked+.bing-checkbox-ins:before {
+            background: $color;
+        }
+    }
+}
