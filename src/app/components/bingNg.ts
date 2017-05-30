@@ -11,3 +11,5 @@ export * from './switch/switch.component';// 开关
 export * from './badge/badge.component';// 小徽章
 export * from './progress/progress.component';// 进度条
 export * from './jsonView/jsonView.component';// JSON浏览器
+export * from './accordion/accordion.component';// 手风琴
+export * from './breadcrumb/breadcrumb.component';// 面包屑

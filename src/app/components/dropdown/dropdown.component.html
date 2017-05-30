@@ -1,0 +1,12 @@
+<div class="bing-dropdown" #container>
+    <button #btn class="bing-dropdown-header" bButton [color]="color" [class.active]="isOpen" (click)="onMouseClick($event)">
+        <span class="bing-dropdown-header-title" *ngIf="header">{{name}}</span>
+        <ng-content select="b-header"></ng-content>
+        <span class="fa fa-caret-down d-caret" *ngIf="caret"></span>
+    </button>
+    <ul #dropdownMenu style="display:none;">
+        <li *ngFor="let menu of menus" (click)="onItemClick($event)">
+            <i *ngIf="menu.icon" class="fa {{'fa-'+menu.icon}}"></i> {{menu.name}}
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,17 @@
+.bing-breadcrumb {
+    list-style: none;
+    &>li {
+        display: inline-block;
+        .bing-breadcrumb-separator {
+            padding: 0 5px;
+            color: #43494d;
+        }
+        &.active,
+        &:last-child a {
+            color: #808990;
+        }
+        a {
+            white-space: nowrap;
+        }
+    }
+}
