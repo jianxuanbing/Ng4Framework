@@ -1,0 +1,6 @@
+<div class="notify">
+    <div [innerHTML]="html"></div>
+    <div class="notify-progress" *ngIf="item.progress">
+        <span [ngStyle]="{'width':progressWidth+'%'}"></span>
+    </div>
+</div>
