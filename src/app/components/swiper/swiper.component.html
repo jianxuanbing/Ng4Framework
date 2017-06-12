@@ -1,0 +1,4 @@
+<div class="view-child" *ngIf="swiper.displayList.indexOf(childId)>=0" [ngClass]="{'active':swiper.displayList[0]===childId,'prev':swiper.displayList[2]===childId,'next':swiper.displayList[1]===childId}">
+    <ng-content>
+    </ng-content>
+</div>

@@ -14,5 +14,13 @@ export class NotifyComponent implements OnInit,OnDestroy{
     public animate:string;
     public classes:any={};
 
-    constructor(private sanitizer:DomSanitizer,private zone:NgZone,private notifyService)
+    constructor(private sanitizer:DomSanitizer,private zone:NgZone){}
+
+    ngOnInit() {
+        
+    }
+
+    ngOnDestroy() {
+        
+    }
 }
