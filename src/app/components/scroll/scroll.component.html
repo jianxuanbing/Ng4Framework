@@ -1,0 +1,8 @@
+<div class="bing-scroll" #scroll (wheel)="onWheel($event)" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+    <div class="bing-scroll-wrapper">
+        <ng-content></ng-content>
+    </div>
+    <div class="bing-scroll-scrollbar" #scrollbar>
+        <div class="bing-scroll-thumb" #thumb></div>
+    </div>
+</div>
