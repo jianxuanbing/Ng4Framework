@@ -1,0 +1,5 @@
+<ul class="bing-tab-navs">
+    <li class="bing-tab-nav" *ngFor="let tab of tabs;let i=index;" [class.active]="tab.selected">
+        <span (click)="tabClick(i)">{{tab.header}}</span>
+    </li>
+</ul>

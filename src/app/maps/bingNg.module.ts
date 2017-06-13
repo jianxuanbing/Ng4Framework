@@ -1,3 +1,4 @@
+import { TabGroupModule } from './../components/tab/tab-group.module';
 import { AccordionModule } from './../components/accordion/accordion.module';
 import { BadgeModule } from './../components/badge/badge.module';
 import { SwitchModule } from './../components/switch/switch.module';
@@ -30,7 +31,8 @@ import { BreadcrumbModule } from '../components/breadcrumb/breadcrumb.module';
         BadgeModule,
         ShareModule,
         AccordionModule,
-        BreadcrumbModule
+        BreadcrumbModule,
+        TabGroupModule
     ]
 })
 export class BingNgModule {}

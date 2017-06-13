@@ -62,7 +62,7 @@ export class AccordionComponent implements OnInit{
         if(!this.isAnimating){
             this.isActive=this.isExpand?'active':'inactive';
             this.itemClass={
-                'accordion-item-expand':this.isExpand;
+                'accordion-item-expand':this.isExpand
             };
         }
     }

@@ -1,3 +1,4 @@
+import { DemoTabModule } from './containers/demo-tab/demo-tab.module';
 import { DemoJsonViewModule } from './containers/demo-json-view/demo-json-view.module';
 import { DemoGridModule } from './containers/demo-grid/demo-grid.module';
 import { NgModule } from '@angular/core';
@@ -22,6 +23,7 @@ const MODULE_IMPORTS=[
     ButtonModule,
     DemoGridModule,
     DemoJsonViewModule,
+    DemoTabModule,
     RouterModule.forRoot(routes,{useHash:false})
 ];
 

@@ -14,3 +14,4 @@ export * from './jsonView/jsonView.component';// JSON浏览器
 export * from './accordion/accordion.component';// 手风琴
 export * from './breadcrumb/breadcrumb.component';// 面包屑
 export * from './ueditor/ueditor.component';//UEditor
+export * from './tab/tab-group.component';// Tab

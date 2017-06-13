@@ -1,0 +1,6 @@
+<div class="bing-tab-group" #group>
+    <bing-tab-nav [tabs]="tabs" (onTabClick)="tabClick($event)"></bing-tab-nav>
+    <div class="bing-tab-box">
+        <ng-content></ng-content>
+    </div>
+</div>

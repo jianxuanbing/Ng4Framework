@@ -1,4 +1,3 @@
-import { ChipComponent } from './../chip.component';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ChipComponent } from '../chip.component';
 @Component({
