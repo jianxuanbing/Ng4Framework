@@ -1,0 +1,27 @@
+.bing-image-group {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.bing-image-group::after {
+    content: "";
+    clear: both;
+    display: inline-block;
+}
+
+.bing-image-group /deep/ bing-image {
+    width: 24.99999%;
+}
+
+:host /deep/ {
+    .bing-image img {
+        display: block;
+        width: 100%;
+        line-height: 0;
+    }
+}

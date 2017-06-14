@@ -1,3 +1,15 @@
+import { InputtextModule } from './../components/inputtext/inputtext.module';
+import { ScrollModule } from './../components/scroll/scroll.module';
+import { RippleModule } from './../components/ripple/ripple.module';
+import { ProgressModule } from './../components/progress/progress.module';
+import { JsonViewModule } from './../components/jsonView/jsonView.module';
+import { GridModule } from './../components/grid/grid.module';
+import { DropdownModule } from './../components/dropdown/dropdown.module';
+import { ChipModule } from './../components/chip/chip.module';
+import { CardModule } from './../components/card/card.module';
+import { CalendarModule } from './../components/calendar/calendar.module';
+import { HamburgeModule } from './../components/hamburge/hamburge.module';
+import { ImageModule } from './../components/image/image.module';
 import { PanelModule } from './../components/panel/panel.module';
 import { TabGroupModule } from './../components/tab/tab-group.module';
 import { AccordionModule } from './../components/accordion/accordion.module';
@@ -22,19 +34,42 @@ import { BreadcrumbModule } from '../components/breadcrumb/breadcrumb.module';
 
 @NgModule({
     imports:[
-        ButtonModule,
-        TableModule,
-        CodeModule,
-        CheckboxModule,
-        RadioModule,
-        IconModule,
-        SwitchModule,
-        BadgeModule,
-        ShareModule,
         AccordionModule,
+
+        BadgeModule,
         BreadcrumbModule,
+        ButtonModule,        
+        
+        CalendarModule,
+        CardModule,
+        CheckboxModule,
+        ChipModule,
+        CodeModule,
+
+        DropdownModule,
+
+        GridModule,
+
+        HamburgeModule,
+
+        IconModule,
+        ImageModule,
+        InputtextModule,
+
+        JsonViewModule,
+
+        PanelModule,
+        ProgressModule,
+
+        RadioModule,
+        RippleModule,
+
+        ScrollModule,
+        SwitchModule,        
+        ShareModule,
+                
         TabGroupModule,
-        PanelModule
+        TableModule,
     ]
 })
 export class BingNgModule {}

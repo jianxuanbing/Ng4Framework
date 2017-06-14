@@ -18,3 +18,6 @@ export * from './ueditor/ueditor.component';// 富文本编辑器-UEditor
 export * from './tab/tab-group.component';// 选项卡
 export * from './scroll/scroll.component';// 滚动条
 export * from './panel/panel.component';// 面板
+export * from './hamburge/hamburge.component'; // 汉堡包
+export * from './image/image.component';// 图片
+export * from './inputtext/inputtext.component';// 输入框
