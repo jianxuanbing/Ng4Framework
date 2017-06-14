@@ -1,4 +1,4 @@
-import { routes } from './../../../app.routing';
+//import { routes } from './../../../maps/app-routing.module';
 import { Injectable } from '@angular/core';
 import { Router,Routes } from '@angular/router';
 

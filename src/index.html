@@ -20,9 +20,10 @@
         <%= htmlWebpackPlugin.options.metadata.title %>
     </title>
     <base href="<%= htmlWebpackPlugin.options.metadata.baseUrl %>" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
 </head>
 
-<body>
+<body class="bing-theme-2">
     <app>Loading...</app>
     <!--在index.html中没有<script>或<link>标签。 HtmlWebpackPlugin会在运行时动态插入它们。-->
     <div id="preloader">

@@ -1,1 +1,159 @@
 @import '../assets/styles/theme';
+@each $theme,
+$color in $theme {
+     :host-context(.bing-#{$theme}) /deep/ {
+        .bing-theme-setting,
+        .theme-setting {
+            background: $color;
+        }
+        h3.bing-head-title {
+            color: $color !important;
+        }
+        .main-container .accordion-toggle {
+            color: #fff !important;
+            background: $color;
+        }
+        .bing-tab-group .bing-tab-nav.active span {
+            color: $color;
+            &:after {
+                background: $color;
+            }
+        }
+    }
+     :host-context(.bing-#{$theme}:not(.bing-theme-2)) /deep/ {
+        .left-menu,
+        .aside-header {
+            background: $color;
+        }
+    }
+     :host-context(.bing-theme-2) /deep/ {
+        .top-menu,
+        .aside-header {
+            background: $color !important;
+        }
+    }
+     :host-context(.bing-theme-2.bing-#{$theme}) /deep/ {
+        .top-menu,
+        .aside-header,
+        .ripple {
+            background: $color !important;
+        }
+    }
+}
+
+:host-context(.bing-theme-2) /deep/ {
+    .left-menu {
+        background: #fff !important;
+        box-shadow: 3px 0 6px rgba(0, 0, 0, 0.24);
+        z-index: 100;
+        li a em {
+            color: #666;
+        }
+        .left-menu-item li a,
+        .accordion-toggle,
+        .accordion-inner ul li>a {
+            color: #262626;
+            &:hover {
+                color: #262626 !important;
+                background-color: #eee !important;
+            }
+        }
+        .left-menu-item li a.active,
+        .accordion-inner ul li>a.active {
+            color: #262626 !important;
+            background-color: #eee !important;
+        }
+    }
+    .top-menu {
+        .hamburge-line span,
+        .navbar-header .search-form {
+            background: #fff;
+        }
+        button {
+            background: transparent;
+            color: #fff !important;
+        }
+    }
+    .bing-scroll-thumb {
+        background: rgba(0, 0, 0, 0.298039);
+    }
+    .top-menu,
+    .aside-header {
+        background: $default !important;
+    }
+    .navbar-header li a,
+    .aside-header li a {
+        color: #fff;
+    }
+    .bing-theme-setting {
+        box-shadow: 0 0 .5rem #fff;
+    }
+    .navbar-header .navbar-header-right {
+        .bing-dropdown-header {
+            &.active,
+            &:active,
+            &:hover {
+                background: transparent !important;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, .1);
+                }
+            }
+        }
+    }
+}
+
+:host-context(.bing-mini) /deep/ {
+    .main-layout-container {
+        left: $leftMenuWidthOfMini;
+    }
+    .left-menu {
+        .accordion-item .accordion-toggle i {
+            padding-right: 0 !important;
+        }
+        .accordion-toggle:hover+.accordion-content {
+            @include position(absolute, 0, $left: 45px);
+            height: auto;
+        }
+    }
+    .aside-header {
+        width: $leftMenuWidthOfMini;
+    }
+    .aside-header-inner {
+        &>span {
+            &.top-logo-mini {
+                display: block;
+            }
+            &.top-logo {
+                display: none;
+            }
+        }
+    }
+}
+
+:host-context(.bing-mini.bing-theme-2) /deep/ {
+    .main-layout-container {
+        left: 0 !important;
+    }
+    .left-menu {
+        left: -#{$leftMenuWidth} !important;
+    }
+    .aside-header {
+        width: $leftMenuWidth !important;
+    }
+    .aside-header-inner {
+        &>span {
+            &.top-logo-mini {
+                display: none !important;
+            }
+            &.top-logo {
+                display: block !important;
+            }
+        }
+    }
+}

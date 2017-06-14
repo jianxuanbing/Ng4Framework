@@ -10,6 +10,7 @@ const CopyWebpackPlugin = require('html-webpack-plugin');
 const AssetsPlugin = require('assets-webpack-plugin');
 const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
 //const HtmlElementsPlugin = require('./html-elements-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 // webpack constants
 const HMR = helpers.hasProcessFlag('hot');
@@ -37,7 +38,7 @@ module.exports = function(options) {
         entry: {
             'polyfills': './src/polyfills.ts',
             'vendor': './src/vendor.ts',
-            'main': './src/main.ts'
+            'main': './src/main.ts',
         },
         /**
          * 配置解析模块路径
@@ -85,7 +86,12 @@ module.exports = function(options) {
                 loader: 'css-loader!stylus-loader'
             }, {
                 test: /\.css$/,
-                loaders: ['to-string-loader', 'css-loader']
+                //loaders: ['to-string-loader', 'css-loader']
+                exclude: helpers.root('src', 'app'),
+                loader: ExtractTextPlugin.extract({
+                    fallbackLoader: 'style-loader',
+                    loader: 'css-loader?sourceMap'
+                })
             }, {
                 test: /\.scss$/,
                 loaders: ['to-string-loader', 'css-loader', 'sass-loader']
@@ -102,6 +108,10 @@ module.exports = function(options) {
             }, {
                 test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
                 loader: 'file-loader'
+            }, {
+                test: /\.css$/,
+                include: helpers.root('src', 'app'),
+                loader: 'raw-loader'
             }],
 
             // postLoaders: [{
@@ -152,7 +162,7 @@ module.exports = function(options) {
                 inject: 'body'
             }),
             // 热替换插件--使用Hash时，不能使用热替换插件
-            //new webpack.HotModuleReplacementPlugin()
+            //new webpack.HotModuleReplacementPlugin(),
         ],
         node: {
             global: true,

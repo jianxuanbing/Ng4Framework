@@ -16,6 +16,9 @@ import 'rxjs/Subscription';
 import 'rxjs/Subject';
 import 'rxjs/BehaviorSubject';
 
+import 'ngx-clipboard';
+import 'angular2-highlight-js';
+
 // Bootsctrap
 import 'bootstrap/dist/css/bootstrap.css';
 import 'font-awesome/css/font-awesome.css';

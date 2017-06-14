@@ -1,5 +1,5 @@
 const helpers = require('./helpers');
-const path=require('path');
+const path = require('path');
 const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
 const commonConfig = require('./webpack.common');
@@ -7,6 +7,7 @@ const commonConfig = require('./webpack.common');
 // webpack plugins
 const DefinePlugin = require('webpack/lib/DefinePlugin');
 const NamedModulesPlugin = require('webpack/lib/NamedModulesPlugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 // webpack constants
 const ENV = process.env.ENV = process.env.NODE_ENV = 'development';
@@ -45,18 +46,19 @@ module.exports = function(options) {
             new NamedModulesPlugin(),
             new webpack.LoaderOptionsPlugin({
                 debug: true,
-                options:{
-                    context:helpers.root('src'),
-                    output:{
-                        path:helpers.root('dist')
+                options: {
+                    context: helpers.root('src'),
+                    output: {
+                        path: helpers.root('dist')
                     },
-                    tslint:{
-                        emitErrors:false,
-                        failOnHint:false,
-                        resourcePath:'src'                                            
+                    tslint: {
+                        emitErrors: false,
+                        failOnHint: false,
+                        resourcePath: 'src'
                     }
                 }
-            })
+            }),
+            new ExtractTextPlugin('[name].css')
         ],
         devServer: {
             port: METADATA.port,
@@ -65,21 +67,21 @@ module.exports = function(options) {
             watchContentBase: true,
             contentBase: helpers.root('dist'),
             historyApiFallback: {
-                index:'/index.html'
+                index: '/index.html'
             },
             // 监视配置
             watchOptions: {
                 aggregateTimeout: 300,
                 poll: 1000
             },
-            proxy:{
-                '/api':{
-                    target:'http://localhost:8080',
-                    secure:false,
-                    changeOrigin:true,
-                    pathRewrite:{
-                        '^/api':''
-                    }                    
+            proxy: {
+                '/api': {
+                    target: 'http://localhost:8080',
+                    secure: false,
+                    changeOrigin: true,
+                    pathRewrite: {
+                        '^/api': ''
+                    }
                 }
             }
         },

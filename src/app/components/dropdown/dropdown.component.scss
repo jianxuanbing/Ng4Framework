@@ -29,12 +29,12 @@
 
 .bing-dropdown,
 .bing-dropdown-header,
-:host /deep/ .bing-dropdown-header f-header {
+:host /deep/ .bing-dropdown-header b-header {
     display: inline-flex;
 }
 
 .bing-dropdown-header,
-:host /deep/ .bing-dropdown-header f-header {
+:host /deep/ .bing-dropdown-header b-header {
     align-items: center;
 }
 

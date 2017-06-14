@@ -95,7 +95,7 @@
         justify-content: space-between;
         .bing-dropdown,
         .bing-dropdown-header,
-        .bing-dropdown-header f-header {
+        .bing-dropdown-header b-header {
             display: flex;
             height: 100%;
             margin: 0;
@@ -133,7 +133,7 @@
                 @include flexbox;
                 align-items: center;
             }
-            f-header img {
+            b-header img {
                 width: 1.5rem;
                 height: 1.5rem;
                 border-radius: 50%;

@@ -1,5 +1,6 @@
 // 指令
 export * from './button/button.directive';// 按钮
+export * from './ripple/ripple.directive';// 波纹效果
 
 // 组件
 export * from './table/table.component';// 表格
@@ -13,5 +14,7 @@ export * from './progress/progress.component';// 进度条
 export * from './jsonView/jsonView.component';// JSON浏览器
 export * from './accordion/accordion.component';// 手风琴
 export * from './breadcrumb/breadcrumb.component';// 面包屑
-export * from './ueditor/ueditor.component';//UEditor
-export * from './tab/tab-group.component';// Tab
+export * from './ueditor/ueditor.component';// 富文本编辑器-UEditor
+export * from './tab/tab-group.component';// 选项卡
+export * from './scroll/scroll.component';// 滚动条
+export * from './panel/panel.component';// 面板

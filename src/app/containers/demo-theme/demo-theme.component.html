@@ -1,0 +1,12 @@
+<div class="main-container">
+    <div class="row">
+        <bing-panel bGrid="12" header="基础配色">
+            <ul class="theme-color-list">
+                <li *ngFor="let t of theme" class="theme-color-item" (click)="selectTheme(t.name)" [ngStyle]="{background:t.color}">
+                    <p>{{t.name}}</p>
+                    <p>{{t.color}}</p>
+                </li>
+            </ul>
+        </bing-panel>
+    </div>
+</div>
