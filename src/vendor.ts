@@ -20,8 +20,9 @@ import 'ngx-clipboard';
 import 'angular2-highlight-js';
 
 // Bootsctrap
-import 'bootstrap/dist/css/bootstrap.css';
+//import 'bootstrap/dist/css/bootstrap.css';
 import 'font-awesome/css/font-awesome.css';
+import 'src/assets/styles/theme.scss';
 
 if('production'===ENV){
     // 生成环境

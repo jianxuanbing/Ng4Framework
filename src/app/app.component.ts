@@ -1,5 +1,6 @@
 import { ButtonModule } from './components/button/button.module';
 import { Component, ViewEncapsulation,ViewContainerRef } from '@angular/core';
+import '../assets/styles/theme.scss';
 
 @Component({
     selector:'app',

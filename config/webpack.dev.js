@@ -27,6 +27,7 @@ module.exports = function(options) {
         devtool: 'cheap-module-source-map',
         output: {
             path: helpers.root('dist'),
+            publicPath: '/',
             filename: '[name].bundle.js',
             sourceMapFilename: '[name].map',
             chunkFilename: '[id].chunk.js',
@@ -58,7 +59,7 @@ module.exports = function(options) {
                     }
                 }
             }),
-            new ExtractTextPlugin('[name].css')
+            new ExtractTextPlugin('style.css')
         ],
         devServer: {
             port: METADATA.port,

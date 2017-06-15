@@ -16,6 +16,10 @@
             "node",
             "core-js"
         ],
+        "typeRoot": [
+            "node_modules/@types",
+            "./node_modules/core-js"
+        ],
         "suppressImplicitAnyIndexErrors": true,
         "outDir": "./dist/", //编译文件输出目录
         "baseUrl": "./src", //根目录路径
@@ -25,7 +29,7 @@
         "src/**/*"
     ],
     "exclude": [
-        "node_modules",
+        //"node_modules",
         "dist",
         "typings",
         "typings/index.d.ts"

@@ -25,10 +25,6 @@ module.exports = function(options) {
     isProd = options.env === 'production';
     return {
         /**
-         * index.html meta 静态数据
-         */
-        //metadata: METADATA,
-        /**
          * 是否启用缓存,缓存生成模块和多个增量构建块来提高性能
          */
         cache: false,
@@ -67,17 +63,10 @@ module.exports = function(options) {
             exprContextCritical: false,
             rules: [{
                 test: /\.ts$/,
-                loader: 'string-replace-loader',
-                options: {
-                    search: /(System|SystemJS)(.*[\n\r]\s*\.|\.)import\((.+)\)/g,
-                    replace: '$1.import($3).then(mod => (mod.__esModule && mod.default) ? mod.default : mod)'
-                },
-                include: [helpers.root('src')],
-                enforce: 'pre'
-            }, {
-                test: /\.ts$/,
-                loaders: ['awesome-typescript-loader', 'angular2-template-loader'],
-                exclude: [/\.(spec|e2e)\.ts$/]
+                loaders: [
+                    'awesome-typescript-loader?(tsconfig:"tsconfig.json")',
+                    'angular2-template-loader'
+                ]
             }, {
                 test: /\.json$/,
                 loader: 'json-loader'
@@ -86,7 +75,6 @@ module.exports = function(options) {
                 loader: 'css-loader!stylus-loader'
             }, {
                 test: /\.css$/,
-                //loaders: ['to-string-loader', 'css-loader']
                 exclude: helpers.root('src', 'app'),
                 loader: ExtractTextPlugin.extract({
                     fallbackLoader: 'style-loader',
@@ -100,29 +88,13 @@ module.exports = function(options) {
                 loader: 'raw-loader',
                 exclude: [helpers.root('src/index.html')]
             }, {
-                test: /\.(jpg|png|gif)$/,
-                loader: 'file-loader'
-            }, {
-                test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                loader: 'url-loader?limit=10000&minetype=application/font-woff'
-            }, {
-                test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-                loader: 'file-loader'
+                test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
+                loader: 'file-loader?name=assets/[name].[hash].[ext]'
             }, {
                 test: /\.css$/,
                 include: helpers.root('src', 'app'),
                 loader: 'raw-loader'
             }],
-
-            // postLoaders: [{
-            //     test: /\.js$/,
-            //     loader: 'string-replace-loader',
-            //     query: {
-            //         search: 'var sourceMappingUrl=extractSourceMappingUrl\\(cssText\\);',
-            //         replace: "var sourceMappingUrl='';",
-            //         flags: 'g'
-            //     }
-            // }]
         },
         /**
          * 添加额外的编译器插件
