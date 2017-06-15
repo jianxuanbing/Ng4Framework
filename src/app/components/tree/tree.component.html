@@ -1,0 +1,5 @@
+<div class="bing-tree">
+    <ul>
+        <bing-tree-item *ngFor="let menu of menus" title="{{menu.title}}" [file]="menu?.file" [folder]="menu?.folder" [expanded]="menu.expanded"></bing-tree-item>
+    </ul>
+</div>

@@ -1,0 +1,4 @@
+<div class="bing-mask" *ngIf="visible" [@fadeInState](@fadeInState.done)="transitionEnd()">
+    <ng-content></ng-content>
+    <span *ngIf="close" class="fa fa-close"></span>
+</div>

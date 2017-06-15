@@ -1,0 +1,9 @@
+<div class="bing-popover" #container>
+    <button #btn class="bing-popover-header" bButton [color]="color" [class.active]="isOpen" (click)="onMouseClick($event)">
+        <span class="bing-popover-header-title" *ngIf="header">{{name}}</span>
+        <ng-content select="b-header"></ng-content>
+    </button>
+    <div class="bing-popover-content" #popoverMenu style="display:none;">
+        <ng-content></ng-content>
+    </div>
+</div>

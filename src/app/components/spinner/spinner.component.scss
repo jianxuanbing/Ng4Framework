@@ -1,0 +1,76 @@
+:host /deep/ {
+    $borderColor: #bbb;
+    .bing-spinner {
+        border: 1px solid $borderColor;
+        overflow: hidden;
+        border-radius: 2px;
+    }
+    .bing-spinner,
+    .bing-spinner-minus,
+    .bing-spinner-add {
+        position: relative;
+        display: inline-flex;
+    }
+    .bing-spinner input {
+        background: transparent;
+        border: none;
+        padding: 0 .2rem;
+        min-width: 1.5rem;
+        max-width: 2rem;
+        text-align: center;
+    }
+    .bing-spinner-minus,
+    .bing-spinner-add {
+        width: 1.5rem;
+        height: 1.5rem;
+        background: #f9f9f9;
+        cursor: pointer;
+        border: none;
+    }
+    .bing-spinner-minus {
+        border-right: 1px solid $borderColor;
+        &:active {
+            background: #ddd;
+        }
+        &:disabled {
+            opacity: .8;
+            &:before {
+                background: silver;
+            }
+        }
+    }
+    .bing-spinner-add {
+        border-left: 1px solid $borderColor;
+        &:active {
+            background: #ddd;
+        }
+        &:disabled {
+            opacity: .8;
+            &:before {
+                background: silver;
+            }
+            &:after {
+                background: silver;
+            }
+        }
+    }
+    .bing-spinner-minus:before,
+    .bing-spinner-add:before,
+    .bing-spinner-add:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background: $borderColor;
+        transform: translate3d(-50%, -50%, 0);
+    }
+    .bing-spinner-minus:before,
+    .bing-spinner-add:before {
+        width: .4rem;
+        height: .1em;
+    }
+    .bing-spinner-add:after {
+        height: .4rem;
+        width: .1em;
+    }
+}

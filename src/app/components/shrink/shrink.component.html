@@ -1,0 +1,8 @@
+<div class="suspend" #container>
+    <span class="suspend-btn burge burge-line" #btn (click)="toggle()">
+        <span></span>
+    <span></span>
+    <span></span>
+    </span>
+    <bing-shrink-item *ngFor="let item of menus" [icon]="item.icon"></bing-shrink-item>
+</div>

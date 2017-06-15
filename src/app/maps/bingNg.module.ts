@@ -1,3 +1,16 @@
+import { TreeModule } from './../components/tree/tree.module';
+import { TooltipModule } from './../components/tooltip/tooltip.module';
+import { ToastModule } from './../components/toast/toast.module';
+import { SpinnerModule } from './../components/spinner/spinner.module';
+import { ShrinkModule } from './../components/shrink/shrink.module';
+import { SelectModule } from './../components/select/select.module';
+import { RatingModule } from './../components/rating/rating.module';
+import { RangeModule } from './../components/range/range.module';
+import { PopoverModule } from './../components/popover/popover.module';
+import { ModalModule } from './../components/modal/modal.module';
+import { MaskModule } from './../components/mask/mask.module';
+import { LoadingModule } from './../components/loading/loading.module';
+import { ListModule } from './../components/list/list.module';
 import { InputtextModule } from './../components/inputtext/inputtext.module';
 import { ScrollModule } from './../components/scroll/scroll.module';
 import { RippleModule } from './../components/ripple/ripple.module';
@@ -58,18 +71,33 @@ import { BreadcrumbModule } from '../components/breadcrumb/breadcrumb.module';
 
         JsonViewModule,
 
+        ListModule,
+        LoadingModule,
+
+        MaskModule,
+        ModalModule,
+
         PanelModule,
-        ProgressModule,
+        PopoverModule,
+        ProgressModule,        
 
         RadioModule,
         RippleModule,
+        RangeModule,
+        RatingModule,        
 
-        ScrollModule,
-        SwitchModule,        
         ShareModule,
+        ScrollModule,
+        SelectModule,
+        ShrinkModule,
+        SpinnerModule,
+        SwitchModule,
                 
         TabGroupModule,
         TableModule,
+        ToastModule,
+        TooltipModule,
+        TreeModule
     ]
 })
 export class BingNgModule {}

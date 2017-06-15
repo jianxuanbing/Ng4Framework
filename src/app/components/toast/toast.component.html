@@ -1,0 +1,6 @@
+<div class="bing-toast-group" #container *ngIf="value.length>0">
+    <div class="bing-toast" *ngFor="let msg of value;let i=index" [@toastState]>
+        <div>{{msg}}</div>
+        <span class="fa fa-close bing-toast-close" (click)="close(i)"></span>
+    </div>
+</div>

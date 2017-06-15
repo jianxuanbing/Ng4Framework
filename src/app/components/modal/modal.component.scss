@@ -1,0 +1,59 @@
+@import '../../../assets/styles/theme/_variables';
+.bing-modal {
+    position: fixed;
+    background: #222733;
+    overflow: hidden;
+    min-width: 10rem;
+    border-radius: 2px;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.bing-modal .bing-modal-header,
+.bing-modal-footer {
+    position: relative;
+    padding: .5rem .75rem;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.bing-modal-footer {
+    text-align: right;
+}
+
+.bing-modal .bing-modal-close {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 1rem;
+    height: 1rem;
+    opacity: 0.2;
+    line-height: 1rem;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.bing-modal .bing-modal-close:hover {
+    background: #1c1d24;
+    opacity: 0.5;
+}
+
+.bing-modal .bing-modal-content {
+    padding: .75rem;
+    color: #fff;
+}
+
+@each $theme,
+$color in $theme {
+     :host-context(.bing-#{$theme}) /deep/ {
+        .bing-modal {
+            background: $color;
+        }
+    }
+    .bing-modal.bing-#{$theme} {
+        background: $color !important;
+    }
+}

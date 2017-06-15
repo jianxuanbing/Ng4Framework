@@ -21,7 +21,8 @@ const childRoutes:Routes=[
  * 常量路由
  */
 const routes:Routes=[
-    {path:'main',component:IndexComponent,children:childRoutes}
+    {path:'main',component:IndexComponent,children:childRoutes},
+    {path:'',redirectTo:'/main',pathMatch:'full'}
 ];
 
 @NgModule({

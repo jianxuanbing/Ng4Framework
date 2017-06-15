@@ -1,4 +1,4 @@
-@import "../../../assets/sass/mixin";
+@import '../../../assets/styles/theme/_mixin';
 :host /deep/ {
     .bing-list-item {
         @include flexbox;
