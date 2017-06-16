@@ -1,12 +1,11 @@
 import { ButtonModule } from './components/button/button.module';
 import { Component, ViewEncapsulation,ViewContainerRef } from '@angular/core';
-import '../assets/styles/theme.scss';
 
 @Component({
     selector:'app',
     encapsulation:ViewEncapsulation.None,
     templateUrl:'./app.component.html',
-    styleUrls:['./app.component.scss']
+    styleUrls:['./app.component.scss','../assets/styles/theme.scss']
 })
 export class AppComponent{
     /**

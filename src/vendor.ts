@@ -15,6 +15,21 @@ import 'rxjs/Observable';
 import 'rxjs/Subscription';
 import 'rxjs/Subject';
 import 'rxjs/BehaviorSubject';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/mergeMap';
+
+import 'rxjs/add/observable/of';
+import 'rxjs/add/observable/throw';
+
+// Observable operators
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/operator/distinctUntilChanged';
+import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/filter';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/switchMap';
+
 
 import 'ngx-clipboard';
 import 'angular2-highlight-js';
@@ -22,7 +37,6 @@ import 'angular2-highlight-js';
 // Bootsctrap
 //import 'bootstrap/dist/css/bootstrap.css';
 import 'font-awesome/css/font-awesome.css';
-import 'src/assets/styles/theme.scss';
 
 if('production'===ENV){
     // 生成环境

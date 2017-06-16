@@ -1,14 +1,14 @@
 // 主题颜色
-$theme-blue:#3949ab;
-$theme-green:#4CAF50;
+$theme-blue: #3949ab;
+$theme-green: #4CAF50;
 // 链接颜色
-$link-color:#FFF;
-$link-background:#29368B;
+$link-color: #fff;
+$link-background: #29368B;
 // 背景颜色
-$background:#2B2C30;
+$background: #2B2C30;
 $top:50px;
 $aside-width:250px;
-$left-menu:'left-menu';
+$left-menu: 'left-menu';
 // 线半径
 @mixin borderRadius($radius:2px) {
     border-radius: $radius;

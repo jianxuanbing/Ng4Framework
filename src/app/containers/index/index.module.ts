@@ -1,3 +1,4 @@
+import { HamburgeModule } from './../../components/hamburge/hamburge.module';
 import { AccordionModule } from './../../components/accordion/accordion.module';
 import { RippleModule } from './../../components/ripple/ripple.module';
 import { IconModule } from './../../components/icon/icon.module';
@@ -16,7 +17,8 @@ import { NgModule } from '@angular/core';
         ScrollModule,
         IconModule,
         RippleModule,
-        AccordionModule
+        AccordionModule,
+        HamburgeModule,
     ],
     declarations:[IndexComponent]
 })

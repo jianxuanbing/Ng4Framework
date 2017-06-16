@@ -1,3 +1,4 @@
+import { ButtonModule } from './../../components/button/button.module';
 import { DemoThemeComponent } from './demo-theme.component';
 import { GridModule } from './../../components/grid/grid.module';
 import { PanelModule } from './../../components/panel/panel.module';
@@ -7,7 +8,8 @@ import { NgModule } from '@angular/core';
     imports:[
         CommonModule,
         PanelModule,
-        GridModule
+        GridModule,
+        ButtonModule,
     ],
     declarations:[DemoThemeComponent]
 })

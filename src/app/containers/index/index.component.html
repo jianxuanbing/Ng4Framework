@@ -50,7 +50,14 @@
                 </ul>
             </bing-accordion>
             <bing-accordion class="let-menu-item" header="基础组件" iconName="th-large">
-
+                <ul>
+                    <li bRipple>
+                        <a routerLink="accordion" routerLinkActive="active">
+                            <cite>面板</cite>
+                            <em>折叠面板/手风琴</em>
+                        </a>
+                    </li>
+                </ul>
             </bing-accordion>
         </bing-accordion-group>
     </bing-scroll>
@@ -60,7 +67,9 @@
         <div class="aside-header-inner">
             <ul>
                 <li class="toggle-btn">
-                    <a (click)="toggleAside()">缩进</a>
+                    <a (click)="toggleAside()">
+                        <bing-hamburge type="line"></bing-hamburge>
+                    </a>
                 </li>
             </ul>
             <span class="top-logo-mini">B</span>

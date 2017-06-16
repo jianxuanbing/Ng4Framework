@@ -9,6 +9,8 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
+require('../assets/styles/theme.scss');
+
 /**
  * 导入模块
  */
@@ -25,7 +27,11 @@ const MODULE_IMPORTS=[
 @NgModule({
     bootstrap:[AppComponent],
     declarations:[AppComponent],
-    imports:MODULE_IMPORTS
+    imports:MODULE_IMPORTS,
+    providers:[
+        HttpModule,
+        BrowserModule
+    ]
 })
 
 export class AppModule{

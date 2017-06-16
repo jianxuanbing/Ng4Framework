@@ -1,3 +1,4 @@
+import { DemoAccordionComponent } from './../containers/demo-accordion/demo-accordion.component';
 import { DemoThemeComponent } from './../containers/demo-theme/demo-theme.component';
 import { NgModule } from '@angular/core';
 import { IndexComponent } from './../containers/index/index.component';
@@ -14,7 +15,8 @@ const childRoutes:Routes=[
     {path:'grid',component:DemoGridComponent},
     {path:'json-view',component:DemoJsonViewComponent},
     {path:'tab',component:DemoTabComponent},
-    {path:'theme',component:DemoThemeComponent},
+    {path:'accordion',component:DemoAccordionComponent},
+    {path:'theme',component:DemoThemeComponent,data:{title:'主题'}},
     {path:'',component:MainComponent}
 ]
 /**

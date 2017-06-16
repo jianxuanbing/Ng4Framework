@@ -20,6 +20,7 @@ const METADATA = webpackMerge(commonConfig({ env: ENV }).metadata, {
     ENV: ENV,
     HMR: HMR
 });
+const proxyApi = 'http://localhost:8098'
 
 module.exports = function(options) {
     return webpackMerge(commonConfig({ env: ENV }), {
@@ -76,14 +77,15 @@ module.exports = function(options) {
                 poll: 1000
             },
             proxy: {
-                '/api': {
-                    target: 'http://localhost:8080',
-                    secure: false,
-                    changeOrigin: true,
-                    pathRewrite: {
-                        '^/api': ''
-                    }
-                }
+                // '/api': {
+                //     target: proxyApi,
+                //     secure: false,
+                //     changeOrigin: true,
+                //     pathRewrite: {
+                //         '^/api': ''
+                //     }
+                // }
+                '/api/*': proxyApi
             }
         },
         node: {

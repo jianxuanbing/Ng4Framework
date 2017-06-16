@@ -1,3 +1,5 @@
+import { DemoAccordionModule } from './../containers/demo-accordion/demo-accordion.module';
+import { BingNgModule } from './bingNg.module';
 import { DemoThemeModule } from './../containers/demo-theme/demo-theme.module';
 import { DemoTabModule } from './../containers/demo-tab/demo-tab.module';
 import { DemoJsonViewModule } from './../containers/demo-json-view/demo-json-view.module';
@@ -17,11 +19,12 @@ import { NgModule } from '@angular/core';
         FormsModule,
 
         IndexModule,
-        MainModule,
+        MainModule,        
         DemoGridModule,
         DemoJsonViewModule,
         DemoTabModule,
         DemoThemeModule,
+        DemoAccordionModule,
     ],
     providers:[
     ],

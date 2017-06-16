@@ -10,7 +10,7 @@ const CopyWebpackPlugin = require('html-webpack-plugin');
 const AssetsPlugin = require('assets-webpack-plugin');
 const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
 //const HtmlElementsPlugin = require('./html-elements-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 // webpack constants
 const HMR = helpers.hasProcessFlag('hot');
@@ -34,7 +34,7 @@ module.exports = function(options) {
         entry: {
             'polyfills': './src/polyfills.ts',
             'vendor': './src/vendor.ts',
-            'main': './src/main.ts',
+            'main': './src/main.ts'
         },
         /**
          * 配置解析模块路径
@@ -62,39 +62,42 @@ module.exports = function(options) {
         module: {
             exprContextCritical: false,
             rules: [{
-                test: /\.ts$/,
-                loaders: [
-                    'awesome-typescript-loader?(tsconfig:"tsconfig.json")',
-                    'angular2-template-loader'
-                ]
-            }, {
-                test: /\.json$/,
-                loader: 'json-loader'
-            }, {
-                test: /\.styl$/,
-                loader: 'css-loader!stylus-loader'
-            }, {
-                test: /\.css$/,
-                exclude: helpers.root('src', 'app'),
-                loader: ExtractTextPlugin.extract({
-                    fallbackLoader: 'style-loader',
-                    loader: 'css-loader?sourceMap'
-                })
-            }, {
-                test: /\.scss$/,
-                loaders: ['to-string-loader', 'css-loader', 'sass-loader']
-            }, {
-                test: /\.html$/,
-                loader: 'raw-loader',
-                exclude: [helpers.root('src/index.html')]
-            }, {
-                test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
-                loader: 'file-loader?name=assets/[name].[hash].[ext]'
-            }, {
-                test: /\.css$/,
-                include: helpers.root('src', 'app'),
-                loader: 'raw-loader'
-            }],
+                    test: /\.ts$/,
+                    loaders: [
+                        'awesome-typescript-loader?(tsconfig:"tsconfig.json")',
+                        'angular2-template-loader'
+                    ]
+                }, {
+                    test: /\.json$/,
+                    loader: 'json-loader'
+                }, {
+                    test: /\.styl$/,
+                    loader: 'css-loader!stylus-loader'
+                }, {
+                    test: /\.css$/,
+                    exclude: [helpers.root('src', 'app')],
+                    loader: ExtractTextPlugin.extract({
+                        fallbackLoader: 'style-loader',
+                        loader: 'css-loader?sourceMap'
+                    })
+                },
+                {
+                    test: /\.scss$/,
+                    loaders: ['to-string-loader', 'css-loader', 'sass-loader']
+                },
+                {
+                    test: /\.html$/,
+                    loader: 'raw-loader',
+                    exclude: [helpers.root('src/index.html')]
+                }, {
+                    test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
+                    loader: 'file-loader?name=assets/[name].[hash].[ext]'
+                }, {
+                    test: /\.css$/,
+                    include: helpers.root('src', 'app'),
+                    loader: 'style-loader!css-loader'
+                }
+            ],
         },
         /**
          * 添加额外的编译器插件
@@ -118,7 +121,7 @@ module.exports = function(options) {
             // Ng上下文注入插件
             new ContextReplacementPlugin(
                 /angular(\\|\/)core(\\|\/)@angular/,
-                helpers.root('src'), {}
+                helpers.root('./src'), {}
             ),
             // 复制插件，复制指定目录或文件到指定路径，主要用于复制静态资源文件
             new CopyWebpackPlugin([{
