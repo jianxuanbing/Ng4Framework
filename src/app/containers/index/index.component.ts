@@ -5,6 +5,8 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 import {ActivatedRoute} from '@angular/router';
 import {Title} from '@angular/platform-browser';
 
+import {menuList} from './index';
+
 @Component({
     selector:'bing-root',
     templateUrl:'./index.component.html',
@@ -26,7 +28,13 @@ export class IndexComponent implements OnInit,AfterViewInit,OnDestroy{
         console.log(1);
     }
 
-    constructor(private renderer2:Renderer2,private fb:FormBuilder,private route:ActivatedRoute,private domRenderer:DomRenderer,private pageTitle:Title){}
+    constructor(private renderer2:Renderer2
+        ,private fb:FormBuilder
+        ,private route:ActivatedRoute
+        ,private domRenderer:DomRenderer
+        ,private pageTitle:Title
+        ){            
+        }
 
     ngOnInit() {
         this.title='首页';
@@ -51,11 +59,7 @@ export class IndexComponent implements OnInit,AfterViewInit,OnDestroy{
         this.searchForm=this.fb.group({
             'keyword':['']
         });
-        this.menus=[
-            {'icon':'user'},
-            {'icon':'user'},
-            {'icon':'user'}
-        ];
+        this.menus=menuList;
         this.theme=config.theme;
     }
 

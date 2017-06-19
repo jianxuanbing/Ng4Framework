@@ -20,22 +20,27 @@ export class HttpHelper{
      * 
      * @memberof HttpHelper
      */
-    private handleResponse(response:any):Promise<any>{
-        const data=response.json();
-        console.log(data);
-        return new Promise((resolve,reject)=>{
-            if(data.code){
-                return resolve(data);
-            }else{
-                return reject(data);
-            }
-        });        
+    private handleResponse(response:Response){
+        const data=response.json();        
+        return data||{};
     }
-
-    private handleError(error:any):Promise<any>{        
-        //const errmsg=[500,504].indexOf(error.status)>-1?error.body:JSON.parse(error.body).message;
-        return Promise.reject(error);
+    /**
+     * 错误处理
+     * @param error 
+     */
+    private handleError(error:Response|any){
+        let errMsg:string;
+        if(error instanceof Response){
+            const body=error.json()||'';
+            const err=body.error||JSON.stringify(body);
+            errMsg=`${error.status} - ${error.statusText} || '' ${err}`;
+        }else{
+            errMsg=error.message?error.message:error.toString();
+        }
+        console.log(errMsg);    
+        return Promise.reject(errMsg);
     }
+    
     /**
      * Get请求
      * @param {string} url 

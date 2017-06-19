@@ -11,7 +11,6 @@ const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const NormalModuleReplacementPlugin = require('webpack/lib/NormalModuleReplacementPlugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 // webpack constants
 const ENV = process.env.ENV = process.env.NODE_ENV = 'production';
@@ -81,7 +80,6 @@ module.exports = function(options) {
                     }
                 }
             }),
-            new ExtractTextPlugin('style.[hash].css'),
         ],
         node: {
             global: true,

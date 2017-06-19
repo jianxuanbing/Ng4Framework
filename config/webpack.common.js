@@ -12,8 +12,8 @@ const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin')
 //const HtmlElementsPlugin = require('./html-elements-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 // 多个提取实例
-const commonCss = new ExtractTextPlugin('stylesheets/common.css');
-const themeCss = new ExtractTextPlugin('stylesheets/theme.css');
+const commonCss = new ExtractTextPlugin('stylesheets/common.[hash].css');
+const themeCss = new ExtractTextPlugin('stylesheets/theme.[hash].css');
 
 // webpack constants
 const HMR = helpers.hasProcessFlag('hot');
@@ -56,7 +56,8 @@ module.exports = function(options) {
             ],
             alias: {
                 'src': path.resolve(__dirname, '../src'),
-                'app': path.resolve(__dirname, '../src/app')
+                'app': path.resolve(__dirname, '../src/app'),
+                'data': path.resolve(__dirname, '../src/data'),
             }
         },
         /**
@@ -70,7 +71,8 @@ module.exports = function(options) {
                         'awesome-typescript-loader?(tsconfig:"tsconfig.json")',
                         'angular2-template-loader'
                     ]
-                }, {
+                },
+                {
                     test: /\.json$/,
                     loader: 'json-loader'
                 },

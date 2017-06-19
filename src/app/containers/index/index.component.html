@@ -1,65 +1,27 @@
 <aside class="left-menu">
     <bing-scroll class="left-scroll" scrollClass="scroll-box">
-        <ul class="left-menu-item">
-            <li bRipple>
-                <a routerLink="" routerLinkActive="active">
-                    <bing-icon icon="desktop"></bing-icon>
-                    <span class="accordion-toggle-title">简介</span>
-                </a>
-            </li>
-            <li bRipple>
-                <a routerLink="" routerLinkActive="active">
-                    <bing-icon icon="download"></bing-icon>
-                    <span class="accordion-toggle-title">开始使用</span>
-                </a>
-            </li>
-            <li bRipple>
-                <a routerLink="theme" routerLinkActive="active">
-                    <bing-icon icon="adjust"></bing-icon>
-                    <span class="accordion-toggle-title">主题</span>
-                </a>
-            </li>
-        </ul>
-        <bing-accordion-group [closeOthers]="true">
-            <bing-accordion class="let-menu-item" header="UI 元素" iconName="dashboard">
-                <ul>
-                    <li bRipple>
-                        <a routerLink="grid" routerLinkActive="active">
-                            <cite>栅格系统</cite>
-                            <em>grid</em>
-                        </a>
-                    </li>
-                    <li bRipple>
-                        <a routerLink="typography" routerLinkActive="active">
-                            <cite>辅助元素</cite>
-                            <em>typography</em>
-                        </a>
-                    </li>
-                    <li bRipple>
-                        <a routerLink="image" routerLinkActive="active">
-                            <cite>图片</cite>
-                            <em>image</em>
-                        </a>
-                    </li>
-                    <li bRipple>
-                        <a routerLink="shadow" routerLinkActive="active">
-                            <cite>阴影</cite>
-                            <em>shadow</em>
-                        </a>
-                    </li>
-                </ul>
-            </bing-accordion>
-            <bing-accordion class="let-menu-item" header="基础组件" iconName="th-large">
-                <ul>
-                    <li bRipple>
-                        <a routerLink="accordion" routerLinkActive="active">
-                            <cite>面板</cite>
-                            <em>折叠面板/手风琴</em>
-                        </a>
-                    </li>
-                </ul>
-            </bing-accordion>
-        </bing-accordion-group>
+        <div *ngFor="let menu of menus">
+            <ul class="left-menu-item" *ngIf="menu.isSingle">
+                <li bRipple>
+                    <a routerLink="{{menu.menu.route}}" routerLinkActive="active">
+                        <bing-icon icon="{{menu.menu.icon}}"></bing-icon>
+                        <span class="accordion-toggle-title">{{menu.menu.name}}</span>
+                    </a>
+                </li>
+            </ul>
+            <bing-accordion-group [closeOthers]="true" *ngIf="!menu.isSingle">
+                <bing-accordion class="left-menu-item" header="{{root.name}}" iconName="{{root.icon}}" *ngFor="let root of menu.menus">
+                    <ul>
+                        <li *ngFor="let children of root.children">
+                            <a routerLink="{{children.route}}" routerLinkActive="active">
+                                <cite>{{children.name}}</cite>
+                                <em>{{children.desc}}</em>
+                            </a>
+                        </li>
+                    </ul>
+                </bing-accordion>
+            </bing-accordion-group>
+        </div>
     </bing-scroll>
 </aside>
 <div class="top-menu">

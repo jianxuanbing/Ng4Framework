@@ -28,6 +28,8 @@ export class DemoThemeComponent implements OnInit{
 
     sendMsg(){
         console.log("嘿嘿嘿");
-        var result=this.http.get("/DropDownList/GetDeliveryCompanyInfo");
+        this.http.get("/DropDownList/GetDeliveryCompanyInfo").then(data=>{
+            console.log(data);
+        });
     }
 }
