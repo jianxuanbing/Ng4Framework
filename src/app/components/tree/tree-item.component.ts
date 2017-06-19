@@ -24,20 +24,19 @@ export class TreeItemComponent implements OnChanges{
     isOpen:boolean;
 
     constructor(){
-        this.isActive='incative';
+        this.isActive='inactive';
     }
 
-    ngOnChanges() {
-        console.log(this.expanded);
+    ngOnChanges() {        
         if(this.expanded){
             this.isActive='active';
             this.isOpen=true;
-        }        
+        }
     }
 
     toggle(event:any){
         event.stopPropagation();
-        const cl=event.targe.parentNode.classList;
+        const cl=event.target.parentNode.classList;
         cl.toggle('open');
         this.isOpen=!this.isOpen;
         this.isActive=this.isOpen?'active':'inactive';

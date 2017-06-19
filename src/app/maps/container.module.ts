@@ -1,3 +1,4 @@
+import { DemoStartModule } from './../containers/demo-start/demo-start.module';
 import { DemoAccordionModule } from './../containers/demo-accordion/demo-accordion.module';
 import { BingNgModule } from './bingNg.module';
 import { DemoThemeModule } from './../containers/demo-theme/demo-theme.module';
@@ -25,6 +26,7 @@ import { NgModule } from '@angular/core';
         DemoTabModule,
         DemoThemeModule,
         DemoAccordionModule,
+        DemoStartModule,               
     ],
     providers:[
     ],

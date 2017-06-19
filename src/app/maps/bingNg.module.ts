@@ -98,6 +98,59 @@ import { BreadcrumbModule } from '../components/breadcrumb/breadcrumb.module';
         ToastModule,
         TooltipModule,
         TreeModule
+    ],
+    exports:[
+        AccordionModule,
+
+        BadgeModule,
+        BreadcrumbModule,
+        ButtonModule,        
+        
+        CalendarModule,
+        CardModule,
+        CheckboxModule,
+        ChipModule,
+        CodeModule,
+
+        DropdownModule,
+
+        GridModule,
+
+        HamburgeModule,
+
+        IconModule,
+        ImageModule,
+        InputtextModule,
+
+        JsonViewModule,
+
+        ListModule,
+        LoadingModule,
+
+        MaskModule,
+        ModalModule,
+
+        PanelModule,
+        PopoverModule,
+        ProgressModule,        
+
+        RadioModule,
+        RippleModule,
+        RangeModule,
+        RatingModule,        
+
+        ShareModule,
+        ScrollModule,
+        SelectModule,
+        ShrinkModule,
+        SpinnerModule,
+        SwitchModule,
+                
+        TabGroupModule,
+        TableModule,
+        ToastModule,
+        TooltipModule,
+        TreeModule
     ]
 })
 export class BingNgModule {}

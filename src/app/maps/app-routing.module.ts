@@ -1,3 +1,4 @@
+import { DemoStartComponent } from './../containers/demo-start/demo-start.component';
 import { DemoAccordionComponent } from './../containers/demo-accordion/demo-accordion.component';
 import { DemoThemeComponent } from './../containers/demo-theme/demo-theme.component';
 import { NgModule } from '@angular/core';
@@ -17,6 +18,7 @@ const childRoutes:Routes=[
     {path:'tab',component:DemoTabComponent},
     {path:'accordion',component:DemoAccordionComponent},
     {path:'theme',component:DemoThemeComponent,data:{title:'主题'}},
+    {path:'getting-started',component:DemoStartComponent},
     {path:'',component:MainComponent}
 ]
 /**

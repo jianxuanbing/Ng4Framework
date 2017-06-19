@@ -1,0 +1,41 @@
+<div class="main-container">
+    <div class="row">
+        <div bGrid="6" class="bing-demo-board">
+            <p>
+                bingNG是一款完全响应式的前端UI框架， 它采用了主流的左右两栏式布局，使用了Html5+CSS3+Angular2(+4)等流行的前端技术， 同时提供了诸多强大的可以重新组合的UI组件，门槛极低，拿来即用。
+            </p>
+            <p>bingNG还很年轻，首个版本发布于2017年5月。</p>
+            <p><b>当前版本</b>： v{{version}}</p>
+            <hr>
+            <h3 class="bing-head-title">项目结构</h3>
+
+            <blockquote>
+                <bing-tree [menus]="menus"></bing-tree>
+            </blockquote>
+        </div>
+
+        <div class="bing-demo-board" fGrid="6">
+            <div class="bing-card-board">
+                <bing-panel header="从GitHub下载">
+                    <bing-code lang="javascript">
+                        git clone http://www.com
+                    </bing-code>
+                </bing-panel>
+            </div>
+            <div class="bing-card-board">
+                <bing-panel header="用NPM安装">
+                    <bing-code lang="javascript">
+                        npm install bingNG
+                    </bing-code>
+                </bing-panel>
+            </div>
+            <div class="bing-card-board">
+                <bing-panel header="用法">
+                    <bing-code lang="javascript">
+                        npm install bingNG
+                    </bing-code>
+                </bing-panel>
+            </div>
+        </div>
+    </div>
+</div>
