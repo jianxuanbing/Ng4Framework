@@ -7,7 +7,7 @@ const commonConfig = require('./webpack.common');
 // webpack plugins
 const DefinePlugin = require('webpack/lib/DefinePlugin');
 const NamedModulesPlugin = require('webpack/lib/NamedModulesPlugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 // webpack constants
 const ENV = process.env.ENV = process.env.NODE_ENV = 'development';
@@ -25,11 +25,11 @@ const proxyApi = 'http://localhost:8098'
 module.exports = function(options) {
     return webpackMerge(commonConfig({ env: ENV }), {
         //metadata: METADATA,
-        devtool: 'cheap-module-source-map',
+        devtool: 'cheap-module-eval-source-map',
         output: {
-            path: helpers.root('dist'),
+            path: helpers.root('dist'), // 出口路径
             publicPath: '/',
-            filename: '[name].bundle.js',
+            filename: '[name].bundle.js', // 出口名称
             sourceMapFilename: '[name].map',
             chunkFilename: '[id].chunk.js',
             library: 'ac_[name]',
@@ -60,11 +60,14 @@ module.exports = function(options) {
                     }
                 }
             }),
-            new ExtractTextPlugin('style.css')
+            // 自动打开浏览器
+            new OpenBrowserPlugin({
+                url: 'http://' + METADATA.host + ':' + METADATA.port
+            }),
         ],
         devServer: {
             port: METADATA.port,
-            host: METADATA.host,
+            host: METADATA.host, // 启动端口号
             // 监视contentBase文件更改，则整个页面重新加载
             watchContentBase: true,
             contentBase: helpers.root('dist'),

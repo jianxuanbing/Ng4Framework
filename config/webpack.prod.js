@@ -44,6 +44,7 @@ module.exports = function(options) {
                     'HMR': METADATA.HMR
                 }
             }),
+            // 压缩JS插件
             new UglifyJsPlugin({
                 beautify: false,
                 mangle: {

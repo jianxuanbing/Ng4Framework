@@ -3,9 +3,9 @@ import { Component, ViewEncapsulation,ViewContainerRef } from '@angular/core';
 
 @Component({
     selector:'app',
-    encapsulation:ViewEncapsulation.None,
+    //encapsulation:ViewEncapsulation.None,
     templateUrl:'./app.component.html',
-    styleUrls:['./app.component.scss','../assets/styles/theme.scss']
+    styleUrls:['./app.component.scss']
 })
 export class AppComponent{
     /**

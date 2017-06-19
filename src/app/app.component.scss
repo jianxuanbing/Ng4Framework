@@ -1,5 +1,5 @@
-@import '../assets/styles/theme/_mixin.scss';
-@import '../assets/styles/theme/_variables.scss';
+@import '../assets/styles/theme/_mixin';
+@import '../assets/styles/theme/_variables';
 @each $theme,
 $color in $theme {
      :host-context(.bing-#{$theme}) /deep/ {

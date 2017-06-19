@@ -11,6 +11,9 @@ const AssetsPlugin = require('assets-webpack-plugin');
 const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
 //const HtmlElementsPlugin = require('./html-elements-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+// 多个提取实例
+const commonCss = new ExtractTextPlugin('stylesheets/common.css');
+const themeCss = new ExtractTextPlugin('stylesheets/theme.css');
 
 // webpack constants
 const HMR = helpers.hasProcessFlag('hot');
@@ -70,20 +73,43 @@ module.exports = function(options) {
                 }, {
                     test: /\.json$/,
                     loader: 'json-loader'
-                }, {
+                },
+                {
                     test: /\.styl$/,
                     loader: 'css-loader!stylus-loader'
-                }, {
+                },
+                {
                     test: /\.css$/,
                     exclude: [helpers.root('src', 'app')],
-                    loader: ExtractTextPlugin.extract({
+                    loader: commonCss.extract({
                         fallbackLoader: 'style-loader',
                         loader: 'css-loader?sourceMap'
                     })
                 },
                 {
                     test: /\.scss$/,
-                    loaders: ['to-string-loader', 'css-loader', 'sass-loader']
+                    include: helpers.root('src/assets'),
+                    loaders: ['to-string-loader'].concat(themeCss.extract({
+                        fallback: 'style-loader',
+                        loader: 'css-loader?sourceMap!sass-loader?sourceMap'
+                    }))
+                },
+                {
+                    test: /\.scss$/,
+                    include: helpers.root('src/app'),
+                    loaders: [
+                        'to-string-loader',
+                        'css-loader?sourceMap',
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                plugins: [
+                                    require('autoprefixer')
+                                ]
+                            }
+                        },
+                        'sass-loader'
+                    ]
                 },
                 {
                     test: /\.html$/,
@@ -92,10 +118,6 @@ module.exports = function(options) {
                 }, {
                     test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
                     loader: 'file-loader?name=assets/[name].[hash].[ext]'
-                }, {
-                    test: /\.css$/,
-                    include: helpers.root('src', 'app'),
-                    loader: 'style-loader!css-loader'
                 }
             ],
         },
@@ -128,14 +150,16 @@ module.exports = function(options) {
                 from: 'src/assets',
                 to: 'assets'
             }]),
-            // Html打包插件
+            // Html打包插件，用于简化HTML文件(index.html)的创建，提供访问bundle的服务
             new HtmlWebpackPlugin({
-                template: 'src/index.html',
+                template: 'src/index.html', //模板
                 chunksSortMode: 'dependency',
                 title: METADATA.title,
                 metadata: METADATA,
-                inject: 'body'
+                inject: 'body' //将script标签插入到body标签中
             }),
+            commonCss,
+            themeCss,
             // 热替换插件--使用Hash时，不能使用热替换插件
             //new webpack.HotModuleReplacementPlugin(),
         ],

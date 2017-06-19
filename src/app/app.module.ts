@@ -9,8 +9,6 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
-require('../assets/styles/theme.scss');
-
 /**
  * 导入模块
  */
