@@ -1,11 +1,11 @@
 {
   "main": {
     "js": "/main.bundle.js",
-    "css": "/stylesheets/theme.fc05cbad193b3e0145c8.css"
+    "css": "/stylesheets/theme.4c0827dad4055eac31c9.css"
   },
   "vendor": {
     "js": "/vendor.bundle.js",
-    "css": "/stylesheets/common.fc05cbad193b3e0145c8.css"
+    "css": "/stylesheets/common.4c0827dad4055eac31c9.css"
   },
   "polyfills": {
     "js": "/polyfills.bundle.js"

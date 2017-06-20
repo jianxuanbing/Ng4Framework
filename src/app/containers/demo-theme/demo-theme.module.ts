@@ -1,3 +1,4 @@
+import { HoverTextModule } from './../../components/hoverText/hover-text.module';
 import { ButtonModule } from './../../components/button/button.module';
 import { DemoThemeComponent } from './demo-theme.component';
 import { GridModule } from './../../components/grid/grid.module';
@@ -10,6 +11,7 @@ import { NgModule } from '@angular/core';
         PanelModule,
         GridModule,
         ButtonModule,
+        HoverTextModule,
     ],
     declarations:[DemoThemeComponent]
 })
