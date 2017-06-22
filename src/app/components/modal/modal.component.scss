@@ -1,5 +1,5 @@
 @import '../../../assets/styles/theme/_variables';
-.bing-modal {
+.bg-modal {
     position: fixed;
     background: #222733;
     overflow: hidden;
@@ -9,18 +9,18 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-.bing-modal .bing-modal-header,
-.bing-modal-footer {
+.bg-modal .bg-modal-header,
+.bg-modal-footer {
     position: relative;
     padding: .5rem .75rem;
     background: rgba(0, 0, 0, 0.1);
 }
 
-.bing-modal-footer {
+.bg-modal-footer {
     text-align: right;
 }
 
-.bing-modal .bing-modal-close {
+.bg-modal .bg-modal-close {
     position: absolute;
     right: 0;
     top: 50%;
@@ -36,24 +36,24 @@
     transform: translate(-50%, -50%);
 }
 
-.bing-modal .bing-modal-close:hover {
+.bg-modal .bg-modal-close:hover {
     background: #1c1d24;
     opacity: 0.5;
 }
 
-.bing-modal .bing-modal-content {
+.bg-modal .bg-modal-content {
     padding: .75rem;
     color: #fff;
 }
 
 @each $theme,
 $color in $theme {
-     :host-context(.bing-#{$theme}) /deep/ {
-        .bing-modal {
+     :host-context(.bg-#{$theme}) /deep/ {
+        .bg-modal {
             background: $color;
         }
     }
-    .bing-modal.bing-#{$theme} {
+    .bg-modal.bg-#{$theme} {
         background: $color !important;
     }
 }

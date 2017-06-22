@@ -1,7 +1,7 @@
 import { Component, OnInit,HostBinding } from '@angular/core';
-import { fadeInUp } from '../../components/common/animations';
+import { fadeInUp } from './../../utils/animations';
 @Component({
-    selector:'bing-main',
+    selector:'bg-main',
     templateUrl:'./main.component.html',
     styleUrls:['./main.component.scss'],
     animations:[fadeInUp]

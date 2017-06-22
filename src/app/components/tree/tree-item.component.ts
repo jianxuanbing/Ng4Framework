@@ -1,7 +1,7 @@
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Component, OnChanges, Input } from '@angular/core';
 @Component({
-    selector:'bing-tree-item',
+    selector:'bg-tree-item',
     templateUrl:'./tree-item.component.html',
     animations:[
         trigger('treeState',[

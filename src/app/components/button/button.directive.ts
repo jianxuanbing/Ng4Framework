@@ -74,7 +74,7 @@ export class ButtonDirective implements OnInit,AfterViewInit{
             }
 
             if(lastChild&&lastChild!==icon){
-                this.renderer2.addClass(icon,'bing-btn-'+this.direction);
+                this.renderer2.addClass(icon,'bg-btn-'+this.direction);
             }
         }
 

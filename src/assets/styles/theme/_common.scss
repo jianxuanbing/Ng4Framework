@@ -492,7 +492,7 @@ input.input {
     background: rgba(242, 244, 248, 0.4);
 }
 
-.bing-drop-cap:first-letter {
+.bg-drop-cap:first-letter {
     color: #c69c6d;
     float: left;
     font-size: 5em;
@@ -538,7 +538,7 @@ input.input {
     margin-bottom: .75rem;
 }
 
-.bing-iscroll-wrapper {
+.bg-iscroll-wrapper {
     position: absolute;
     top: 0;
     left: 0;
@@ -566,12 +566,12 @@ input.input {
     height: 100%;
 }
 
-.bing-highlight {
+.bg-highlight {
     overflow: hidden;
     position: relative;
 }
 
-.bing-highlight:before {
+.bg-highlight:before {
     display: block;
     top: -200%;
     left: -100%;
@@ -592,12 +592,12 @@ input.input {
     position: absolute;
 }
 
-.bing-highlight img {
+.bg-highlight img {
     width: 100%;
     height: 100%;
 }
 
-.bing-highlight:hover:before {
+.bg-highlight:hover:before {
     -webkit-animation: crossed .5s linear;
     -moz-animation: crossed .5s linear;
     -o-animation: crossed .5s linear;
@@ -700,7 +700,7 @@ blockquote {
 
 @each $theme,
 $color in $theme {
-    .bing-#{$theme} blockquote {
+    .bg-#{$theme} blockquote {
         border-color: $color;
     }
 }

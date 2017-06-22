@@ -80,7 +80,7 @@
 
 @each $theme,
 $color in $theme {
-    .range-slider.bing-#{$theme} .range-bar-active {
+    .range-slider.bg-#{$theme} .range-bar-active {
         background: $color;
     }
 }

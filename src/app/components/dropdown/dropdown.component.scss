@@ -1,10 +1,10 @@
 @import '../../../assets/styles/theme/_mixin';
-.bing-dropdown {
+.bg-dropdown {
     position: relative;
     height: 2rem;
 }
 
-.bing-dropdown-menu {
+.bg-dropdown-menu {
     position: fixed;
     top: 0;
     right: 0;
@@ -13,7 +13,7 @@
     z-index: 10000;
 }
 
-.bing-dropdown-menu>ul {
+.bg-dropdown-menu>ul {
     position: absolute;
     opacity: 0;
     transform: scale(0);
@@ -22,31 +22,31 @@
     transition: all .25s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.bing-dropdown-menu>ul.open {
+.bg-dropdown-menu>ul.open {
     opacity: 1;
     transform: scale(1);
 }
 
-.bing-dropdown,
-.bing-dropdown-header,
-:host /deep/ .bing-dropdown-header b-header {
+.bg-dropdown,
+.bg-dropdown-header,
+:host /deep/ .bg-dropdown-header b-header {
     display: inline-flex;
 }
 
-.bing-dropdown-header,
-:host /deep/ .bing-dropdown-header b-header {
+.bg-dropdown-header,
+:host /deep/ .bg-dropdown-header b-header {
     align-items: center;
 }
 
-.bing-dropdown-header {
+.bg-dropdown-header {
     cursor: pointer;
 }
 
-.bing-dropdown .d-caret {
+.bg-dropdown .d-caret {
     padding-left: .2rem;
 }
 
-:host /deep/ .bing-dropdown-header header {
+:host /deep/ .bg-dropdown-header header {
     font-weight: bold;
     font-size: .75rem;
     img {
@@ -57,13 +57,13 @@
     }
 }
 
-.bing-dropdown-menu>ul {
+.bg-dropdown-menu>ul {
     min-width: 160px;
     background: #fff;
     border-radius: 2px 0px 2px 2px;
 }
 
-.bing-dropdown-menu li {
+.bg-dropdown-menu li {
     list-style: none;
     padding: .5rem 2rem .5rem 1rem;
     width: 100%;

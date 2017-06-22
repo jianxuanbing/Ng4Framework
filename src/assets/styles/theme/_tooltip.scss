@@ -1,4 +1,4 @@
-.bing-tooltip {
+.bg-tooltip {
     position: fixed;
     max-width: 12.5rem;
     padding: .5rem;
@@ -9,63 +9,63 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.bing-tooltip:before {
+.bg-tooltip:before {
     content: '';
     position: absolute;
 }
 
-.bing-tooltip.right {
+.bg-tooltip.right {
     margin-left: .4rem;
 }
 
-.bing-tooltip.right:before {
+.bg-tooltip.right:before {
     top: 50%;
     left: -.8rem;
     border: .4rem solid transparent;
     border-right-color: rgba(18, 19, 26, .9);
 }
 
-.bing-tooltip.right:before,
-.bing-tooltip.left:before {
+.bg-tooltip.right:before,
+.bg-tooltip.left:before {
     -webkit-transform: translate(0, -50%);
     -moz-transform: translate(0, -50%);
     transform: translate(0, -50%);
 }
 
-.bing-tooltip.left {
+.bg-tooltip.left {
     margin-left: -.4rem;
 }
 
-.bing-tooltip.left:before {
+.bg-tooltip.left:before {
     top: 50%;
     right: -.8rem;
     border: .4rem solid transparent;
     border-left-color: rgba(18, 19, 26, .9);
 }
 
-.bing-tooltip.top {
+.bg-tooltip.top {
     margin-top: -.4rem;
 }
 
-.bing-tooltip.top:before {
+.bg-tooltip.top:before {
     left: 50%;
     bottom: -.8rem;
     border: .4rem solid transparent;
     border-top-color: rgba(18, 19, 26, .9);
 }
 
-.bing-tooltip.top:before,
-.bing-tooltip.bottom:before {
+.bg-tooltip.top:before,
+.bg-tooltip.bottom:before {
     -webkit-transform: translate(-50%, 0);
     -moz-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
 }
 
-.bing-tooltip.bottom {
+.bg-tooltip.bottom {
     margin-top: .4rem;
 }
 
-.bing-tooltip.bottom:before {
+.bg-tooltip.bottom:before {
     left: 50%;
     top: -.8rem;
     border: .4rem solid transparent;

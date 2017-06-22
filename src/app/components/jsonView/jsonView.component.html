@@ -1,4 +1,4 @@
-<div class="bing-json-view">
+<div class="bg-json-view">
     <a (click)="toggle()">
         <span class="toggler" [ngClass]="{'collapse':isOpen,'expand':!isOpen}" [style.visibility]="hasChildren?'visible':'hidden'"></span>
         <span class="key" *ngIf="key">
@@ -14,6 +14,6 @@
         </span>
     </a>
     <div class="children" *ngIf="hasChildren&&isOpen">
-        <bing-json-view *ngFor="let _key of childrenKeys" [data]="data[_key]" [key]="_key" [level]="level+1" [levelOpen]="levelOpen"></bing-json-view>
+        <bg-json-view *ngFor="let _key of childrenKeys" [data]="data[_key]" [key]="_key" [level]="level+1" [levelOpen]="levelOpen"></bg-json-view>
     </div>
 </div>

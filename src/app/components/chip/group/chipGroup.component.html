@@ -1,4 +1,4 @@
-<div class="bing-chip-group" [ngClass]="chipClass">
-    <bing-chip *ngFor="let chip of chips" [value]="chip.value" [delete]="chip.delete"></bing-chip>
-    <input type="text" *ngIf="placeholder" placeholder="placeholder" (focus)="onFocus()" (blur)="onFocus()" (keyup.enter)="onEnter($event)" />>
+<div class="bg-chip-group" [ngClass]="chipClass">
+    <bg-chip *ngFor="let chip of chips" [value]="chip.value" [delete]="chip.delete"></bg-chip>
+    <input type="text" *ngIf="placeholder" placeholder="placeholder" (focus)="onFocus()" (blur)="onFocus()" (keyup.enter)="onEnter($event)" />
 </div>

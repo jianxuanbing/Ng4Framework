@@ -1,8 +1,8 @@
 import { ShrinkItemComponent } from './shrink-item.component';
-import { DomRenderer } from './../common/dom';
+import { DomRenderer } from './../../utils/dom';
 import { Component, OnInit, AfterViewInit, Input, ViewChild, ElementRef, ViewChildren, QueryList } from '@angular/core';
 @Component({
-    selector:'bing-shrink',
+    selector:'bg-shrink',
     templateUrl:'./shrink.component.html',
     styleUrls:['./shrink.component.scss'],
     providers:[DomRenderer]

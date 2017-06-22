@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 @Component({
-    selector:'bing-image'  ,
+    selector:'bg-image'  ,
     templateUrl:'./image.component.html'
 })
 export class ImageComponent implements OnInit{

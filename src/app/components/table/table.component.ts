@@ -4,7 +4,7 @@ import { Component, OnInit, AfterViewInit, Input, ViewChild, ElementRef, ViewChi
 import { TableHeadComponent } from './head/tableHead.component';
 import { TableBodyComponent } from './body/tableBody.component';
 @Component({
-    selector:'bing-table',
+    selector:'bg-table',
     templateUrl:'./table.component.html',
     styleUrls:['./table.component.scss']
 })
@@ -28,13 +28,13 @@ export class TableComponent implements OnInit,AfterViewInit{
     ngAfterViewInit() {
         const _container=this.container.nativeElement;
         if(this.striped){
-            this.renderer2.addClass(_container,'bing-table-striped');
+            this.renderer2.addClass(_container,'bg-table-striped');
         }
         if(this.border){
-            this.renderer2.addClass(_container,'bing-table-bordered');
+            this.renderer2.addClass(_container,'bg-table-bordered');
         }
         if(this.hover||this.selection){
-            this.renderer2.addClass(_container,'bing-table-hover');
+            this.renderer2.addClass(_container,'bg-table-hover');
         }
     }
     

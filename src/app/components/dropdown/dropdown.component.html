@@ -1,6 +1,6 @@
-<div class="bing-dropdown" #container>
-    <button #btn class="bing-dropdown-header" bButton [color]="color" [class.active]="isOpen" (click)="onMouseClick($event)">
-        <span class="bing-dropdown-header-title" *ngIf="header">{{name}}</span>
+<div class="bg-dropdown" #container>
+    <button #btn class="bg-dropdown-header" bButton [color]="color" [class.active]="isOpen" (click)="onMouseClick($event)">
+        <span class="bg-dropdown-header-title" *ngIf="header">{{name}}</span>
         <ng-content select="b-header"></ng-content>
         <span class="fa fa-caret-down d-caret" *ngIf="caret"></span>
     </button>

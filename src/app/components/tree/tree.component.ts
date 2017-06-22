@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 @Component({
-    selector:'bing-tree',
+    selector:'bg-tree',
     templateUrl:'./tree.component.html',
     styleUrls:['./tree.component.scss']
 })

@@ -1,8 +1,8 @@
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Component, OnInit, Input, ViewChild, ElementRef, Renderer2 } from '@angular/core';
-import { DomRenderer } from '../common/dom';
+import { DomRenderer } from './../../utils/dom';
 @Component({
-    selector:'bing-dropdown',
+    selector:'bg-dropdown',
     templateUrl:'./dropdown.component.html',
     styleUrls:['./dropdown.component.scss'],
     animations:[
@@ -49,7 +49,7 @@ export class DropdownComponent implements OnInit{
         if(!this.isOpen){
             this.isOpen=!this.isOpen;
             this.modal=this.renderer2.createElement('div');
-            this.renderer2.addClass(this.modal,'bing-dropdown-menu');
+            this.renderer2.addClass(this.modal,'bg-dropdown-menu');
             this.renderer2.appendChild(this.modal,this.dropdownMenu.nativeElement);
             const menu=this.modal.querySelector('ul');
             menu.style.display='block';

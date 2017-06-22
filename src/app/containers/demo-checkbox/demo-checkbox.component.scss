@@ -1,0 +1,9 @@
+:host /deep/ {
+    .bg-tab {
+        flex-wrap: wrap;
+    }
+    bg-checkbox {
+        display: flex;
+        margin: 0 .5rem .5rem 0;
+    }
+}

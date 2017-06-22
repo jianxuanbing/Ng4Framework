@@ -1,13 +1,13 @@
 @import '../../../assets/styles/theme/_mixin';
 :host /deep/ {
-    .bing-select {
+    .bg-select {
         position: relative;
         display: inline-block;
         width: 150px;
         height: 30px;
         border-bottom: 1px solid #d9d9d9;
     }
-    .bing-select-input label {
+    .bg-select-input label {
         @include flexbox;
         position: relative;
         width: calc(100% - 25px);
@@ -23,12 +23,12 @@
         -webkit-align-items: center;
         align-items: center;
     }
-    .bing-select-input {
+    .bg-select-input {
         position: relative;
         width: 100%;
         height: 100%;
     }
-    .bing-select-input:before {
+    .bg-select-input:before {
         font-family: FontAwesome;
         content: "\f0dd";
         position: absolute;
@@ -41,7 +41,7 @@
         -moz-transform: translate(0, -50%);
         transform: translate(0, -50%);
     }
-    .bing-select-menu {
+    .bg-select-menu {
         position: absolute;
         top: 0;
         left: 0;
@@ -52,14 +52,14 @@
         overflow: hidden;
         overflow-y: auto;
     }
-    .bing-select-item {
+    .bg-select-item {
         list-style: none;
         cursor: pointer;
     }
-    .bing-select-item:hover {
+    .bg-select-item:hover {
         background: #eee;
     }
-    .bing-select-item-content {
+    .bg-select-item-content {
         @include flexbox;
         padding: 5px 10px;
         white-space: nowrap;
@@ -68,7 +68,7 @@
         -webkit-align-items: center;
         align-items: center;
     }
-    .bing-select-item.bing-select-active {
+    .bg-select-item.bg-select-active {
         background: #eee;
         font-weight: bold;
     }

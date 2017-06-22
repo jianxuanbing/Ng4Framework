@@ -1,9 +1,9 @@
-import { HttpHelper } from './../../utils/HttpHelper';
+import { HttpHelper } from './../../utils/httpHelper';
+import { fadeInUp } from './../../utils/animations';
 import { config } from './../../common/config';
-import { fadeInUp } from './../../components/common/animations';
 import { Component, OnInit, HostBinding, Renderer2 } from '@angular/core';
 @Component({
-    selector:'bing-demo-theme',
+    selector:'bg-demo-theme',
     templateUrl:'./demo-theme.component.html',
     styleUrls:['./demo-theme.component.scss'],
     animations:[fadeInUp],
@@ -21,9 +21,9 @@ export class DemoThemeComponent implements OnInit{
 
     selectTheme(value:string){            
         const className=document.body.className;
-        const theme=/bing-theme-2/.test(className);
-        document.body.className=theme?'bing-theme-2':'';
-        this.renderer2.addClass(document.body,`bing-${value}`);
+        const theme=/bg-theme-2/.test(className);
+        document.body.className=theme?'bg-theme-2':'';
+        this.renderer2.addClass(document.body,`bg-${value}`);
     }
 
     sendMsg(){

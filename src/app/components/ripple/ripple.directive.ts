@@ -1,4 +1,4 @@
-import { DomRenderer } from './../common/dom';
+import { DomRenderer } from './../../utils/dom';
 import { OnInit, AfterViewInit, HostListener, Directive, ElementRef } from '@angular/core';
 
 @Directive({

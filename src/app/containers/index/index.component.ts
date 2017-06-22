@@ -1,5 +1,5 @@
+import { DomRenderer } from './../../utils/dom';
 import { config } from './../../common/config';
-import { DomRenderer } from './../../components/common/dom';
 import { Component, OnInit, AfterViewInit, OnDestroy, HostListener, Renderer2 } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import {ActivatedRoute} from '@angular/router';
@@ -8,7 +8,7 @@ import {Title} from '@angular/platform-browser';
 import {menuList} from './index';
 
 @Component({
-    selector:'bing-root',
+    selector:'bg-root',
     templateUrl:'./index.component.html',
     styleUrls:['./index.component.scss'],
     providers:[DomRenderer]
@@ -80,9 +80,9 @@ export class IndexComponent implements OnInit,AfterViewInit,OnDestroy{
     toggleAside(){
         this.isMini=!this.isMini;
         if(this.isMini){
-            this.renderer2.addClass(document.body,'bing-mini');            
+            this.renderer2.addClass(document.body,'bg-mini');            
         }else{
-            this.renderer2.removeClass(document.body,'bing-mini');
+            this.renderer2.removeClass(document.body,'bg-mini');
         }
     }
 
@@ -93,7 +93,7 @@ export class IndexComponent implements OnInit,AfterViewInit,OnDestroy{
     onActivate(component:any){
         let title=component.pageTitle;
         if(!title){
-            title='BingNG';
+            title='bgNG';
         }
         this.pageTitle.setTitle(title);
     }

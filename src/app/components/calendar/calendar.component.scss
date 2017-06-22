@@ -1,5 +1,5 @@
 @import '../../../assets/styles/theme/_mixin';
-:host /deep/ .bing-calendar {
+:host /deep/ .bg-calendar {
     background: #009688;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
     display: inline-block;
@@ -114,6 +114,6 @@
     font-size: 1.5rem;
 }
 
-:host /deep/ .bing-calendar {
+:host /deep/ .bg-calendar {
     box-shadow: 0 0.0625em 0.1875em 0 rgba(0, 0, 0, 0.1), 0 0.5em 0 -0.25em #f2f2f2, 0 0.5em 0.1875em -0.25em rgba(0, 0, 0, 0.1), 0 1em 0 -0.5em #e5e5e5, 0 1em 0.1875em -0.5em rgba(0, 0, 0, 0.1);
 }

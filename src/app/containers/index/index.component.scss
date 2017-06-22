@@ -93,9 +93,9 @@
         @include flexbox;
         height: 100%;
         justify-content: space-between;
-        .bing-dropdown,
-        .bing-dropdown-header,
-        .bing-dropdown-header b-header {
+        .bg-dropdown,
+        .bg-dropdown-header,
+        .bg-dropdown-header b-header {
             display: flex;
             height: 100%;
             margin: 0;
@@ -139,12 +139,12 @@
                 border-radius: 50%;
             }
             li,
-            bing-dropdown,
-            .bing-dropdown,
-            .bing-dropdown .dropdown {
+            bg-dropdown,
+            .bg-dropdown,
+            .bg-dropdown .dropdown {
                 height: 100%;
             }
-            .bing-dropdown-header {
+            .bg-dropdown-header {
                 position: relative;
                 outline: none;
                 background: transparent;
@@ -273,7 +273,7 @@
             @include position(absolute, 0, 0, 0, 0);
         }
     }
-    .bing-table-cell-inner {
+    .bg-table-cell-inner {
         font-size: .7rem;
     }
     [class^=col-] {
@@ -287,14 +287,14 @@
         z-index: 100;
         transition: opacity .3s;
     }
-    .bing-code {
+    .bg-code {
         position: relative;
         code {
             max-height: 22.5rem;
             overflow-y: auto;
         }
     }
-    .bing-tab:hover .code-clone {
+    .bg-tab:hover .code-clone {
         opacity: .7;
         &:hover {
             opacity: 1;
@@ -317,13 +317,13 @@
     [ng-reflect-lang="CSS"]:after {
         content: "CSS";
     }
-    .bing-demo-board,
-    .bing-card-board {
+    .bg-demo-board,
+    .bg-card-board {
         position: relative;
     }
-    .bing-card-board {
+    .bg-card-board {
         margin-bottom: 1rem;
-        &>h3.bing-toolbar {
+        &>h3.bg-toolbar {
             margin: 0;
             position: absolute;
             top: .65rem;
@@ -333,28 +333,28 @@
             color: #333;
         }
     }
-    .bing-demo-row {
+    .bg-demo-row {
         margin-top: 1rem;
         &>p {
             margin-bottom: 1rem;
         }
     }
-    .bing-ul-padding {
+    .bg-ul-padding {
         -webkit-padding-start: 1.5rem;
         -moz-padding-start: 1.5rem;
     }
-    .bing-demo-board p {
+    .bg-demo-board p {
         font-size: .7rem;
         line-height: 1.2rem;
     }
-    h2.bing-head-title {
+    h2.bg-head-title {
         font-weight: 600;
         font-size: 1rem;
     }
-    h3.bing-title {
+    h3.bg-title {
         font-weight: 500;
     }
-    h3.bing-head-title {
+    h3.bg-head-title {
         color: $defaultFontColor;
     }
     hr {
@@ -372,7 +372,7 @@
     .main-container .accordion-toggle {
         background: $default;
     }
-    .toggle-btn bing-hamburge {
+    .toggle-btn bg-hamburge {
         display: inline-flex;
         width: 100%;
         height: 100%;
@@ -416,7 +416,7 @@
             display: flex;
             margin: .5rem 0;
             align-items: center;
-            bing-icon {
+            bg-icon {
                 position: absolute;
                 left: 0;
                 top: 0;
@@ -494,7 +494,7 @@
             left: 0;
         }
     }
-     :host-context(.bing-mini) {
+     :host-context(.bg-mini) {
         .left-menu,
         .aside-header,
         .main-layout-container {
@@ -534,11 +534,11 @@
     }
 }
 
-.bing-theme-list {
+.bg-theme-list {
     @include flexbox;
     width: 6rem;
     flex-wrap: wrap;
-    .bing-theme-option {
+    .bg-theme-option {
         list-style: none;
         width: 33.3333%;
         padding: .5rem .25rem;
@@ -555,5 +555,32 @@
             width: 1rem;
             height: 1rem;
         }
+    }
+}
+
+:host /deep/ {
+    .site-navbar {
+        z-index: 2000;
+        background-color: $default;
+    }
+    .navbar-fixed-bottom,
+    .navbar-fixed-top {
+        width: 100%;
+        position: fixed;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    .navbar {
+        border: none;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
+        min-height: 60px;
+        margin-bottom: 22px;
+    }
+    .navbar-fixed-top {
+        top: 0;
+    }
+    .navbar-header {
+        width: 220px;
     }
 }

@@ -2,38 +2,38 @@
 @import '../assets/styles/theme/_variables';
 @each $theme,
 $color in $theme {
-     :host-context(.bing-#{$theme}) /deep/ {
-        .bing-theme-setting,
+     :host-context(.bg-#{$theme}) /deep/ {
+        .bg-theme-setting,
         .theme-setting {
             background: $color;
         }
-        h3.bing-head-title {
+        h3.bg-head-title {
             color: $color !important;
         }
         .main-container .accordion-toggle {
             color: #fff !important;
             background: $color;
         }
-        .bing-tab-group .bing-tab-nav.active span {
+        .bg-tab-group .bg-tab-nav.active span {
             color: $color;
             &:after {
                 background: $color;
             }
         }
     }
-     :host-context(.bing-#{$theme}:not(.bing-theme-2)) /deep/ {
+     :host-context(.bg-#{$theme}:not(.bg-theme-2)) /deep/ {
         .left-menu,
         .aside-header {
             background: $color;
         }
     }
-     :host-context(.bing-theme-2) /deep/ {
+     :host-context(.bg-theme-2) /deep/ {
         .top-menu,
         .aside-header {
             background: $color !important;
         }
     }
-     :host-context(.bing-theme-2.bing-#{$theme}) /deep/ {
+     :host-context(.bg-theme-2.bg-#{$theme}) /deep/ {
         .top-menu,
         .aside-header,
         .ripple {
@@ -42,7 +42,7 @@ $color in $theme {
     }
 }
 
-:host-context(.bing-theme-2) /deep/ {
+:host-context(.bg-theme-2) /deep/ {
     .left-menu {
         background: #fff !important;
         box-shadow: 3px 0 6px rgba(0, 0, 0, 0.24);
@@ -75,7 +75,7 @@ $color in $theme {
             color: #fff !important;
         }
     }
-    .bing-scroll-thumb {
+    .bg-scroll-thumb {
         background: rgba(0, 0, 0, 0.298039);
     }
     .top-menu,
@@ -86,11 +86,11 @@ $color in $theme {
     .aside-header li a {
         color: #fff;
     }
-    .bing-theme-setting {
+    .bg-theme-setting {
         box-shadow: 0 0 .5rem #fff;
     }
     .navbar-header .navbar-header-right {
-        .bing-dropdown-header {
+        .bg-dropdown-header {
             &.active,
             &:active,
             &:hover {
@@ -109,7 +109,7 @@ $color in $theme {
     }
 }
 
-:host-context(.bing-mini) /deep/ {
+:host-context(.bg-mini) /deep/ {
     .main-layout-container {
         left: $leftMenuWidthOfMini;
     }
@@ -137,7 +137,7 @@ $color in $theme {
     }
 }
 
-:host-context(.bing-mini.bing-theme-2) /deep/ {
+:host-context(.bg-mini.bg-theme-2) /deep/ {
     .main-layout-container {
         left: 0 !important;
     }

@@ -1,22 +1,22 @@
 @import '../../../assets/styles/theme/_variables';
-.bing-checkbox,
-.bing-checkbox-inner,
-.bing-checkbox-ins {
+.bg-checkbox,
+.bg-checkbox-inner,
+.bg-checkbox-ins {
     display: flex;
     cursor: pointer;
     align-items: center;
 }
 
-.bing-sr-only .bing-checkbox-title {
+.bg-sr-only .bg-checkbox-title {
     display: none;
 }
 
-.bing-checkbox-inner input {
+.bg-checkbox-inner input {
     -webkit-appearance: none;
     opacity: 0;
 }
 
-.bing-checkbox-ins {
+.bg-checkbox-ins {
     position: relative;
     width: 1rem;
     height: 1rem;
@@ -24,7 +24,7 @@
     background: rgba(0, 0, 0, 0.26);
 }
 
-.bing-checkbox-ins:before {
+.bg-checkbox-ins:before {
     content: "";
     position: absolute;
     top: 0;
@@ -34,7 +34,7 @@
     border-radius: 2px;
 }
 
-.bing-checkbox-ins {
+.bg-checkbox-ins {
     &:before,
     &:after {
         transform: scale(0);
@@ -42,7 +42,7 @@
     }
 }
 
-.bing-checkbox-ins::after {
+.bg-checkbox-ins::after {
     content: "";
     width: 6px;
     height: 13px;
@@ -57,33 +57,33 @@
     ;
 }
 
-.bing-checkbox-inner>input:checked+.bing-checkbox-ins::after {
+.bg-checkbox-inner>input:checked+.bg-checkbox-ins::after {
     opacity: 1;
     transform: rotate(45deg) scale3D(1, 1, 1);
     ;
 }
 
-.bing-checkbox-inner>input:checked+.bing-checkbox-ins:before {
+.bg-checkbox-inner>input:checked+.bg-checkbox-ins:before {
     background: $theme-green;
     transform: scale(1);
 }
 
-.bing-checkbox-inner>input:disabled+.bing-checkbox-ins {
+.bg-checkbox-inner>input:disabled+.bg-checkbox-ins {
     opacity: .8;
 }
 
-.bing-checkbox-inner>input:disabled+.bing-checkbox-ins:before {
+.bg-checkbox-inner>input:disabled+.bg-checkbox-ins:before {
     background: transparent !important;
 }
 
-.bing-checkbox-inner {
+.bg-checkbox-inner {
     padding-right: .3rem;
 }
 
 @each $theme,
 $color in $theme {
-    .bing-checkbox.bing-#{$theme} {
-        .bing-checkbox-inner>input:checked+.bing-checkbox-ins:before {
+    .bg-checkbox.bg-#{$theme} {
+        .bg-checkbox-inner>input:checked+.bg-checkbox-ins:before {
             background: $color;
         }
     }

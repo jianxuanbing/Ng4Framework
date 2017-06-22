@@ -1,6 +1,6 @@
 import { Component, AfterViewInit, Input, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 @Component({
-    selector:'bing-avatar',
+    selector:'bg-avatar',
     templateUrl:'./list-avatar.component.html'
 })
 export class ListAvatarComponent implements AfterViewInit{
@@ -10,7 +10,7 @@ export class ListAvatarComponent implements AfterViewInit{
 
     ngAfterViewInit() {
         if(this.large){
-            this.renderer2.addClass(this.avatar.nativeElement,'bing-avatar-large');
+            this.renderer2.addClass(this.avatar.nativeElement,'bg-avatar-large');
         }
     }
 }

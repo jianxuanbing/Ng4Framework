@@ -1,7 +1,7 @@
 @import '../../../assets/styles/theme/_variables';
-.bing-radio,
-.bing-radio-inner,
-.bing-radio-ins {
+.bg-radio,
+.bg-radio-inner,
+.bg-radio-ins {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -12,21 +12,21 @@
     align-items: center;
 }
 
-.bing-radio-inner {
+.bg-radio-inner {
     padding-right: 6px;
 }
 
-.bing-radio-inner input {
+.bg-radio-inner input {
     -webkit-appearance: none;
     opacity: 0;
 }
 
-.bing-radio {
+.bg-radio {
     margin-bottom: .5rem;
 }
 
-.bing-radio-ins,
-.bing-radio-ins::after {
+.bg-radio-ins,
+.bg-radio-ins::after {
     position: relative;
     width: 1rem;
     height: 1rem;
@@ -37,8 +37,8 @@
     transition: all .4s cubic-bezier(.25, .8, .25, 1);
 }
 
-.bing-radio-ins::before,
-.bing-radio-ins::after {
+.bg-radio-ins::before,
+.bg-radio-ins::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -47,7 +47,7 @@
     border-radius: 50%;
 }
 
-.bing-radio-ins::before {
+.bg-radio-ins::before {
     width: .7rem;
     height: .7rem;
     -webkit-transform: translate(-50%, -50%);
@@ -55,7 +55,7 @@
     transform: translate(-50%, -50%);
 }
 
-.bing-radio-ins::after {
+.bg-radio-ins::after {
     width: .35rem;
     height: .35rem;
     -webkit-transform: translate(-50%, -50%) scale(0);
@@ -66,31 +66,31 @@
     transition: transform .25s;
 }
 
-.bing-radio-ins::after,
-.bing-radio-inner>input:checked+.bing-radio-ins {
+.bg-radio-ins::after,
+.bg-radio-inner>input:checked+.bg-radio-ins {
     background: $theme-green;
 }
 
-.bing-radio-inner>input:checked+.bing-radio-ins::after {
+.bg-radio-inner>input:checked+.bg-radio-ins::after {
     -webkit-transform: translate(-50%, -50%) scale(1);
     -moz-transform: translate(-50%, -50%) scale(1);
     transform: translate(-50%, -50%) scale(1);
 }
 
-.bing-radio-title {
+.bg-radio-title {
     padding-left: .3rem;
 }
 
-.bing-radio-inner>input:disabled+.bing-radio-ins,
-.bing-radio-inner>input:disabled+.bing-radio-ins:after {
+.bg-radio-inner>input:disabled+.bg-radio-ins,
+.bg-radio-inner>input:disabled+.bg-radio-ins:after {
     background: rgba(0, 0, 0, 0.15) !important;
 }
 
 @each $theme,
 $color in $theme {
-    .bing-radio.bing-#{$theme} {
-        .bing-radio-ins::after,
-        .bing-radio-inner>input:checked+.bing-radio-ins {
+    .bg-radio.bg-#{$theme} {
+        .bg-radio-ins::after,
+        .bg-radio-inner>input:checked+.bg-radio-ins {
             background: $color;
         }
     }

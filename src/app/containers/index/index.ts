@@ -204,6 +204,11 @@ export const menuList =
                         name:"树形菜单",
                         desc:"Tree",
                         route:"tree"
+                    },
+                    {
+                        name:"Json视图",
+                        desc:"JsonView",
+                        route:"json-view"
                     }
                 ]
             },

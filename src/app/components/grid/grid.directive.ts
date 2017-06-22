@@ -1,5 +1,5 @@
+import { DomRenderer } from './../../utils/dom';
 import { Directive, AfterViewInit, Input, ElementRef } from '@angular/core';
-import { DomRenderer } from '../common/dom';
 @Directive({
     selector:'[bGrid]',
     providers:[DomRenderer]

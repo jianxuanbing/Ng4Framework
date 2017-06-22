@@ -1,0 +1,72 @@
+<div class="main-container">
+    <div class="row">
+        <div bGrid="6" class="bg-demo-board">
+            <p>
+                徽章是包含数字或文字的简单组件。
+            </p>
+            <hr>
+            <h3 class="bg-head-title">API 选项</h3>
+
+            <div class="bg-demo-row">
+                <h3 class="bg-title">bg-badge</h3>
+                <p>单个小徽章。</p>
+                <bg-table>
+                    <bg-table-header>
+                        <bg-table-row>
+                            <bg-table-head>属性</bg-table-head>
+                            <bg-table-head>类型</bg-table-head>
+                            <bg-table-head>描述</bg-table-head>
+                        </bg-table-row>
+                    </bg-table-header>
+
+                    <bg-table-body>
+                        <bg-table-row>
+                            <bg-table-cell>up</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>Boolean</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>是否显示在右上角，默认为false</bg-table-cell>
+                        </bg-table-row>
+                    </bg-table-body>
+                </bg-table>
+            </div>
+        </div>
+
+        <div class="bg-demo-board" bGrid="6">
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Default</h3>
+                <bg-tab-group direction="right">
+                    <bg-tab header="PREVIEW">
+                        <button bButton>
+              小徽章
+              <bg-badge content="9" [up]="true"></bg-badge>
+            </button>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;button fButton&gt; 小徽章 &lt;bg-badge content="9"&gt;&lt;/bg-badge&gt; &lt;/button&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Default</h3>
+                <bg-tab-group direction="right">
+                    <bg-tab header="PREVIEW">
+                        <a>
+                            <bg-icon icon="bell"></bg-icon>
+                            <bg-badge content="1" [up]="true"></bg-badge>
+                        </a>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;a&gt; &lt;bg-icon icon="bell"&gt;&lt;/bg-icon&gt; &lt;bg-badge content="1" [up]="true"&gt;&lt;/bg-badge&gt; &lt;/a&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+        </div>
+    </div>
+
+</div>

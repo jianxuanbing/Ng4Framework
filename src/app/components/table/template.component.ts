@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ViewContainerRef, EmbeddedViewRef } from '@angular/core';
 @Component({
-    selector:'bing-template',
+    selector:'bg-template',
     template:''
 })
 export class TemplateComponent implements OnInit{

@@ -1,7 +1,7 @@
-import { fadeInUp } from './../../components/common/animations';
+import { fadeInUp } from './../../utils/animations';
 import { Component, OnInit, HostBinding } from '@angular/core';
 @Component({
-    selector:'bing-demo-accordion',
+    selector:'bg-demo-accordion',
     templateUrl:'./demo-accordion.component.html',
     styleUrls:['./demo-accordion.component.scss'],
     animations:[fadeInUp]

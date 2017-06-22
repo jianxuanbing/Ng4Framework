@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 @Component({
-    selector:'bing-breadcrumb',
+    selector:'bg-breadcrumb',
     templateUrl:'./breadcrumb.component.html',
     styleUrls:['./breadcrumb.component.scss']
 })

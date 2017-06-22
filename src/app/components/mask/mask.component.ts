@@ -1,7 +1,8 @@
-import { fadeIn } from './../common/animations';
+import { fadeIn } from './../../utils/animations';
+
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 @Component({
-    selector:'bing-mask',
+    selector:'bg-mask',
     templateUrl:'./mask.component.html',
     styleUrls:['./mask.component.scss'],
     animations:[fadeIn]

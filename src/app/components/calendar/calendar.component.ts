@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 @Component({
-    selector:'bing-calendar',
+    selector:'bg-calendar',
     templateUrl:'./calendar.component.html',
     styleUrls:['./calendar.component.scss']
 })

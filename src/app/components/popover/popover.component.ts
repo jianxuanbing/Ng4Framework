@@ -1,9 +1,9 @@
 import { style } from '@angular/animations';
-import { DomRenderer } from './../common/dom';
-import { fadeInUp } from './../common/animations';
+import { DomRenderer } from './../../utils/dom';
+import { fadeInUp } from './../../utils/animations';
 import { Component, OnInit, Input, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 @Component({
-    selector:'bing-popover',
+    selector:'bg-popover',
     templateUrl:'./popover.component.html',
     styleUrls:['./popover.component.scss'],
     animations:[fadeInUp]
@@ -34,9 +34,9 @@ export class PopoverComponent implements OnInit{
         if(!this.isOpen){
             this.isOpen=!this.isOpen;
             this.modal=this.renderer2.createElement('div');
-            this.renderer2.addClass(this.modal,'bing-popover-menu');
+            this.renderer2.addClass(this.modal,'bg-popover-menu');
             this.renderer2.appendChild(this.modal,this.popoverMenu.nativeElement);
-            const menu=this.modal.querySelector('.bing-popover-content');
+            const menu=this.modal.querySelector('.bg-popover-content');
             menu.style.display='block';
             this.renderer2.removeClass(menu,'open');
             const rect=this.domRenderer.getRect(this.button.nativeElement);

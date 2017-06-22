@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit, Input, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 @Component({
-    selector:'bing-list',
+    selector:'bg-list',
     templateUrl:'./list.component.html',
     styleUrls:['./list.component.scss']
 })
@@ -16,10 +16,10 @@ export class ListComponent implements OnInit,AfterViewInit{
     ngAfterViewInit() {
         const list=this.list.nativeElement;
         if(this.hover){
-            this.renderer2.addClass(list,'bing-list-hover');
+            this.renderer2.addClass(list,'bg-list-hover');
         }
         if(this.line){
-            this.renderer2.addClass(list,'bing-list-line');
+            this.renderer2.addClass(list,'bg-list-line');
         }
     }
 }

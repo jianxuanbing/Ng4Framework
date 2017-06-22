@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit, Input, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 import { HighlightJsService } from 'angular2-highlight-js';
 @Component({
-    selector:'bing-code',
+    selector:'bg-code',
     templateUrl:'./code.component.html'
 })
 export class CodeComponent implements OnInit,AfterViewInit{

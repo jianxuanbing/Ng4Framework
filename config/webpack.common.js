@@ -58,6 +58,7 @@ module.exports = function(options) {
                 'src': path.resolve(__dirname, '../src'),
                 'app': path.resolve(__dirname, '../src/app'),
                 'data': path.resolve(__dirname, '../src/data'),
+                'assets': path.resolve(__dirname, '../src/assets'),
             }
         },
         /**
@@ -117,9 +118,14 @@ module.exports = function(options) {
                     test: /\.html$/,
                     loader: 'raw-loader',
                     exclude: [helpers.root('src/index.html')]
-                }, {
-                    test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
+                },
+                {
+                    test: /\.(svg|woff|woff2|ttf|eot)$/,
                     loader: 'file-loader?name=assets/[name].[hash].[ext]'
+                },
+                {
+                    test: /\.(png|jpe?g|gif|ico)$/,
+                    loader: 'url-loader?limit=8192'
                 }
             ],
         },

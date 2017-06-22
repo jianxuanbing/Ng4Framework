@@ -1,7 +1,7 @@
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Component, OnInit, Input, ViewChild, ElementRef, Output, EventEmitter, Renderer2 } from '@angular/core';
 @Component({
-    selector:'bing-modal',
+    selector:'bg-modal',
     templateUrl:'./modal.component.html',
     styleUrls:['./modal.component.scss'],
     animations:[
@@ -68,7 +68,7 @@ export class ModalComponent implements OnInit{
     addOverlay(){
         if(!this.mask){
             this.mask=document.createElement('div');
-            this.mask.className='bing-modal-mask';
+            this.mask.className='bg-modal-mask';
             this.mask.style.cssText='position: fixed;top:0;left:0;width:100%;height:100%;opacity:.5;background:#000;';
             this.mask.style.zIndex=(parseInt(this.modal.style.zIndex,10)-1)+'';
             this.maskClickListener=this.rendere2.listen(this.mask,'click',(event:any)=>{
@@ -81,7 +81,7 @@ export class ModalComponent implements OnInit{
     center(){
         this.modal=this.modalViewChild.nativeElement;
         this.modal.style.zIndex='10002';
-        this.modal.classList.add('bing-'+this.modalColor);
+        this.modal.classList.add('bg-'+this.modalColor);
         const win={
             width:window.innerWidth,
             height:window.innerHeight

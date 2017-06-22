@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 @Component({
-    selector:'bing-inputtext',
+    selector:'bg-inputtext',
     templateUrl:'./inputtext.component.html',
     styleUrls:['./inputtext.component.scss']
 })

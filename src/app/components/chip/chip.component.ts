@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit, OnDestroy, Input, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 import { ChipGroupComponent } from './group/chipGroup.component';
 @Component({
-    selector:'bing-chip',
+    selector:'bg-chip',
     templateUrl:'./chip.component.html'
 })
 export class ChipComponent implements OnInit,AfterViewInit,OnDestroy{
@@ -22,9 +22,9 @@ export class ChipComponent implements OnInit,AfterViewInit,OnDestroy{
 
     ngAfterViewInit() {
         if(this.delete){
-            this.renderer2.addClass(this.container.nativeElement,'bing-chip-delete');
+            this.renderer2.addClass(this.container.nativeElement,'bg-chip-delete');
         }else{
-            this.renderer2.removeClass(this.container.nativeElement,'bing-chip-delete');
+            this.renderer2.removeClass(this.container.nativeElement,'bg-chip-delete');
         }
     }
 

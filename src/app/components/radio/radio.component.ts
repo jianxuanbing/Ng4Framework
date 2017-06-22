@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit, Input, Output, EventEmitter, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 @Component({
-    selector:'bing-radio',
+    selector:'bg-radio',
     templateUrl:'./radio.component.html',
     styleUrls:['./radio.component.scss']
 })
@@ -20,7 +20,7 @@ export class RadioComponent implements OnInit,AfterViewInit{
 
     ngAfterViewInit() {
         if(this.color){
-            this.renderer2.addClass(this.container.nativeElement,'bing-'+this.color);
+            this.renderer2.addClass(this.container.nativeElement,'bg-'+this.color);
         }
     }
 

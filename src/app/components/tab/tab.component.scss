@@ -4,40 +4,40 @@ $theme: theme-line,
 theme-block;
 @each $type in $theme {
     @if $type=='theme-block' {
-         :host /deep/ .bing-tab-group.#{$type} {
-            ul.bing-tab-navs {
+         :host /deep/ .bg-tab-group.#{$type} {
+            ul.bg-tab-navs {
                 background: $default;
                 border: none;
                 li span {
                     color: #fff;
                 }
             }
-            .bing-tab-nav.active span {
+            .bg-tab-nav.active span {
                 background: #fff;
                 color: #3949ab;
             }
-            .bing-tab-nav span:after {
+            .bg-tab-nav span:after {
                 height: 0;
             }
         }
     }
     @else {
-         :host /deep/ .bing-tab-group {
-            ul.bing-tab-navs {
+         :host /deep/ .bg-tab-group {
+            ul.bg-tab-navs {
                 background: #fff;
                 border-bottom: 1px solid #d9d9d9;
                 li span {
                     color: #333;
                 }
             }
-            .bing-tab-nav.active span {
+            .bg-tab-nav.active span {
                 color: $default;
                 font-weight: bold;
                 &:after {
                     transform: scale(1);
                 }
             }
-            .bing-tab-nav span:after {
+            .bg-tab-nav span:after {
                 position: absolute;
                 bottom: -1px;
                 left: 0;
@@ -52,22 +52,22 @@ theme-block;
     }
 }
 
-:host /deep/ .bing-tab-group {
+:host /deep/ .bg-tab-group {
     @include boxShadow;
-    ul.bing-tab-navs {
+    ul.bg-tab-navs {
         @include flexbox;
         padding: .2rem .2rem 0;
         margin: 0;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
     }
-    &.bing-tab-right>bing-tab-nav>ul.bing-tab-navs {
+    &.bg-tab-right>bg-tab-nav>ul.bg-tab-navs {
         justify-content: flex-end
     }
-    &.bing-tab-center>bing-tab-nav>ul.bing-tab-navs {
+    &.bg-tab-center>bg-tab-nav>ul.bg-tab-navs {
         justify-content: center
     }
-    ul.bing-tab-navs {
+    ul.bg-tab-navs {
         &:after {
             display: table;
             content: '';
@@ -87,7 +87,7 @@ theme-block;
     }
 }
 
-:host /deep/ .bing-tab-box {
+:host /deep/ .bg-tab-box {
     position: relative;
     overflow: hidden;
     &:after {
@@ -95,12 +95,12 @@ theme-block;
         content: '';
         clear: both;
     }
-    bing-tab {
+    bg-tab {
         width: 100%;
         flex-shrink: 0;
         border-top: 0;
     }
-    .bing-tab {
+    .bg-tab {
         width: 100%;
         background: #fff;
         display: none;

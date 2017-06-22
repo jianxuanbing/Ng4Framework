@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit, Input, Output, EventEmitter, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 @Component({
-    selector:'bing-checkbox',
+    selector:'bg-checkbox',
     templateUrl:'./checkbox.component.html',
     styleUrls:['./checkbox.component.scss']
 })
@@ -24,7 +24,7 @@ export class CheckboxComponent implements OnInit,AfterViewInit{
 
     ngAfterViewInit() {
         if(this.color){
-            this.renderer2.addClass(this.container.nativeElement,'bing-'+this.color);
+            this.renderer2.addClass(this.container.nativeElement,'bg-'+this.color);
         }
     }
 

@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit, Input, ContentChild, TemplateRef, ElementRef } from '@angular/core';
 import { TableComponent } from '../table.component';
 @Component({
-    selector:'bing-table-head',
+    selector:'bg-table-head',
     template:'<ng-content></ng-content>'
 })
 export class TableHeadComponent implements OnInit,AfterViewInit{

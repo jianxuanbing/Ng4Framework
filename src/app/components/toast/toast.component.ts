@@ -1,7 +1,7 @@
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Component, OnInit, AfterViewInit, Input, ElementRef } from '@angular/core';
 @Component({
-    selector:'bing-toast',
+    selector:'bg-toast',
     templateUrl:'./toast.component.html',
     styleUrls:['./toast.component.scss'],
     animations:[

@@ -1,4 +1,4 @@
-.bing-badge {
+.bg-badge {
     display: inline-block;
     padding: 2px 3px;
     font-size: .5rem;
@@ -7,7 +7,7 @@
     background-color: #f44336;
     color: #fff;
     margin-left: 3px;
-    &.bing-badge-up {
+    &.bg-badge-up {
         position: absolute;
         right: -3px;
         top: -3px;
@@ -15,38 +15,38 @@
     }
 }
 
-.bing-depth {
+.bg-depth {
     box-shadow: 0 0 25px 0px rgba(0, 0, 0, 0.22);
 }
 
-.bing-depth-top-left {
+.bg-depth-top-left {
     box-shadow: -10px -10px 25px 0px rgba(0, 0, 0, 0.22);
 }
 
-.bing-depth-top-right {
+.bg-depth-top-right {
     box-shadow: 10px -10px 25px 0px rgba(0, 0, 0, 0.22);
 }
 
-.bing-depth-bottom-right {
+.bg-depth-bottom-right {
     box-shadow: 10px 10px 25px 0px rgba(0, 0, 0, 0.22);
 }
 
-.bing-depth-bottom-left {
+.bg-depth-bottom-left {
     box-shadow: -10px 10px 25px 0px rgba(0, 0, 0, 0.22);
 }
 
-.bing-depth-top {
+.bg-depth-top {
     box-shadow: 0 -15px 10px -10px rgba(0, 0, 0, .22);
 }
 
-.bing-depth-right {
+.bg-depth-right {
     box-shadow: 15px 0 10px -10px rgba(0, 0, 0, .22);
 }
 
-.bing-depth-bottom {
+.bg-depth-bottom {
     box-shadow: 0 15px 10px -10px rgba(0, 0, 0, .22);
 }
 
-.bing-depth-left {
+.bg-depth-left {
     box-shadow: -15px 0 10px -10px rgba(0, 0, 0, .22);
 }

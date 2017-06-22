@@ -1,4 +1,4 @@
-import { DomRenderer } from './../common/dom';
+import { DomRenderer } from './../../utils/dom';
 import { Directive, OnInit, AfterViewInit, Input, ElementRef, Renderer2, HostListener } from '@angular/core';
 @Directive({
     selector:'[bTooltip]',
@@ -36,7 +36,7 @@ export class TooltipDirective implements OnInit,AfterViewInit{
         if(!this.tooltip){
             this.tooltip=document.createElement('div');
             this.tooltip.innerHTML=this.text;
-            this.tooltip.className='bing-tooltip';
+            this.tooltip.className='bg-tooltip';
             this.tooltip.style.opacity='0';
             this.renderer2.appendChild(document.body,this.tooltip);
             let top=0;

@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit, Input, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 @Component({
-    selector:'bing-icon',
+    selector:'bg-icon',
     templateUrl:'./icon.component.html',
     styleUrls:['./icon.component.scss']
 })

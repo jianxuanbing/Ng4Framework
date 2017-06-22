@@ -1,19 +1,19 @@
-<div class="bing-table" #container>
+<div class="bg-table" #container>
     <table>
         <thead>
             <tr>
-                <th class="bing-table-head" *ngIf="selection">
-                    <div class="bing-table-head-inner">
-                        <div class="bing-table-head-text">
-                            <bing-tcheckbox #checkbox (onClick)="optionClick($event)"></bing-tcheckbox>
+                <th class="bg-table-head" *ngIf="selection">
+                    <div class="bg-table-head-inner">
+                        <div class="bg-table-head-text">
+                            <bg-tcheckbox #checkbox (onClick)="optionClick($event)"></bg-tcheckbox>
                         </div>
                     </div>
                 </th>
-                <th class="bing-table-head" *ngFor="let head of heads">
-                    <div class="bing-table-head-inner">
-                        <div class="bing-table-head-text">
+                <th class="bg-table-head" *ngFor="let head of heads">
+                    <div class="bg-table-head-inner">
+                        <div class="bg-table-head-text">
                             <span *ngIf="!head.headerTemplate">{{head.title}}</span>
-                            <bing-template *ngIf="head.headerTemplate" [template]="head.headerTemplate"></bing-template>
+                            <bg-template *ngIf="head.headerTemplate" [template]="head.headerTemplate"></bg-template>
                         </div>
                     </div>
                 </th>
@@ -21,16 +21,16 @@
         </thead>
 
         <tbody *ngFor="let body of bodys">
-            <tr class="bing-table-row" *ngFor="let row of body.rows;let i=index" (click)="onSelect(row,i)" [class.bing-selected]="row.selected">
-                <td *ngIf="selection" class="bing-table-cell">
-                    <div class="bing-table-cell-inner">
-                        <bing-tcheckbox (onClick)="itemClick($event,row,i)"></bing-tcheckbox>
+            <tr class="bg-table-row" *ngFor="let row of body.rows;let i=index" (click)="onSelect(row,i)" [class.bg-selected]="row.selected">
+                <td *ngIf="selection" class="bg-table-cell">
+                    <div class="bg-table-cell-inner">
+                        <bg-tcheckbox (onClick)="itemClick($event,row,i)"></bg-tcheckbox>
                     </div>
                 </td>
-                <td class="bing-table-row" *ngFor="let cell of row.cells" [attr.colspan]="cell.colspan" [attr.rowspan]="cell.rowspan">
-                    <div class="bing-table-cell-inner">
+                <td class="bg-table-row" *ngFor="let cell of row.cells" [attr.colspan]="cell.colspan" [attr.rowspan]="cell.rowspan">
+                    <div class="bg-table-cell-inner">
                         <span *ngIf="!cell.cellTemplate">{{cell.value}}</span>
-                        <bing-template *ngIf="cell.cellTemplate" [template]="cell.cellTemplate"></bing-template>
+                        <bg-template *ngIf="cell.cellTemplate" [template]="cell.cellTemplate"></bg-template>
                     </div>
                 </td>
             </tr>

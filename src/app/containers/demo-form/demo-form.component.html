@@ -1,0 +1,77 @@
+<div class="main-container">
+    <div class="row">
+        <div bGrid="6" class="bg-demo-board">
+            <p>
+                输入允许用户输入文本，通常以表单形式出现。用户可以输入文字，数字或混合格式类型的输入。
+            </p>
+            <hr>
+            <h3 class="bg-head-title">API 选项</h3>
+
+            <div class="bg-demo-row">
+                <h3 class="bg-title">bg-inputtext</h3>
+                <p>单个输入表单</p>
+                <bg-table>
+                    <bg-table-header>
+                        <bg-table-row>
+                            <bg-table-head>属性</bg-table-head>
+                            <bg-table-head>类型</bg-table-head>
+                            <bg-table-head>描述</bg-table-head>
+                        </bg-table-row>
+                    </bg-table-header>
+
+                    <bg-table-body>
+                        <bg-table-row>
+                            <bg-table-cell>color</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>String</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>表单线框颜色，可选</bg-table-cell>
+                        </bg-table-row>
+                        <bg-table-row>
+                            <bg-table-cell>icon</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>String</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>是否增加图标，可选(采用FontAwesome)</bg-table-cell>
+                        </bg-table-row>
+                    </bg-table-body>
+                </bg-table>
+            </div>
+        </div>
+
+        <div class="bg-demo-board" bGrid="6">
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Default</h3>
+                <bg-tab-group direction="right">
+                    <bg-tab header="PREVIEW">
+                        <bg-inputtext></bg-inputtext>
+                        <bg-inputtext color="success"></bg-inputtext>
+                        <bg-inputtext color="error"></bg-inputtext>
+                        <bg-inputtext color="warning"></bg-inputtext>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-inputtext&gt;&lt;/bg-inputtext&gt; &lt;bg-inputtext color="success"&gt;&lt;/bg-inputtext&gt; &lt;bg-inputtext color="error"&gt;&lt;/bg-inputtext&gt; &lt;bg-inputtext color="warning"&gt;&lt;/bg-inputtext&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Default</h3>
+                <bg-tab-group direction="right">
+                    <bg-tab header="PREVIEW">
+                        <bg-inputtext color="success" icon="check"></bg-inputtext>
+                        <bg-inputtext color="error" icon="close"></bg-inputtext>
+                        <bg-inputtext color="warning" icon="exclamation"></bg-inputtext>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-inputtext color="success" icon="check"&gt;&lt;/bg-inputtext&gt; &lt;bg-inputtext color="error" icon="close"&gt;&lt;/bg-inputtext&gt; &lt;bg-inputtext color="warning" icon="exclamation"&gt;&lt;/bg-inputtext&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+        </div>
+    </div>
+</div>
