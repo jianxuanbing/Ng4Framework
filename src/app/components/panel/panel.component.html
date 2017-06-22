@@ -1,10 +1,10 @@
-<div class="bing-panel" [ngClass]="panelClass">
-    <div class="bing-panel-header">
+<div class="bg-panel" [ngClass]="panelClass">
+    <div class="bg-panel-header">
         <span *ngIf="header">{{header}}</span>
         <ng-content select="b-header"></ng-content>
     </div>
-    <div class="bing-panel-content">
-        <div class="bing-panel-inner">
+    <div class="bg-panel-content">
+        <div class="bg-panel-inner">
             <ng-content></ng-content>
         </div>
     </div>

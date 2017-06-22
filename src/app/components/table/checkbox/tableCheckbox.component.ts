@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit, Input, Output, EventEmitter, ElementRef,ViewChild } from '@angular/core';
 @Component({
-    selector:'bing-tcheckbox',
+    selector:'bg-tcheckbox',
     templateUrl:'./tableCheckbox.component.html'
 })
 export class TCheckboxComponent implements OnInit,AfterViewInit{

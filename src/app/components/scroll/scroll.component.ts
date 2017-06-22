@@ -1,8 +1,8 @@
 import { style } from '@angular/animations';
-import { DomRenderer } from './../common/dom';
+import { DomRenderer } from './../../utils/dom';
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, Input } from '@angular/core';
 @Component({
-    selector:'bing-scroll',
+    selector:'bg-scroll',
     templateUrl:'./scroll.component.html',
     styleUrls:['./scroll.component.scss'],
     providers:[DomRenderer]
@@ -42,7 +42,7 @@ export class ScrollComponent implements OnInit,AfterViewInit{
         this.container=this._container.nativeElement;
         this.thumb=this._thumb.nativeElement;
         this.scrollbar=this._scrollbar.nativeElement;
-        this.wrapper=this.container.querySelector('.bing-scroll-wrapper');
+        this.wrapper=this.container.querySelector('.bg-scroll-wrapper');
         this.scrollClass&&this.domRenderer.addClass(this.container,this.scrollClass);
         this.scrollInit();
     }

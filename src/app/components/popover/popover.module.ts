@@ -1,4 +1,4 @@
-import { DomRenderer } from './../common/dom';
+import { DomRenderer } from './../../utils/dom';
 import { PopoverComponent } from './popover.component';
 import { ButtonModule } from './../button/button.module';
 import { CommonModule } from '@angular/common';

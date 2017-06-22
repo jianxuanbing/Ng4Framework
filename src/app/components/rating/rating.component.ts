@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit, Input, ViewChild, ElementRef, Output, EventEmitter, Renderer2 } from '@angular/core';
 @Component({
-    selector:'bing-rating',
+    selector:'bg-rating',
     templateUrl:'./rating.component.html',
     styleUrls:['./rating.component.scss']
 })
@@ -25,7 +25,7 @@ export class RatingComponent implements OnInit,AfterViewInit{
 
     ngAfterViewInit() {
         if(this.color){
-            this.renderer2.addClass(this.container.nativeElement,`bing-${this.color}`);
+            this.renderer2.addClass(this.container.nativeElement,`bg-${this.color}`);
         }
     }
 

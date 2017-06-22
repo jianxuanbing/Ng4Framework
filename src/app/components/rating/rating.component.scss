@@ -1,5 +1,5 @@
 @import '../../../assets/styles/theme/_variables';
-.bing-rating {
+.bg-rating {
     display: flex;
     padding: .5rem;
     -webkit-align-items: center;
@@ -7,14 +7,14 @@
 }
 
 :host /deep/ {
-    .bing-rating-item {
+    .bg-rating-item {
         padding: 0 .2rem;
         font-size: 1rem;
     }
     @each $theme,
     $color in $theme {
-        .bing-rating {
-            &.bing-#{$theme} {
+        .bg-rating {
+            &.bg-#{$theme} {
                 color: $color;
             }
         }

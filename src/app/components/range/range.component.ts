@@ -1,7 +1,7 @@
-import { DomRenderer } from './../common/dom';
+import { DomRenderer } from './../../utils/dom';
 import { Component, OnInit, AfterViewInit, Input, Output, EventEmitter, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 @Component({
-    selector:'bing-range',
+    selector:'bg-range',
     templateUrl:'./range.component.html',
     styleUrls:['./range.component.scss'],
     providers:[DomRenderer]
@@ -54,7 +54,7 @@ export class RangeComponent implements OnInit,AfterViewInit{
         this.thumb=this._thumb.nativeElement;
         this.track=this._track.nativeElement;
         if(this.color){
-            this.renderer2.addClass(this.range,`bing-${this.color}`);
+            this.renderer2.addClass(this.range,`bg-${this.color}`);
         }
         this.pageInit();
     }

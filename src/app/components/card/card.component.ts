@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 @Component({
-    selector:'bing-card',
+    selector:'bg-card',
     templateUrl:'./card.component.html',
     styleUrls:['./card.component.scss']
 })
@@ -13,7 +13,7 @@ export class CardComponent implements OnInit{
 
     ngOnInit() {
         this.cardClass={
-            'bing-card-hover':this.hover
+            'bg-card-hover':this.hover
         };
     }
 }

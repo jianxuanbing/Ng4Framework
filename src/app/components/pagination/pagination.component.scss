@@ -1,17 +1,17 @@
 @import '../../../assets/styles/theme/_mixin';
 :host /deep/ {
-    .bing-pagination {
+    .bg-pagination {
         display: inline-block;
     }
-    .bing-pagination>ul {
+    .bg-pagination>ul {
         @include flexbox;
     }
-    .bing-pagination-item {
+    .bg-pagination-item {
         margin: 0 2px;
         position: relative;
         vertical-align: top;
     }
-    .bing-pagination-item a {
+    .bg-pagination-item a {
         @include flexbox;
         border-radius: 50% !important;
         padding: 0;

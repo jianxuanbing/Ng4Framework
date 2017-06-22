@@ -1,17 +1,17 @@
 :host /deep/ {
     $borderColor: #bbb;
-    .bing-spinner {
+    .bg-spinner {
         border: 1px solid $borderColor;
         overflow: hidden;
         border-radius: 2px;
     }
-    .bing-spinner,
-    .bing-spinner-minus,
-    .bing-spinner-add {
+    .bg-spinner,
+    .bg-spinner-minus,
+    .bg-spinner-add {
         position: relative;
         display: inline-flex;
     }
-    .bing-spinner input {
+    .bg-spinner input {
         background: transparent;
         border: none;
         padding: 0 .2rem;
@@ -19,15 +19,15 @@
         max-width: 2rem;
         text-align: center;
     }
-    .bing-spinner-minus,
-    .bing-spinner-add {
+    .bg-spinner-minus,
+    .bg-spinner-add {
         width: 1.5rem;
         height: 1.5rem;
         background: #f9f9f9;
         cursor: pointer;
         border: none;
     }
-    .bing-spinner-minus {
+    .bg-spinner-minus {
         border-right: 1px solid $borderColor;
         &:active {
             background: #ddd;
@@ -39,7 +39,7 @@
             }
         }
     }
-    .bing-spinner-add {
+    .bg-spinner-add {
         border-left: 1px solid $borderColor;
         &:active {
             background: #ddd;
@@ -54,9 +54,9 @@
             }
         }
     }
-    .bing-spinner-minus:before,
-    .bing-spinner-add:before,
-    .bing-spinner-add:after {
+    .bg-spinner-minus:before,
+    .bg-spinner-add:before,
+    .bg-spinner-add:after {
         content: "";
         position: absolute;
         top: 50%;
@@ -64,12 +64,12 @@
         background: $borderColor;
         transform: translate3d(-50%, -50%, 0);
     }
-    .bing-spinner-minus:before,
-    .bing-spinner-add:before {
+    .bg-spinner-minus:before,
+    .bg-spinner-add:before {
         width: .4rem;
         height: .1em;
     }
-    .bing-spinner-add:after {
+    .bg-spinner-add:after {
         height: .4rem;
         width: .1em;
     }

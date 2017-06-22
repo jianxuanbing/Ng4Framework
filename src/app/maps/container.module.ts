@@ -1,6 +1,15 @@
+import { DemoFormModule } from './../containers/demo-form/demo-form.module';
+import { DemoDropdownModule } from './../containers/demo-dropdown/demo-dropdown.module';
+import { DemoChipModule } from './../containers/demo-chip/demo-chip.module';
+import { DemoCheckboxModule } from './../containers/demo-checkbox/demo-checkbox.module';
+import { DemoCardModule } from './../containers/demo-card/demo-card.module';
+import { DemoCalendarModule } from './../containers/demo-calendar/demo-calendar.module';
+import { DemoButtonsModule } from './../containers/demo-buttons/demo-buttons.module';
+import { DemoBreadcrumbModule } from './../containers/demo-breadcrumb/demo-breadcrumb.modult';
+import { DemoBadgeModule } from './../containers/demo-badge/demo-badge.module';
+import { BingNgModule } from './bingNg.module';
 import { DemoStartModule } from './../containers/demo-start/demo-start.module';
 import { DemoAccordionModule } from './../containers/demo-accordion/demo-accordion.module';
-import { BingNgModule } from './bingNg.module';
 import { DemoThemeModule } from './../containers/demo-theme/demo-theme.module';
 import { DemoTabModule } from './../containers/demo-tab/demo-tab.module';
 import { DemoJsonViewModule } from './../containers/demo-json-view/demo-json-view.module';
@@ -26,7 +35,16 @@ import { NgModule } from '@angular/core';
         DemoTabModule,
         DemoThemeModule,
         DemoAccordionModule,
-        DemoStartModule,               
+        DemoStartModule,
+        DemoBadgeModule,
+        DemoBreadcrumbModule,
+        DemoButtonsModule,
+        DemoCalendarModule,
+        DemoCardModule,
+        DemoCheckboxModule,
+        DemoChipModule,
+        DemoDropdownModule,
+        DemoFormModule,
     ],
     providers:[
     ],

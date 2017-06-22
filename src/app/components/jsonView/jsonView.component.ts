@@ -1,7 +1,7 @@
-import { Utils } from './../common/utils';
+import { Utils } from './../../utils/utils';
 import { Component, OnInit, Input } from '@angular/core';
 @Component({
-    selector:'bing-json-view',
+    selector:'bg-json-view',
     templateUrl:'./jsonView.component.html',
     styleUrls:['./jsonView.component.scss']
 })

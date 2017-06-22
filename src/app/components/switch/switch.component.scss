@@ -1,6 +1,6 @@
 @import '../../../assets/styles/theme/_variables';
 :host /deep/ {
-    .bing-switch {
+    .bg-switch {
         position: relative;
         overflow: hidden;
         cursor: pointer;
@@ -10,7 +10,7 @@
         input {
             display: none;
         }
-        input[type='checkbox']:checked+.bing-switch-media .switch-label {
+        input[type='checkbox']:checked+.bg-switch-media .switch-label {
             background: #1ABC9C;
             &:after {
                 background: #1ABC9C;
@@ -18,7 +18,7 @@
                 transform: translate3d(1rem, 0, 0);
             }
         }
-        .bing-switch-inner {
+        .bg-switch-inner {
             -webkit-flex: 1;
             flex: 1;
             padding: 0.5rem;
@@ -59,7 +59,7 @@
                 border-radius: 999px;
             }
         }
-        .bing-switch-media {
+        .bg-switch-media {
             -webkit-order: 2;
             order: 2;
             display: -moz-box;
@@ -73,7 +73,7 @@
             margin-left: 3px;
         }
     }
-    .bing-switch.bing-switch-2 {
+    .bg-switch.bg-switch-2 {
         .switch-label {
             width: 2rem;
             background: #fff;
@@ -90,7 +90,7 @@
                 left: 0;
             }
         }
-        input[type='checkbox']:checked+.bing-switch-media .switch-label {
+        input[type='checkbox']:checked+.bg-switch-media .switch-label {
             background: #fff;
             &:before {
                 background: #1ABC9C;
@@ -102,7 +102,7 @@
             }
         }
     }
-    .bing-switch.bing-switch-3 {
+    .bg-switch.bg-switch-3 {
         .switch-label {
             background: #fff;
             &:before {
@@ -118,7 +118,7 @@
                 box-shadow: 0 2px 7px rgba(0, 0, 0, 0.35), 0 1px 1px rgba(0, 0, 0, 0.15);
             }
         }
-        input[type='checkbox']:checked+.bing-switch-media .switch-label {
+        input[type='checkbox']:checked+.bg-switch-media .switch-label {
             &:after {
                 background: #fff;
                 box-shadow: 0 2px 7px rgba(0, 0, 0, 0.35), 0 1px 1px rgba(0, 0, 0, 0.15);
@@ -130,20 +130,20 @@
     }
     @each $name,
     $color in $theme {
-        .bing-switch.bing-switch-#{$name} {
-            input[type='checkbox']:checked+.bing-switch-media .switch-label {
+        .bg-switch.bg-switch-#{$name} {
+            input[type='checkbox']:checked+.bg-switch-media .switch-label {
                 background: $color;
                 &:after {
                     background: $color;
                 }
             }
-            &.bing-switch-2 {
-                input[type='checkbox']:checked+.bing-switch-media .switch-label:before {
+            &.bg-switch-2 {
+                input[type='checkbox']:checked+.bg-switch-media .switch-label:before {
                     background: $color;
                 }
             }
-            &.bing-switch-3 {
-                input[type='checkbox']:checked+.bing-switch-media .switch-label:before {
+            &.bg-switch-3 {
+                input[type='checkbox']:checked+.bg-switch-media .switch-label:before {
                     border-color: $color;
                 }
             }
@@ -151,9 +151,9 @@
     }
 }
 
-.bing-switch {
+.bg-switch {
     $color: rgba(170, 170, 170, .4) !important;
-    input[type='checkbox']:disabled+.bing-switch-media .switch-label {
+    input[type='checkbox']:disabled+.bg-switch-media .switch-label {
         background: $color;
         &:after {
             background: $color;

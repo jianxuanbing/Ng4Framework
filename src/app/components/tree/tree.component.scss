@@ -1,6 +1,6 @@
 @import '../../../assets/styles/theme/_variables';
 :host /deep/ {
-    .bing-tree ul {
+    .bg-tree ul {
         list-style: none;
         color: #333;
         li:before,
@@ -9,7 +9,7 @@
         li span:after {
             font-family: "FontAwesome";
         }
-        li.bing-tree-item {
+        li.bg-tree-item {
             cursor: pointer;
             line-height: 1.2rem;
             &>ul {
@@ -67,14 +67,14 @@
 
 @each $theme,
 $color in $theme {
-     :host-context(.bing-#{$theme}) /deep/ {
-        .bing-tree ul li.bing-tree-item>span {
+     :host-context(.bg-#{$theme}) /deep/ {
+        .bg-tree ul li.bg-tree-item>span {
             &:hover:after,
             &:after {
                 color: $color;
             }
         }
-        .bing-tree ul li.last>span {
+        .bg-tree ul li.last>span {
             &:before {
                 color: $color;
             }

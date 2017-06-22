@@ -1,8 +1,8 @@
-<ol class="bing-breadcrumb" #container>
+<ol class="bg-breadcrumb" #container>
     <ng-template ngFor let-item let-end="last" let-i="index" [ngForOf]="menus">
         <li>
-            <span *ngIf="i!=0&&!icon" class="bing-breadcrumb-separator">{{this.separator}}</span>
-            <span *ngIf="i!=0&&icon" class="fa fa-{{icon}} bing-breadcrumb-separator"></span>
+            <span *ngIf="i!=0&&!icon" class="bg-breadcrumb-separator">{{this.separator}}</span>
+            <span *ngIf="i!=0&&icon" class="fa fa-{{icon}} bg-breadcrumb-separator"></span>
             <a>{{item.name}}</a>
         </li>
     </ng-template>

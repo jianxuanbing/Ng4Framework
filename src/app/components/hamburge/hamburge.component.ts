@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ViewChild, ElementRef, HostListener, Renderer2 } from '@angular/core';
 @Component({
-    selector:'bing-hamburge',
+    selector:'bg-hamburge',
     templateUrl:'./hamburge.component.html',
     styleUrls:['./hamburge.component.scss']
 })

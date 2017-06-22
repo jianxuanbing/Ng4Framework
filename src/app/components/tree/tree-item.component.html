@@ -1,7 +1,7 @@
-<li class="bing-tree-item">
+<li class="bg-tree-item">
     <span (click)="toggle($event)">{{title}}</span>
     <ul *ngIf="folder" [@treeState]="isActive">
-        <bing-tree-item *ngFor="let f of folder" title="{{f.title}}" [file]="f?.file" [folder]="f?.folder" [expanded]="f.expanded"></bing-tree-item>
+        <bg-tree-item *ngFor="let f of folder" title="{{f.title}}" [file]="f?.file" [folder]="f?.folder" [expanded]="f.expanded"></bg-tree-item>
     </ul>
     <ul *ngIf="file" [@treeState]="isActive">
         <li *ngFor="let f of file" class="last" (click)="f?.click(f)">

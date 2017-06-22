@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 @Component({
-    selector:'bing-panel',
+    selector:'bg-panel',
     templateUrl:'./panel.component.html',
     styleUrls:['./panel.component.scss']
 })

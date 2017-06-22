@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 @Component({
-    selector:'bing-shrink-item',
+    selector:'bg-shrink-item',
     templateUrl:'./shrink-item.component.html'
 })
 export class ShrinkItemComponent implements OnInit{

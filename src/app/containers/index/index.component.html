@@ -1,16 +1,16 @@
 <aside class="left-menu">
-    <bing-scroll class="left-scroll" scrollClass="scroll-box">
+    <bg-scroll class="left-scroll" scrollClass="scroll-box">
         <div *ngFor="let menu of menus">
             <ul class="left-menu-item" *ngIf="menu.isSingle">
                 <li bRipple>
                     <a routerLink="{{menu.menu.route}}" routerLinkActive="active">
-                        <bing-icon icon="{{menu.menu.icon}}"></bing-icon>
+                        <bg-icon icon="{{menu.menu.icon}}"></bg-icon>
                         <span class="accordion-toggle-title">{{menu.menu.name}}</span>
                     </a>
                 </li>
             </ul>
-            <bing-accordion-group [closeOthers]="true" *ngIf="!menu.isSingle">
-                <bing-accordion class="left-menu-item" header="{{root.name}}" iconName="{{root.icon}}" *ngFor="let root of menu.menus">
+            <bg-accordion-group [closeOthers]="true" *ngIf="!menu.isSingle">
+                <bg-accordion class="left-menu-item" header="{{root.name}}" iconName="{{root.icon}}" *ngFor="let root of menu.menus">
                     <ul>
                         <li *ngFor="let children of root.children">
                             <a routerLink="{{children.route}}" routerLinkActive="active">
@@ -19,18 +19,24 @@
                             </a>
                         </li>
                     </ul>
-                </bing-accordion>
-            </bing-accordion-group>
+                </bg-accordion>
+            </bg-accordion-group>
         </div>
-    </bing-scroll>
+    </bg-scroll>
 </aside>
+<!--<nav class="site-navbar navbar navbar-default navbar-fixed-top navbar-inverse">
+    <div class="navbar-header">
+
+    </div>
+    <div class="navbar-container container-fluid"></div>
+</nav>-->
 <div class="top-menu">
     <div class="aside-header">
         <div class="aside-header-inner">
             <ul>
                 <li class="toggle-btn">
                     <a (click)="toggleAside()">
-                        <bing-hamburge type="line"></bing-hamburge>
+                        <bg-hamburge type="line"></bg-hamburge>
                     </a>
                 </li>
             </ul>
@@ -45,7 +51,7 @@
     </nav>
 </div>
 <div class="theme-setting">
-    <bing-icon icon="cogs" [spin]="true"></bing-icon>
+    <bg-icon icon="cogs" [spin]="true"></bg-icon>
 </div>
 <main class="main-layout-container">
     <router-outlet (activate)="onActivate($event)" (deactivate)="onDeactivate($evnet)"></router-outlet>

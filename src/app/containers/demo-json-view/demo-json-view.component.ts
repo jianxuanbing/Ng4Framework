@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 @Component({
-    selector:'bing-demo-json-view',
+    selector:'bg-demo-json-view',
     templateUrl:'./demo-json-view.component.html' 
 })
 export class DemoJsonViewComponent implements OnInit{

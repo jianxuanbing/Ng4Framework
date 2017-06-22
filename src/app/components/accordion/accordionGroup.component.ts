@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { AccordionComponent } from './accordion.component';
 @Component({
-    selector:'bing-accordion-group',
+    selector:'bg-accordion-group',
     template:'<ng-content></ng-content>'
 })
 export class AccordionGroupComponent{

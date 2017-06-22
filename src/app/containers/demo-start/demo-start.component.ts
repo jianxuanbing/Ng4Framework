@@ -1,8 +1,8 @@
 import { config } from './../../common/config';
-import { fadeInUp } from './../../components/common/animations';
+import { fadeInUp } from './../../utils/animations';
 import { Component, OnInit, HostBinding } from '@angular/core';
 @Component({
-    selector: 'bing-demo-start',
+    selector: 'bg-demo-start',
     templateUrl: './demo-start.component.html',
     styleUrls: ['./demo-start.component.scss'],
     animations: [fadeInUp]
@@ -18,7 +18,7 @@ export class DemoStartComponent implements OnInit {
         this.version = config.version;
         this.menus = [
             {
-                title: 'bingng',
+                title: 'bgng',
                 expanded: true,
                 folder: [
                     {

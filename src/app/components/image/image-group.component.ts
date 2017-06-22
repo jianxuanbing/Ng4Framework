@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 @Component({
-    selector:'bing-image-group',
+    selector:'bg-image-group',
     templateUrl:'./image-group.component.html',
     styleUrls:['./image.component.scss']
 })

@@ -2,7 +2,7 @@ import { TableComponent } from './../table.component';
 import { TableRowComponent } from './tableRow.component';
 import { Component, OnInit, AfterViewInit, ContentChildren, QueryList } from '@angular/core';
 @Component({
-    selector:'bing-table-body',
+    selector:'bg-table-body',
     template:'<ng-content></ng-content>'
 })
 export class TableBodyComponent implements OnInit,AfterViewInit{

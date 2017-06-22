@@ -1,9 +1,9 @@
-.bing-scroll {
+.bg-scroll {
     position: relative;
     overflow: hidden;
 }
 
-:host /deep/ .bing-scroll-scrollbar {
+:host /deep/ .bg-scroll-scrollbar {
     position: absolute;
     width: 7px;
     right: 2px;
@@ -19,11 +19,11 @@
     opacity: 0;
 }
 
-:host /deep/ .bing-scroll-wrapper {
+:host /deep/ .bg-scroll-wrapper {
     position: relative;
 }
 
-:host /deep/ .bing-scroll-thumb {
+:host /deep/ .bg-scroll-thumb {
     position: absolute;
     top: 0;
     left: 0;

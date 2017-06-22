@@ -1,0 +1,113 @@
+<div class="main-container">
+    <div class="row">
+        <div bGrid="6" class="bg-demo-board">
+            <p>
+                复选框允许用户从一组中选择多个选项。
+            </p>
+            <ul class="bg-ul-padding">
+                <li>多种可选的主题样式</li>
+            </ul>
+            <hr>
+            <h3 class="bg-head-title">API 选项</h3>
+
+            <div class="bg-demo-row">
+                <h3 class="bg-title">bg-checkbox</h3>
+                <p>单个复选框</p>
+                <bg-table>
+                    <bg-table-header>
+                        <bg-table-row>
+                            <bg-table-head>属性</bg-table-head>
+                            <bg-table-head>类型</bg-table-head>
+                            <bg-table-head>描述</bg-table-head>
+                        </bg-table-row>
+                    </bg-table-header>
+
+                    <bg-table-body>
+                        <bg-table-row>
+                            <bg-table-cell>label</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>String</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>自定义文本，可选</bg-table-cell>
+                        </bg-table-row>
+                        <bg-table-row>
+                            <bg-table-cell>name</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>String</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>设置复选框的名称，可选</bg-table-cell>
+                        </bg-table-row>
+                        <bg-table-row>
+                            <bg-table-cell>checked</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>Boolean</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>是否默认选中，默认为false，可选</bg-table-cell>
+                        </bg-table-row>
+                        <bg-table-row>
+                            <bg-table-cell>disabled</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>Boolean</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>是否禁用，默认为false，可选</bg-table-cell>
+                        </bg-table-row>
+                        <bg-table-row>
+                            <bg-table-cell>color</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>color</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>设置主题样式，可选</bg-table-cell>
+                        </bg-table-row>
+                    </bg-table-body>
+                </bg-table>
+            </div>
+        </div>
+
+        <div class="bg-demo-board" bGrid="6">
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Default</h3>
+                <bg-tab-group direction="right">
+                    <bg-tab header="PREVIEW">
+                        <bg-checkbox label="多选框" [checked]="true"></bg-checkbox>
+                        <bg-checkbox label="多选框"></bg-checkbox>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-checkbox label="多选框" [checked]="true"&gt;&lt;/bg-checkbox&gt; &lt;bg-checkbox label="多选框"&gt;&lt;/bg-checkbox&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Theme</h3>
+                <bg-tab-group direction="right">
+                    <bg-tab header="PREVIEW">
+                        <bg-checkbox *ngFor="let t of theme" color="{{t.name}}" label="Theme: {{t.name}}" name="theme" [checked]="true"></bg-checkbox>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-checkbox color="green" label="Theme: green" name="theme" [checked]="true"&gt;&lt;/bg-checkbox&gt; &lt;bg-checkbox color="blue" label="Theme: blue" name="theme"&gt;&lt;/bg-checkbox&gt; &lt;bg-checkbox color="lightblue" label="Theme: lightblue" name="theme"&gt;&lt;/bg-checkbox&gt;
+                            &lt;bg-checkbox color="yellow" label="Theme: yellow" name="theme"&gt;&lt;/bg-checkbox&gt; &lt;bg-checkbox color="red" label="Theme: red" name="theme"&gt;&lt;/bg-checkbox&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Disabled</h3>
+                <bg-tab-group direction="right">
+                    <bg-tab header="PREVIEW">
+                        <bg-checkbox [disabled]="true" label="disabled checkbox"></bg-checkbox>
+                        <bg-checkbox [disabled]="true" label="disabled checkbox" [checked]="true"></bg-checkbox>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-checkbox [disabled]="true" label="disabled checkbox"&gt;&lt;/bg-checkbox&gt; &lt;bg-checkbox [disabled]="true" label="disabled checkbox" [checked]="true"&gt;&lt;/bg-checkbox&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+        </div>
+    </div>
+</div>

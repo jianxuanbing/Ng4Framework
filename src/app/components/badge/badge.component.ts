@@ -1,7 +1,7 @@
-import { DomRenderer } from './../common/dom';
+import { DomRenderer } from './../../utils/dom';
 import { Component, OnInit, AfterViewInit, Input, Renderer2, ElementRef } from '@angular/core';
 @Component({
-    selector:'bing-badge',
+    selector:'bg-badge',
     templateUrl:'./badge.component.html',
     providers:[DomRenderer]
 })

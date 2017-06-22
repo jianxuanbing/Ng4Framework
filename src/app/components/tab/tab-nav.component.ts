@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 @Component({
-    selector:'bing-tab-nav',
+    selector:'bg-tab-nav',
     templateUrl:'./tab-nav.component.html',    
 })
 export class TabNavComponent{

@@ -174,3 +174,17 @@ typings install dt~node --global --save
 `https://git.oschina.net/zt_zhong/CodeBe`
 
 `https://git.oschina.net/mumu-osc/NiceFish`
+
+`https://github.com/ng-lightning/ng-lightning`
+
+`https://github.com/hbb520/angular4-primeng-admin`
+
+`https://github.com/michaelbromley/ngx-pagination`
+
+`https://github.com/tjoskar/ng-lazyload-image`
+
+`https://github.com/BTMorton/angular2-grid`
+
+`https://github.com/jackhutu/jackblog-angular2`
+
+`https://github.com/PointInside/ng2-toastr`

@@ -1,0 +1,163 @@
+<div class="main-container">
+    <div class="row">
+        <div bGrid="6" class="bg-demo-board">
+            <p>
+                卡片视图常用于展现一段完整独立的信息，比如一篇文章的预览图、作者信息、点赞数量等
+            </p>
+            <hr>
+            <h3 class="bg-head-title">API 选项</h3>
+
+            <div class="bg-demo-row">
+                <h3 class="bg-title">bg-card</h3>
+                <p>卡片容器</p>
+            </div>
+
+            <div class="bg-demo-row">
+                <h3 class="bg-title">bg-card-header</h3>
+                <p>卡片头 主要用于显示卡片标题。可选的</p>
+            </div>
+
+            <div class="bg-demo-row">
+                <h3 class="bg-title">bg-card-header-title</h3>
+                <p>卡头标题</p>
+            </div>
+
+            <div class="bg-demo-row">
+                <h3 class="bg-title">bg-card-media</h3>
+                <p>媒体元素</p>
+            </div>
+
+            <div class="bg-demo-row">
+                <h3 class="bg-title">bg-card-content</h3>
+                <p>卡片内容的主容器</p>
+            </div>
+
+            <div class="bg-demo-row">
+                <h3 class="bg-title">bg-card-footer</h3>
+                <p>卡片页脚用于某些附加信息或自定义操作/链接。可选的</p>
+            </div>
+        </div>
+
+        <div bGrid="6" class="bg-demo-board">
+
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">DEFAULT</h3>
+                <bg-tab-group direction="right" theme="line">
+                    <bg-tab header="PREVIEW">
+                        <bg-card bGrid="8">
+                            <bg-card-header>
+                                <bg-card-header-text>
+                                    <div class="bg-card-title">标题</div>
+                                    <div class="bg-card-text">子标题</div>
+                                </bg-card-header-text>
+                            </bg-card-header>
+                            <bg-card-content>
+                                这是一个用纯文本的简单卡片。但卡片可以包含自己的页头，页脚，列表视图，图像，和里面的任何元素。
+                            </bg-card-content>
+                            <bg-card-footer>
+                                <button bButton>cancel</button>
+                            </bg-card-footer>
+                        </bg-card>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-card bGrid="8"&gt; &lt;bg-card-header&gt; &lt;bg-card-header-text&gt; &lt;div class="bg-card-title"&gt;标题&lt;/div&gt; &lt;div class="bg-card-text"&gt;子标题&lt;/div&gt; &lt;/bg-card-header-text&gt; &lt;/bg-card-header&gt; &lt;bg-card-content&gt; 这是一个用纯文本的简单卡片。但卡片可以包含自己的页头，页脚，列表视图，图像，和里面的任何元素。
+                            &lt;/bg-card-content&gt; &lt;bg-card-footer&gt; &lt;button bButton&gt;cancel&lt;/button&gt; &lt;/bg-card-footer&gt; &lt;bg-card&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">MEDIA</h3>
+                <bg-tab-group direction="right" theme="line">
+                    <bg-tab header="PREVIEW">
+                        <bg-card bGrid="8">
+                            <bg-card-media>
+                                <bg-image src="{{img}}"></bg-image>
+                            </bg-card-media>
+                            <bg-card-header>
+                                <bg-card-header-text>
+                                    <div class="bg-card-title">标题</div>
+                                    <div class="bg-card-text">子标题</div>
+                                </bg-card-header-text>
+                            </bg-card-header>
+                        </bg-card>
+                        <bg-card bGrid="8">
+                            <bg-card-media>
+                                <bg-image src="001.jpg"></bg-image>
+                            </bg-card-media>
+                            <bg-card-content>
+                                这是一个用纯文本的简单卡片。但卡片可以包含自己的页头，页脚，列表视图，图像，和里面的任何元素。
+                            </bg-card-content>
+                        </bg-card>
+                        <bg-card bGrid="8">
+                            <bg-card-media>
+                                <bg-image src="assets/001.jpg"></bg-image>
+                            </bg-card-media>
+                            <bg-card-header>
+                                <bg-card-header-text>
+                                    <div class="bg-card-title">标题</div>
+                                    <div class="bg-card-text">子标题</div>
+                                </bg-card-header-text>
+                            </bg-card-header>
+                            <bg-card-content>
+                                这是一个用纯文本的简单卡片。但卡片可以包含自己的页头，页脚，列表视图，图像，和里面的任何元素。
+                            </bg-card-content>
+                        </bg-card>
+                        <bg-card bGrid="8">
+                            <bg-card-media>
+                                <bg-image src="../../../assets/images/001.jpg"></bg-image>
+                            </bg-card-media>
+                            <bg-card-content>
+                                这是一个用纯文本的简单卡片。但卡片可以包含自己的页头，页脚，列表视图，图像，和里面的任何元素。
+                            </bg-card-content>
+                            <bg-card-footer>
+                                <button bButton>cancel</button>
+                            </bg-card-footer>
+                        </bg-card>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-card bGrid="8"&gt; &lt;bg-card-media&gt; &lt;bg-image src="src/assets/Images/landscape1.jpg"&gt;&lt;/bg-image&gt; &lt;/bg-card-media&gt; &lt;bg-card-header&gt; &lt;bg-card-header-text&gt; &lt;div class="bg-card-title"&gt;标题&lt;/div&gt; &lt;div
+                            class="bg-card-text"&gt;子标题&lt;/div&gt; &lt;/bg-card-header-text&gt; &lt;/bg-card-header&gt; &lt;/bg-card&gt; &lt;bg-card bGrid="8"&gt; &lt;bg-card-media&gt; &lt;bg-image src="src/assets/Images/landscape1.jpg"&gt;&lt;/bg-image&gt;
+                            &lt;/bg-card-media&gt; &lt;bg-card-content&gt; 这是一个用纯文本的简单卡片。但卡片可以包含自己的页头，页脚，列表视图，图像，和里面的任何元素。 &lt;/bg-card-content&gt; &lt;/bg-card&gt; &lt;bg-card bGrid="8"&gt; &lt;bg-card-media&gt; &lt;bg-image src="src/assets/Images/landscape1.jpg"&gt;&lt;/bg-image&gt;
+                            &lt;/bg-card-media&gt; &lt;bg-card-header&gt; &lt;bg-card-header-text&gt; &lt;div class="bg-card-title"&gt;标题&lt;/div&gt; &lt;div class="bg-card-text"&gt;子标题&lt;/div&gt; &lt;/bg-card-header-text&gt; &lt;/bg-card-header&gt;
+                            &lt;bg-card-content&gt; 这是一个用纯文本的简单卡片。但卡片可以包含自己的页头，页脚，列表视图，图像，和里面的任何元素。 &lt;/bg-card-content&gt; &lt;/bg-card&gt; &lt;bg-card bGrid="8"&gt; &lt;bg-card-media&gt; &lt;bg-image src="src/assets/Images/landscape1.jpg"&gt;&lt;/bg-image&gt;
+                            &lt;/bg-card-media&gt; &lt;bg-card-content&gt; 这是一个用纯文本的简单卡片。但卡片可以包含自己的页头，页脚，列表视图，图像，和里面的任何元素。 &lt;/bg-card-content&gt; &lt;bg-card-footer&gt; &lt;button bButton&gt;cancel&lt;/button&gt; &lt;/bg-card-footer&gt; &lt;/bg-card&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Hover Effect</h3>
+                <bg-tab-group direction="right" theme="line">
+                    <bg-tab header="PREVIEW">
+                        <bg-card bGrid="8" [hover]="true">
+                            <bg-card-header>
+                                <bg-card-header-text>
+                                    <div class="bg-card-title">标题</div>
+                                    <div class="bg-card-text">子标题</div>
+                                </bg-card-header-text>
+                            </bg-card-header>
+                            <bg-card-content>
+                                这是一个用纯文本的简单卡片。但卡片可以包含自己的页头，页脚，列表视图，图像，和里面的任何元素。
+                            </bg-card-content>
+                            <bg-card-footer>
+                                <button bButton>cancel</button>
+                            </bg-card-footer>
+                        </bg-card>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-card bGrid="8" [hover]="true"&gt; &lt;bg-card-header&gt; &lt;bg-card-header-text&gt; &lt;div class="bg-card-title"&gt;标题&lt;/div&gt; &lt;div class="bg-card-text"&gt;子标题&lt;/div&gt; &lt;/bg-card-header-text&gt; &lt;/bg-card-header&gt; &lt;bg-card-content&gt;
+                            这是一个用纯文本的简单卡片。但卡片可以包含自己的页头，页脚，列表视图，图像，和里面的任何元素。 &lt;/bg-card-content&gt; &lt;bg-card-footer&gt; &lt;button bButton&gt;cancel&lt;/button&gt; &lt;/bg-card-footer&gt; &lt;bg-card&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+        </div>
+
+    </div>
+</div>

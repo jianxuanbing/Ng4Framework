@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ChipComponent } from '../chip.component';
 @Component({
-    selector:'bing-chip-group',
+    selector:'bg-chip-group',
     templateUrl:'./chipGroup.component.html',
     styleUrls:['../chip.component.scss']
 })
@@ -21,8 +21,8 @@ export class ChipGroupComponent implements OnInit{
 
     setChipClass(){
         this.chipClass={
-            'bing-chip-input':this.placeholder,
-            'bing-chip-focus':this.focus
+            'bg-chip-input':this.placeholder,
+            'bg-chip-focus':this.focus
         };
     }
 

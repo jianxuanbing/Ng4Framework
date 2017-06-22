@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit, Input, ViewChild, ElementRef, Output, EventEmitter, Renderer2 } from '@angular/core';
 @Component({
-    selector:'bing-spinner',
+    selector:'bg-spinner',
     templateUrl:'./spinner.component.html',
     styleUrls:['./spinner.component.scss']
 })

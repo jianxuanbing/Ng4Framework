@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit, Input, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 @Component({
-    selector:'bing-progress',
+    selector:'bg-progress',
     templateUrl:'./progress.component.html',
     styleUrls:['./progress.component.scss']
 })
@@ -25,16 +25,16 @@ export class ProgressComponent implements OnInit,AfterViewInit{
         this._container=this.container.nativeElement;
         this._bar=this.bar.nativeElement;
         if(this.move)        {
-            this.renderer2.addClass(this._container,'bing-active');
+            this.renderer2.addClass(this._container,'bg-active');
         }
         if(this.striped){
-            this.renderer2.addClass(this._container,'bing-progress-striped');
+            this.renderer2.addClass(this._container,'bg-progress-striped');
         }
         if(this.value){
             this.renderer2.setStyle(this._bar,'width',this.value);
         }
         if(this.color){
-            this.renderer2.addClass(this._container,'bing-'+this.color);
+            this.renderer2.addClass(this._container,'bg-'+this.color);
         }
     }
 }

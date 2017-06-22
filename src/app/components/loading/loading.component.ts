@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit, Input, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 @Component({
-    selector:'bing-loading',
+    selector:'bg-loading',
     templateUrl:'./loading.component.html',
     styleUrls:['./loading.component.scss']
 })
@@ -15,7 +15,7 @@ export class LoadingComponent implements OnInit,AfterViewInit{
 
     ngAfterViewInit() {
         if(this.color){
-            this.renderer2.addClass(this.container.nativeElement,`bing-${this.color}`);
+            this.renderer2.addClass(this.container.nativeElement,`bg-${this.color}`);
         }
     }
 }

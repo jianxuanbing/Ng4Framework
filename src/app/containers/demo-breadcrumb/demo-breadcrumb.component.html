@@ -1,0 +1,92 @@
+<div class="main-container">
+    <div class="row">
+        <div bGrid="6" class="bg-demo-board">
+            <p>
+                面包屑结构简单，支持自定义分隔符。
+            </p>
+            <h3 class="bg-head-title">API 选项</h3>
+            <div class="bg-demo-row">
+                <h3 class="bg-title">bg-breadcrumb</h3>
+                <p>面包屑组。</p>
+                <bg-table>
+                    <bg-table-header>
+                        <bg-table-row>
+                            <bg-table-head>属性</bg-table-head>
+                            <bg-table-head>类型</bg-table-head>
+                            <bg-table-head>描述</bg-table-head>
+                        </bg-table-row>
+                    </bg-table-header>
+
+                    <bg-table-body>
+                        <bg-table-row>
+                            <bg-table-cell>menus</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>Array</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>面包屑数组</bg-table-cell>
+                        </bg-table-row>
+                        <bg-table-row>
+                            <bg-table-cell>separator</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>String</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>自定义分隔符</bg-table-cell>
+                        </bg-table-row>
+                        <bg-table-row>
+                            <bg-table-cell>icon</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>String</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>使用FontAwesome字体图标来自定义分隔符</bg-table-cell>
+                        </bg-table-row>
+                    </bg-table-body>
+                </bg-table>
+            </div>
+        </div>
+
+        <div bGrid="6" class="bg-demo-board">
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Default</h3>
+                <bg-tab-group direction="right" theme="line">
+                    <bg-tab header="PREVIEW">
+                        <bg-breadcrumb [menus]="menus"></bg-breadcrumb>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-breadcrumb [menus]="menus"&gt;&lt;/bg-breadcrumb&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Separator</h3>
+                <bg-tab-group direction="right" theme="line">
+                    <bg-tab header="PREVIEW">
+                        <bg-breadcrumb separator="|" [menus]="menus"></bg-breadcrumb>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-breadcrumb separator="|" [menus]="menus"&gt;&lt;/bg-breadcrumb&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Icon</h3>
+                <bg-tab-group direction="right" theme="line">
+                    <bg-tab header="PREVIEW">
+                        <bg-breadcrumb icon="tag" [menus]="menus"></bg-breadcrumb>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-breadcrumb icon="tag" [menus]="menus"&gt;&lt;/bg-breadcrumb&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+        </div>
+
+    </div>
+</div>

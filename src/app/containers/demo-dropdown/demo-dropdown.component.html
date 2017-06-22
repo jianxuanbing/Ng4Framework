@@ -1,0 +1,73 @@
+<div class="main-container">
+    <div class="row">
+        <div bGrid="6" class="bg-demo-board">
+            <p>
+                下拉菜单
+            </p>
+            <hr>
+            <h3 class="bg-head-title">API 选项</h3>
+
+            <div class="bg-demo-row">
+                <h3 class="bg-title">bg-dropdown</h3>
+                <p>单个下拉菜单</p>
+                <bg-table>
+                    <bg-table-header>
+                        <bg-table-row>
+                            <bg-table-head>属性</bg-table-head>
+                            <bg-table-head>类型</bg-table-head>
+                            <bg-table-head>描述</bg-table-head>
+                        </bg-table-row>
+                    </bg-table-header>
+
+                    <bg-table-body>
+                        <bg-table-row>
+                            <bg-table-cell>menus</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>Array</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>菜单子项数组</bg-table-cell>
+                        </bg-table-row>
+                        <bg-table-row>
+                            <bg-table-cell>color</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>String</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>主题样式</bg-table-cell>
+                        </bg-table-row>
+                    </bg-table-body>
+                </bg-table>
+            </div>
+        </div>
+
+        <div class="bg-demo-board" bGrid="6">
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Default</h3>
+                <bg-tab-group direction="right">
+                    <bg-tab header="PREVIEW">
+                        <bg-dropdown [menus]="menus" color="green">
+                            <b-header>Dropdown</b-header>
+                        </bg-dropdown>
+
+                        <bg-dropdown [menus]="menus" color="lightblue">
+                            <b-header>Dropdown</b-header>
+                        </bg-dropdown>
+
+                        <bg-dropdown [menus]="menus" color="red">
+                            <b-header>Dropdown</b-header>
+                        </bg-dropdown>
+
+                        <bg-dropdown [menus]="menus" color="blue">
+                            <b-header>Dropdown</b-header>
+                        </bg-dropdown>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-dropdown [menus]="menus" color="green"&gt; &lt;b-header&gt;Dropdown&lt;/b-header&gt; &lt;/bg-dropdown&gt; &lt;bg-dropdown [menus]="menus" color="lightblue"&gt; &lt;b-header&gt;Dropdown&lt;/b-header&gt; &lt;/bg-dropdown&gt; &lt;bg-dropdown [menus]="menus"
+                            color="red"&gt; &lt;b-header&gt;Dropdown&lt;/b-header&gt; &lt;/bg-dropdown&gt; &lt;bg-dropdown [menus]="menus" color="blue"&gt; &lt;b-header&gt;Dropdown&lt;/b-header&gt; &lt;/bg-dropdown&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit, Input, Output, EventEmitter, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 @Component({
-    selector:'bing-switch',
+    selector:'bg-switch',
     templateUrl:'./switch.component.html',
     styleUrls:['./switch.component.scss']
 })
@@ -21,10 +21,10 @@ export class SwitchComponent implements OnInit,AfterViewInit{
     ngAfterViewInit() {
         const _container=this.container.nativeElement;
         if(this.type){
-            this.renderer2.addClass(_container,'bing-switch-'+this.type);
+            this.renderer2.addClass(_container,'bg-switch-'+this.type);
         }
         if(this.color){
-            this.renderer2.addClass(_container,'bing-switch-'+this.color);
+            this.renderer2.addClass(_container,'bg-switch-'+this.color);
         }
     }
 

@@ -1,12 +1,12 @@
-<div class="bing-select">
-    <div class="bing-select-input">
+<div class="bg-select">
+    <div class="bg-select-input">
         <label (click)="onClick()">{{value}}</label>
     </div>
-    <div #menu class="bing-select-menu" [@selectState]="activeState" (@selectState.start)="transitionStart()" (@selectState.done)="transitionEnd()">
-        <div class="bing-select-filter" *ngIf="filter"></div>
-        <div class="bing-select-wrapper">
+    <div #menu class="bg-select-menu" [@selectState]="activeState" (@selectState.start)="transitionStart()" (@selectState.done)="transitionEnd()">
+        <div class="bg-select-filter" *ngIf="filter"></div>
+        <div class="bg-select-wrapper">
             <ul>
-                <bing-select-item *ngFor="let option of options" (onClick)="iClick($event)" [selected]="option===selected" [option]="option"></bing-select-item>
+                <bg-select-item *ngFor="let option of options" (onClick)="iClick($event)" [selected]="option===selected" [option]="option"></bg-select-item>
             </ul>
         </div>
     </div>

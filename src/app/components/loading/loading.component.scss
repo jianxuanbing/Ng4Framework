@@ -1,7 +1,7 @@
 @import '../../../assets/styles/theme/_mixin';
 @import '../../../assets/styles/theme/_variables';
 $size: 5rem;
-.bing-loading {
+.bg-loading {
     display: inline-block;
 }
 
@@ -628,7 +628,7 @@ $size: 5rem;
 
 @each $theme,
 $color in $theme {
-    .bing-#{$theme} .loader {
+    .bg-#{$theme} .loader {
         &.circle-line span,
         &.circle-line-spin span,
         &.circle-round span,
@@ -642,7 +642,7 @@ $color in $theme {
             border-top: .2rem solid $color !important;
         }
     }
-     :host-context(.bing-#{$theme}) {
+     :host-context(.bg-#{$theme}) {
         .loader {
             &.circle-line span,
             &.circle-line-spin span,

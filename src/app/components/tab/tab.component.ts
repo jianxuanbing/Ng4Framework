@@ -2,7 +2,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { trigger, style, transition, animate,state } from '@angular/animations';
 import { Component, OnInit, Input } from '@angular/core';
 @Component({
-    selector:'bing-tab',
+    selector:'bg-tab',
     templateUrl:'./tab.component.html',
     animations:[
         trigger('tabState',[
@@ -35,7 +35,7 @@ export class TabComponent implements OnInit{
 
     toggleClass(){
         this.tabClass={
-            'bing-tab':true,
+            'bg-tab':true,
             'active':this._selected
         };
     }

@@ -1,4 +1,4 @@
-.bing-image-group {
+.bg-image-group {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -8,18 +8,18 @@
     flex-wrap: wrap;
 }
 
-.bing-image-group::after {
+.bg-image-group::after {
     content: "";
     clear: both;
     display: inline-block;
 }
 
-.bing-image-group /deep/ bing-image {
+.bg-image-group /deep/ bg-image {
     width: 24.99999%;
 }
 
 :host /deep/ {
-    .bing-image img {
+    .bg-image img {
         display: block;
         width: 100%;
         line-height: 0;

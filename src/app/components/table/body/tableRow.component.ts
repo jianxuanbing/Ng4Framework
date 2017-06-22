@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TableCellComponent } from './tableCell.component';
 @Component({
-    selector:'bing-table-row',
+    selector:'bg-table-row',
     template:'<ng-content></ng-content>'
 })
 export class TableRowComponent implements OnInit{

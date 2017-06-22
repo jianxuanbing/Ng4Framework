@@ -9,7 +9,7 @@ declare const UE:any;
 export type EventTypes = 'destroy' | 'reset' | 'focus' | 'langReady' | 'beforeExecCommand' | 'afterExecCommand' | 'firstBeforeExecCommand' | 'beforeGetContent' | 'afterGetContent' | 'getAllHtml' | 'beforeSetContent' | 'afterSetContent' | 'selectionchange' | 'beforeSelectionChange' | 'afterSelectionChange';
 
 @Component({
-    selector:'bing-ueditor',
+    selector:'bg-ueditor',
     template:'<textarea #host class="ueditor-textarea"></textarea><p class="loading" *ngIf="loading">{{loadingTip}}</p>',
     styles:[`.ueditor-textarea{display:none;}`],
     providers:[{

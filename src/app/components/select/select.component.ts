@@ -2,7 +2,7 @@ import { SelectItemComponent } from './select-item.component';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, Input, EventEmitter, Output, Renderer2 } from '@angular/core';
 @Component({
-    selector:'bing-select',
+    selector:'bg-select',
     templateUrl:'./select.component.html',
     styleUrls:['./select.component.scss'],
     animations:[

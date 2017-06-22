@@ -1,6 +1,6 @@
 @import '../../../assets/styles/theme/_mixin';
 :host /deep/ {
-    .bing-list-item {
+    .bg-list-item {
         @include flexbox;
         min-height: 2.4rem;
         margin: 0;
@@ -21,18 +21,18 @@
         -webkit-transition: all .3s;
         transition: all .3s;
     }
-    .bing-list {
+    .bg-list {
         background-color: #fff;
         color: rgba(0, 0, 0, .87);
     }
-    .bing-list {
+    .bg-list {
         @include flexbox;
         -ms-flex-flow: column nowrap;
         flex-flow: column nowrap;
         position: relative;
         list-style: none;
     }
-    .bing-avatar {
+    .bg-avatar {
         width: 1.6rem;
         min-width: 1.6rem;
         height: 1.6rem;
@@ -44,16 +44,16 @@
         border-radius: 50%;
         vertical-align: middle;
     }
-    .bing-avatar.bing-avatar-large {
+    .bg-avatar.bg-avatar-large {
         width: 2rem;
         height: 2rem;
     }
-    .bing-avatar img {
+    .bg-avatar img {
         width: 100%;
         height: 100%;
         border-radius: 50%;
     }
-    .bing-list-content {
+    .bg-list-content {
         @include flexbox;
         -ms-flex: 1 1 auto;
         flex: 1 1 auto;
@@ -66,17 +66,17 @@
         white-space: normal;
         padding: .5rem 0;
     }
-    .bing-list-content>* {
+    .bg-list-content>* {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
     }
-    .bing-list-content>:nth-child(3) {
+    .bg-list-content>:nth-child(3) {
         margin: 0;
         color: rgba(0, 0, 0, .54);
         font-size: 14px;
     }
-    .bing-icon {
+    .bg-icon {
         margin-right: 1.2rem;
         color: rgba(0, 0, 0, .54);
     }
@@ -92,13 +92,13 @@
         box-shadow: none;
         margin-right: -.6rem;
     }
-    .bing-list.bing-list-hover .bing-list-item {
+    .bg-list.bg-list-hover .bg-list-item {
         cursor: pointer;
     }
-    .bing-list.bing-list-hover .bing-list-item:hover {
+    .bg-list.bg-list-hover .bg-list-item:hover {
         background: #eee;
     }
-    .bing-list.bing-list-line .bing-list-item:after {
+    .bg-list.bg-list-line .bg-list-item:after {
         content: "";
         position: absolute;
         left: 3.5rem;

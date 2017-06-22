@@ -1,17 +1,17 @@
-<div #modal class="bing-modal" [style.width.px]="width" [style.height.px]="height" [@fadeInScale]="modalClass" [style.display]="visible?'block':'none'">
-    <div class="bing-modal-header">
+<div #modal class="bg-modal" [style.width.px]="width" [style.height.px]="height" [@fadeInScale]="modalClass" [style.display]="visible?'block':'none'">
+    <div class="bg-modal-header">
         <span *ngIf="header">{{header}}</span>
         <span>
             <ng-content select="b-header"></ng-content>
         </span>
-        <span *ngIf="closeIcon" class="bing-modal-close" (click)="close()">
+        <span *ngIf="closeIcon" class="bg-modal-close" (click)="close()">
             <i class="fa fa-close"></i>
         </span>
     </div>
-    <div class="bing-modal-content">
+    <div class="bg-modal-content">
         <ng-content></ng-content>
     </div>
-    <div class="bing-modal-footer">
+    <div class="bg-modal-footer">
         <ng-content select="b-footer"></ng-content>
     </div>
 </div>

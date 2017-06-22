@@ -2,7 +2,7 @@ import { Notify } from './interfaces/notify';
 import { Component, ViewEncapsulation, OnInit, OnDestroy, Input, NgZone } from '@angular/core';
 import {SafeHtml,DomSanitizer} from '@angular/platform-browser';
 @Component({
-    selector:'bing-notify',
+    selector:'bg-notify',
     templateUrl:'./notify.component.html',
     styleUrls:['./notify.component.scss'],
     encapsulation:ViewEncapsulation.None

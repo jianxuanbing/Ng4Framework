@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterContentInit, Input, ViewChild, ElementRef, ContentChildren, QueryList, Renderer2 } from '@angular/core';
 import {TabComponent} from './tab.component';
 @Component({
-    selector:'bing-tab-group',
+    selector:'bg-tab-group',
     templateUrl:'./tab-group.component.html',
     styleUrls:['./tab.component.scss']
 })
@@ -25,7 +25,7 @@ export class TabGroupComponent implements OnInit,AfterContentInit{
             this.renderer2.addClass(this.groups.nativeElement,'theme-'+this.theme);            
         }
         if(this.direction){
-            this.renderer2.addClass(this.groups.nativeElement,'bing-tab-'+this.direction);
+            this.renderer2.addClass(this.groups.nativeElement,'bg-tab-'+this.direction);
         }
     }
 

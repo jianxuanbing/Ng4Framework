@@ -1,7 +1,7 @@
 import { SelectComponent } from './select.component';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 @Component({
-    selector:'bing-select-item',
+    selector:'bg-select-item',
     templateUrl:'./select-item.component.html'
 })
 export class SelectItemComponent implements OnInit{
