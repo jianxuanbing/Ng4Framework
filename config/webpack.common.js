@@ -121,11 +121,11 @@ module.exports = function(options) {
                 },
                 {
                     test: /\.(svg|woff|woff2|ttf|eot)$/,
-                    loader: 'file-loader?name=assets/[name].[hash].[ext]'
+                    loader: 'file-loader?name=assets/fonts/[name].[hash].[ext]'
                 },
                 {
                     test: /\.(png|jpe?g|gif|ico)$/,
-                    loader: 'url-loader?limit=8192'
+                    loader: 'url-loader?limit=8192&name=assets/images/[name].[hash].[ext]'
                 }
             ],
         },
