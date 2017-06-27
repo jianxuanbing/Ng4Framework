@@ -1,3 +1,8 @@
+import { DemoSpinnerComponent } from './../containers/demo-spinner/demo-spinner.component';
+import { DemoTooltipComponent } from './../containers/demo-tooltip/demo-tooltip.component';
+import { DemoTreeComponent } from './../containers/demo-tree/demo-tree.component';
+import { DemoTypographyComponent } from './../containers/demo-typography/demo-typography.component';
+import { DemoGalleryComponent } from './../containers/demo-gallery/demo-gallery.component';
 import { DemoHighlightJsComponent } from './../containers/demo-highlight-js/demo-highlight-js.component';
 import { DemoCountDownComponent } from './../containers/demo-countdown/demo-countdown.component';
 import { DemoUEditorComponent } from './../containers/demo-ueditor/demo-ueditor.component';
@@ -20,6 +25,10 @@ import { DemoTabComponent } from './../containers/demo-tab/demo-tab.component';
 import { DemoJsonViewComponent } from './../containers/demo-json-view/demo-json-view.component';
 import { Routes, RouterModule } from '@angular/router';
 import { DemoGridComponent } from '../containers/demo-grid/demo-grid.component';
+import { DemoToastComponent } from '../containers/demo-toast/demo-toast.component';
+import { DemoTableComponent } from '../containers/demo-table/demo-table.component';
+import { DemoSwitchComponent } from '../containers/demo-switch/demo-switch.component';
+import { DemoShrinkComponent } from '../containers/demo-shrink/demo-shrink.component';
 
 /**
  * 子路由
@@ -27,7 +36,7 @@ import { DemoGridComponent } from '../containers/demo-grid/demo-grid.component';
 const childRoutes:Routes=[
     {path:'grid',component:DemoGridComponent},
     {path:'json-view',component:DemoJsonViewComponent},
-    {path:'tab',component:DemoTabComponent},
+    {path:'tabs',component:DemoTabComponent},
     {path:'accordion',component:DemoAccordionComponent},
     {path:'theme',component:DemoThemeComponent,data:{title:'主题'}},
     {path:'getting-started',component:DemoStartComponent},
@@ -43,6 +52,15 @@ const childRoutes:Routes=[
     {path:'ueditor',component:DemoUEditorComponent},
     {path:'countdown',component:DemoCountDownComponent},
     {path:'highlight-js',component:DemoHighlightJsComponent},
+    {path:'gallery',component:DemoGalleryComponent},
+    {path:'typography',component:DemoTypographyComponent},
+    {path:'tree',component:DemoTreeComponent},
+    {path:'tooltips',component:DemoTooltipComponent},
+    {path:'toast',component:DemoToastComponent},
+    {path:'table',component:DemoTableComponent},
+    {path:'switch',component:DemoSwitchComponent},
+    {path:'spinner',component:DemoSpinnerComponent},
+    {path:'shrink',component:DemoShrinkComponent},
     {path:'',component:MainComponent}
 ]
 /**

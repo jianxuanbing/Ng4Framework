@@ -1,0 +1,61 @@
+<div class="main-container">
+    <div class="row">
+        <div bGrid="6" class="bg-demo-board">
+            <p>
+                Toast是一个微妙的通知，显示在应用程式的内容上。 通常情况下，Toast会在短时间内显示，然后自动关闭。
+            </p>
+            <hr>
+            <h3 class="bg-head-title">API 选项</h3>
+
+            <div class="bg-demo-row">
+                <h3 class="bg-title">bg-radio</h3>
+                <p>一个Radio组件</p>
+            </div>
+        </div>
+
+        <div class="bg-demo-board" bGrid="6">
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Default</h3>
+                <bg-tab-group direction="right">
+                    <bg-tab header="PREVIEW">
+
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-radio label="男" name="sex" [checked]="true"&gt;&lt;/bg-radio&gt; &lt;bg-radio label="女" name="sex"&gt;&lt;/bg-radio&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Theme</h3>
+                <bg-tab-group direction="right">
+                    <bg-tab header="PREVIEW">
+
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-radio color="green" label="Theme: green" name="theme" [checked]="true"&gt;&lt;/bg-radio&gt; &lt;bg-radio color="blue" label="Theme: blue" name="theme"&gt;&lt;/bg-radio&gt; &lt;bg-radio color="lightblue" label="Theme: lightblue" name="theme"&gt;&lt;/bg-radio&gt;
+                            &lt;bg-radio color="yellow" label="Theme: yellow" name="theme"&gt;&lt;/bg-radio&gt; &lt;bg-radio color="red" label="Theme: red" name="theme"&gt;&lt;/bg-radio&gt; &lt;bg-radio color="orange" label="Theme: orange" name="theme"&gt;&lt;/bg-radio&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Disabled</h3>
+                <bg-tab-group direction="right">
+                    <bg-tab header="PREVIEW">
+
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-radio label="disabled" [disabled]="true"&gt;&lt;/bg-radio&gt; &lt;bg-radio label="disabled" [disabled]="true" [checked]="true"&gt;&lt;/bg-radio&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+        </div>
+    </div>
+</div>

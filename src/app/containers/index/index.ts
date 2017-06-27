@@ -224,6 +224,21 @@ export const menuList =
                         name:'代码高亮',
                         desc:'highlight-js',
                         route:'highlight-js'
+                    },
+                    {
+                        name:'画廊',
+                        desc:'gallery',
+                        route:'gallery'
+                    },
+                    {
+                        name:'通知',
+                        desc:'toast',
+                        route:'toast'
+                    },
+                    {
+                        name:'收缩',
+                        desc:'shrink',
+                        route:'shrink'
                     }
                 ]
             },

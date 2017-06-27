@@ -43,8 +43,8 @@ export class TooltipDirective implements OnInit,AfterViewInit{
             let left=0;
             const rect=this.domRenderer.getRect(this.er.nativeElement);
             switch(this.tooltipPosition){
-                case 'left':
-                    top=rect.top-this.tooltip.offsetHeight/2+rect.heigth/2;
+                case 'left':                    
+                    top=rect.top-this.tooltip.offsetHeight/2+rect.height/2;
                     left=rect.left-this.tooltip.offsetWidth;
                     break;
                 case 'right':
@@ -60,7 +60,7 @@ export class TooltipDirective implements OnInit,AfterViewInit{
                     left=rect.left-this.tooltip.offsetWidth/2+rect.width/2;
                     break;
             }
-            this.domRenderer.addClass(this.tooltip,this.tooltipPosition);
+            this.domRenderer.addClass(this.tooltip,this.tooltipPosition);            
             this.domRenderer.css(this.tooltip,{
                 'top':top+'px',
                 'left':left+'px',

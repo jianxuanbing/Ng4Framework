@@ -7,5 +7,22 @@ import { fadeInUp } from '../../utils/animations';
     animations:[fadeInUp]
 })
 export class DemoGalleryComponent implements OnInit{
-    @HostBinding('@fadeInUpState')
+    @HostBinding('@fadeInUpState') fadeInUpState:any;
+    @HostBinding('style.display') display='block';
+
+    images:any[]=[];
+
+    constructor(){}
+
+    ngOnInit() {
+        this.images=[
+            {'src':'assets/images/001.jpg','alt':'image','highlight':true},
+            {'src':'assets/images/001.jpg','alt':'image','highlight':true},
+            {'src':'assets/images/001.jpg','alt':'image','highlight':true},
+            {'src':'assets/images/001.jpg','alt':'image','highlight':true},
+            {'src':'assets/images/001.jpg','alt':'image','highlight':true},
+            {'src':'assets/images/001.jpg','alt':'image','highlight':true},
+            {'src':'assets/images/001.jpg','alt':'image','highlight':true},
+        ];
+    }
 }

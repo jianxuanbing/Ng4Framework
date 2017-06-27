@@ -1,0 +1,86 @@
+<div class="main-container">
+    <div class="row">
+        <div bGrid="6" class="bg-demo-board">
+            <p>
+                数字输入框控件，可直接输入数字，也可以点击“+”、“-”按钮变换当前数值。
+            </p>
+            <hr>
+            <h3 class="bg-head-title">API 选项</h3>
+
+            <div class="bg-demo-row">
+                <h3 class="bg-title">bg-spinner</h3>
+                <p>数字输入框</p>
+                <bg-table>
+                    <bg-table-header>
+                        <bg-table-row>
+                            <bg-table-head>属性</bg-table-head>
+                            <bg-table-head>类型</bg-table-head>
+                            <bg-table-head>描述</bg-table-head>
+                        </bg-table-row>
+                    </bg-table-header>
+
+                    <bg-table-body>
+                        <bg-table-row>
+                            <bg-table-cell>value</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>Number</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>设置当前值，默认为0</bg-table-cell>
+                        </bg-table-row>
+                        <bg-table-row>
+                            <bg-table-cell>min</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>Number</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>允许使用的最小值，默认无限制</bg-table-cell>
+                        </bg-table-row>
+                        <bg-table-row>
+                            <bg-table-cell>min</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>Number</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>允许使用的最大值，默认无限制</bg-table-cell>
+                        </bg-table-row>
+                        <bg-table-row>
+                            <bg-table-cell>step</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>Number</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>每次点击“+”、“-”按钮变化的步长，默认步长为1</bg-table-cell>
+                        </bg-table-row>
+                    </bg-table-body>
+                </bg-table>
+            </div>
+        </div>
+
+        <div class="bg-demo-board" bGrid="6">
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Default</h3>
+                <bg-tab-group direction="right">
+                    <bg-tab header="PREVIEW">
+                        <bg-spinner></bg-spinner>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-spinner&gt;&lt;/bg-spinner&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Step</h3>
+                <bg-tab-group direction="right">
+                    <bg-tab header="PREVIEW">
+                        <bg-spinner [step]="5"></bg-spinner>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-spinner [step]="5"&gt;&lt;/bg-spinner&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+        </div>
+    </div>
+</div>

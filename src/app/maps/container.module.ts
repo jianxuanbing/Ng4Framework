@@ -1,3 +1,5 @@
+import { DemoToastModule } from './../containers/demo-toast/demo-toast.module';
+import { DemoTypographyModule } from './../containers/demo-typography/demo-typography.module';
 import { DemoHighlightJsModule } from './../containers/demo-highlight-js/demo-highlight-js.module';
 import { DemoCountDownModule } from './../containers/demo-countdown/demo-countdown.module';
 import { DemoUEditorModule } from './../containers/demo-ueditor/demo-ueditor.module';
@@ -23,6 +25,13 @@ import { IndexModule } from './../containers/index/index.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { DemoGalleryModule } from '../containers/demo-gallery/demo-gallery.module';
+import { DemoTreeModule } from '../containers/demo-tree/demo-tree.module';
+import { DemoTooltipModule } from '../containers/demo-tooltip/demo-tooltip.module';
+import { DemoTableModule } from '../containers/demo-table/demo-table.module';
+import { DemoSwitchModule } from '../containers/demo-switch/demo-switch.module';
+import { DemoSpinnerModule } from '../containers/demo-spinner/demo-spinner.module';
+import { DemoShrinkModule } from '../containers/demo-shrink/demo-shrink.module';
 @NgModule({
     declarations:[        
     ],
@@ -52,6 +61,15 @@ import { NgModule } from '@angular/core';
         DemoUEditorModule,
         DemoCountDownModule,
         DemoHighlightJsModule,
+        DemoGalleryModule,
+        DemoTypographyModule,
+        DemoTreeModule,
+        DemoTooltipModule,
+        DemoToastModule,
+        DemoTableModule,
+        DemoSwitchModule,
+        DemoSpinnerModule,
+        DemoShrinkModule,
     ],
     providers:[
     ],

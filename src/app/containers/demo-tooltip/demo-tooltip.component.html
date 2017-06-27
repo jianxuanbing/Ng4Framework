@@ -1,0 +1,74 @@
+<div class="main-container">
+    <div class="row">
+        <div bGrid="6" class="bg-demo-board">
+            <p>
+                工具提示识别元素何时被激活。 它们可能包含有关其功能的简短帮助文本。 例如，它们可能包含有关可操作图标的文本信息。
+            </p>
+            <hr>
+            <h3 class="bg-head-title">API 选项</h3>
+
+            <div class="bg-demo-row">
+                <h3 class="bg-title">bTooltip</h3>
+                <p>必选，表示当前元素带有提示条</p>
+                <bg-table>
+                    <bg-table-header>
+                        <bg-table-row>
+                            <bg-table-head>属性</bg-table-head>
+                            <bg-table-head>类型</bg-table-head>
+                            <bg-table-head>描述</bg-table-head>
+                        </bg-table-row>
+                    </bg-table-header>
+
+                    <bg-table-body>
+                        <bg-table-row>
+                            <bg-table-cell>bTooltip</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>String</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>设置提示框的内容。</bg-table-cell>
+                        </bg-table-row>
+                        <bg-table-row>
+                            <bg-table-cell>tooltipPosition</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>String</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>设置提示框的位置(top、right、bottom、left)，默认right。</bg-table-cell>
+                        </bg-table-row>
+                    </bg-table-body>
+                </bg-table>
+            </div>
+        </div>
+
+        <div class="bg-demo-board" bGrid="6">
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Default</h3>
+                <bg-tab-group direction="right">
+                    <bg-tab header="PREVIEW">
+                        <button bButton bTooltip="提示文字，提示文字，提示文字，哈哈哈">默认(右侧)提示框</button>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;button bButton bTooltip="提示文字，提示文字，提示文字，哈哈哈"&gt;默认(右侧)提示框&lt;/button&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Position</h3>
+                <bg-tab-group direction="right">
+                    <bg-tab header="PREVIEW">
+                        <button bButton bTooltip="提示文字，提示文字，提示文字，哈哈哈" tooltipPosition="left">左侧提示框</button>
+                        <button bButton bTooltip="提示文字，提示文字，提示文字，哈哈哈" tooltipPosition="top">顶部提示框</button>
+                        <button bButton bTooltip="提示文字，提示文字，提示文字，哈哈哈" tooltipPosition="bottom">底部提示框</button>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;button bButton bTooltip="提示文字，提示文字，提示文字，哈哈哈" tooltipPosition="left"&gt;左侧提示框&lt;/button&gt; &lt;button bButton bTooltip="提示文字，提示文字，提示文字，哈哈哈" tooltipPosition="top"&gt;顶部提示框&lt;/button&gt; &lt;button bButton bTooltip="提示文字，提示文字，提示文字，哈哈哈" tooltipPosition="bottom"&gt;底部提示框&lt;/button&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,292 @@
+<div class="main-container">
+    <div class="row">
+        <div bGrid="6" class="bg-demo-board">
+            <p>
+                数据表可用于显示数据列表。
+            </p>
+            <ul class="bg-ul-padding">
+                <li>分页，即时搜索和排序</li>
+                <li>提供了丰富的支持,复选框</li>
+            </ul>
+            <hr>
+            <h3 class="bg-head-title">API 选项</h3>
+
+            <div class="bg-demo-row">
+                <h3 class="bg-title">bg-table</h3>
+                <p>必选，类似HTML的table，一个bg-table对应一个table。</p>
+                <bg-table>
+                    <bg-table-header>
+                        <bg-table-row>
+                            <bg-table-head>属性</bg-table-head>
+                            <bg-table-head>类型</bg-table-head>
+                            <bg-table-head>描述</bg-table-head>
+                        </bg-table-row>
+                    </bg-table-header>
+
+                    <bg-table-body>
+                        <bg-table-row>
+                            <bg-table-cell>selection</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>String</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>是否增加复选框，默认为false</bg-table-cell>
+                        </bg-table-row>
+                        <bg-table-row>
+                            <bg-table-cell>pagination</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>String</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>是否增加分页器，默认为false</bg-table-cell>
+                        </bg-table-row>
+                    </bg-table-body>
+                </bg-table>
+            </div>
+
+            <div class="bg-demo-row">
+                <h3 class="bg-title">bg-table-header</h3>
+                <p>必选，类似HTML的thead，一个bg-table-header对应一个thead。</p>
+            </div>
+
+            <div class="bg-demo-row">
+                <h3 class="bg-title">bg-table-body</h3>
+                <p>必选，类似HTML的tbody，一个bg-table-body对应一个tbody。</p>
+            </div>
+
+            <div class="bg-demo-row">
+                <h3 class="bg-title">bg-table-row</h3>
+                <p>必选，类似HTML的tr，一个bg-table-row对应一个tr。</p>
+            </div>
+
+            <div class="bg-demo-row">
+                <h3 class="bg-title">bg-table-cell</h3>
+                <p>必选，类似HTML的td，一个bg-table-cell对应一个td。</p>
+                <bg-table>
+                    <bg-table-header>
+                        <bg-table-row>
+                            <bg-table-head>属性</bg-table-head>
+                            <bg-table-head>类型</bg-table-head>
+                            <bg-table-head>描述</bg-table-head>
+                        </bg-table-row>
+                    </bg-table-header>
+
+                    <bg-table-body>
+                        <bg-table-row>
+                            <bg-table-cell>colspan</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>Number</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>规定单元格可横跨的列数，可选</bg-table-cell>
+                        </bg-table-row>
+                        <bg-table-row>
+                            <bg-table-cell>rowspan</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>Number</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>规定单元格可横跨的行数，可选</bg-table-cell>
+                        </bg-table-row>
+                    </bg-table-body>
+                </bg-table>
+            </div>
+        </div>
+
+        <div bGrid="6" class="bg-demo-board">
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Default</h3>
+                <bg-tab-group direction="right">
+                    <bg-tab header="PREVIEW">
+                        <bg-table>
+                            <bg-table-header>
+                                <bg-table-row>
+                                    <bg-table-head>Dessert (100g serving)</bg-table-head>
+                                    <bg-table-head>Calories (g)</bg-table-head>
+                                </bg-table-row>
+                            </bg-table-header>
+
+                            <bg-table-body>
+                                <bg-table-row *ngFor="let cell of cells">
+                                    <bg-table-cell>{{cell.pro}}</bg-table-cell>
+                                    <bg-table-cell>{{cell.intro}}</bg-table-cell>
+                                </bg-table-row>
+                            </bg-table-body>
+                        </bg-table>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-chip [value]="'chip'"&gt;&lt;/bg-chip&gt; &lt;bg-chip [value]="'chip'"&gt;&lt;/bg-chip&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Border</h3>
+                <bg-tab-group direction="right">
+                    <bg-tab header="PREVIEW">
+                        <bg-table [border]="true">
+                            <bg-table-header>
+                                <bg-table-row>
+                                    <bg-table-head>Dessert (100g serving)</bg-table-head>
+                                    <bg-table-head>Calories (g)</bg-table-head>
+                                </bg-table-row>
+                            </bg-table-header>
+
+                            <bg-table-body>
+                                <bg-table-row *ngFor="let cell of cells">
+                                    <bg-table-cell>{{cell.pro}}</bg-table-cell>
+                                    <bg-table-cell>{{cell.intro}}</bg-table-cell>
+                                </bg-table-row>
+                            </bg-table-body>
+                        </bg-table>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-chip [value]="'chip'"&gt;&lt;/bg-chip&gt; &lt;bg-chip [value]="'chip'"&gt;&lt;/bg-chip&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Striped</h3>
+                <bg-tab-group direction="right">
+                    <bg-tab header="PREVIEW">
+                        <bg-table [striped]="true">
+                            <bg-table-header>
+                                <bg-table-row>
+                                    <bg-table-head>Dessert (100g serving)</bg-table-head>
+                                    <bg-table-head>Calories (g)</bg-table-head>
+                                </bg-table-row>
+                            </bg-table-header>
+
+                            <bg-table-body>
+                                <bg-table-row *ngFor="let cell of cells">
+                                    <bg-table-cell>{{cell.pro}}</bg-table-cell>
+                                    <bg-table-cell>{{cell.intro}}</bg-table-cell>
+                                </bg-table-row>
+                            </bg-table-body>
+                        </bg-table>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-chip [value]="'chip'"&gt;&lt;/bg-chip&gt; &lt;bg-chip [value]="'chip'"&gt;&lt;/bg-chip&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Sort</h3>
+                <bg-tab-group direction="right">
+                    <bg-tab header="PREVIEW">
+                        <bg-table>
+                            <bg-table-header>
+                                <bg-table-row>
+                                    <bg-table-head>Dessert (100g serving)</bg-table-head>
+                                    <bg-table-head>Calories (g)</bg-table-head>
+                                </bg-table-row>
+                            </bg-table-header>
+
+                            <bg-table-body>
+                                <bg-table-row *ngFor="let cell of cells">
+                                    <bg-table-cell>{{cell.pro}}</bg-table-cell>
+                                    <bg-table-cell>{{cell.intro}}</bg-table-cell>
+                                </bg-table-row>
+                            </bg-table-body>
+                        </bg-table>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-chip [value]="'chip'"&gt;&lt;/bg-chip&gt; &lt;bg-chip [value]="'chip'"&gt;&lt;/bg-chip&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Hover</h3>
+                <bg-tab-group direction="right">
+                    <bg-tab header="PREVIEW">
+                        <bg-table [hover]="true">
+                            <bg-table-header>
+                                <bg-table-row>
+                                    <bg-table-head>Dessert (100g serving)</bg-table-head>
+                                    <bg-table-head>Calories (g)</bg-table-head>
+                                </bg-table-row>
+                            </bg-table-header>
+
+                            <bg-table-body>
+                                <bg-table-row *ngFor="let cell of cells">
+                                    <bg-table-cell>{{cell.pro}}</bg-table-cell>
+                                    <bg-table-cell>{{cell.intro}}</bg-table-cell>
+                                </bg-table-row>
+                            </bg-table-body>
+                        </bg-table>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-chip [value]="'chip'"&gt;&lt;/bg-chip&gt; &lt;bg-chip [value]="'chip'"&gt;&lt;/bg-chip&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Seleciton</h3>
+                <bg-tab-group direction="right" [theme]="'line'">
+                    <bg-tab header="PREVIEW">
+                        <bg-table [selection]="true">
+                            <bg-table-header>
+                                <bg-table-row>
+                                    <bg-table-head>Dessert (100g serving)</bg-table-head>
+                                    <bg-table-head>Calories (g)</bg-table-head>
+                                </bg-table-row>
+                            </bg-table-header>
+
+                            <bg-table-body>
+                                <bg-table-row *ngFor="let cell of cells">
+                                    <bg-table-cell>{{cell.pro}}</bg-table-cell>
+                                    <bg-table-cell>{{cell.intro}}</bg-table-cell>
+                                </bg-table-row>
+                            </bg-table-body>
+                        </bg-table>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-chip [value]="'chip'"&gt;&lt;/bg-chip&gt; &lt;bg-chip [value]="'chip'"&gt;&lt;/bg-chip&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Pagination</h3>
+                <bg-tab-group direction="right" [theme]="'line'">
+                    <bg-tab header="PREVIEW">
+                        <bg-table [selection]="true" [pagination]="true">
+                            <bg-table-header>
+                                <bg-table-row>
+                                    <bg-table-head>Dessert (100g serving)</bg-table-head>
+                                    <bg-table-head>Calories (g)</bg-table-head>
+                                </bg-table-row>
+                            </bg-table-header>
+
+                            <bg-table-body>
+                                <bg-table-row *ngFor="let cell of cells">
+                                    <bg-table-cell>{{cell.pro}}</bg-table-cell>
+                                    <bg-table-cell>{{cell.intro}}</bg-table-cell>
+                                </bg-table-row>
+                            </bg-table-body>
+                        </bg-table>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-chip [value]="'chip'"&gt;&lt;/bg-chip&gt; &lt;bg-chip [value]="'chip'"&gt;&lt;/bg-chip&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,143 @@
+<div class="main-container">
+    <div class="row">
+        <div bGrid="6" class="bg-demo-board">
+            <p>
+                拨动开关用作切换单个设置选项的状态。
+            </p>
+            <ul class="bg-ul-padding">
+                <li>支持三种风格</li>
+                <li>多种可选的样式</li>
+            </ul>
+            <hr>
+            <h3 class="bg-head-title">API 选项</h3>
+
+            <div class="bg-demo-row">
+                <h3 class="bg-title">bg-switch</h3>
+                <p>单个Switch开关</p>
+                <bg-table>
+                    <bg-table-header>
+                        <bg-table-row>
+                            <bg-table-head>属性</bg-table-head>
+                            <bg-table-head>类型</bg-table-head>
+                            <bg-table-head>描述</bg-table-head>
+                        </bg-table-row>
+                    </bg-table-header>
+
+                    <bg-table-body>
+                        <bg-table-row>
+                            <bg-table-cell>label</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>String</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>自定义文本，可选</bg-table-cell>
+                        </bg-table-row>
+                        <bg-table-row>
+                            <bg-table-cell>color</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>String</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>主题样式</bg-table-cell>
+                        </bg-table-row>
+                        <bg-table-row>
+                            <bg-table-cell>type</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>String</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>主题类型</bg-table-cell>
+                        </bg-table-row>
+                        <bg-table-row>
+                            <bg-table-cell>checked</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>Boolean</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>是否默认选中，默认false</bg-table-cell>
+                        </bg-table-row>
+                        <bg-table-row>
+                            <bg-table-cell>disabled</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>Boolean</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>是否禁用，默认为false</bg-table-cell>
+                        </bg-table-row>
+                        <bg-table-row>
+                            <bg-table-cell>onChange</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>Function</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>change监听事件</bg-table-cell>
+                        </bg-table-row>
+                    </bg-table-body>
+                </bg-table>
+            </div>
+        </div>
+
+        <div class="bg-demo-board" bGrid="6">
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Default</h3>
+                <bg-tab-group direction="right">
+                    <bg-tab header="PREVIEW">
+                        <bg-switch label="Switch"></bg-switch>
+                        <bg-switch label="Switch" type="2" [checked]="true"></bg-switch>
+                        <bg-switch label="Switch" type="3"></bg-switch>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-switch label="Switch"&gt;&lt;/bg-switch&gt; &lt;bg-switch label="Switch" type="2" [checked]="true"&gt;&lt;/bg-switch&gt; &lt;bg-switch label="Switch" type="3"&gt;&lt;/bg-switch&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Disabled</h3>
+                <bg-tab-group direction="right">
+                    <bg-tab header="PREVIEW">
+                        <bg-switch label="Switch" [disabled]="true"></bg-switch>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-switch label="Switch" [disabled]="true"&gt;&lt;/bg-switch&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Theme</h3>
+                <bg-tab-group direction="right">
+                    <bg-tab header="PREVIEW">
+                        <bg-switch label="Switch"></bg-switch>
+                        <bg-switch label="Switch" color="blue"></bg-switch>
+                        <bg-switch label="Switch" color="lightblue"></bg-switch>
+                        <bg-switch label="Switch" color="yellow"></bg-switch>
+                        <bg-switch label="Switch" color="red"></bg-switch>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-switch label="Switch"&gt;&lt;/bg-switch&gt; &lt;bg-switch label="Switch" color="blue"&gt;&lt;/bg-switch&gt; &lt;bg-switch label="Switch" color="lightblue"&gt;&lt;/bg-switch&gt; &lt;bg-switch label="Switch" color="yellow"&gt;&lt;/bg-switch&gt; &lt;bg-switch
+                            label="Switch" color="red"&gt;&lt;/bg-switch&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Change Event</h3>
+                <bg-tab-group direction="right">
+                    <bg-tab header="PREVIEW">
+                        <bg-switch label="Switch" (onChange)="onChange($event)"></bg-switch>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-switch label="Switch" (onChange)="onChange($event)"&gt;&lt;/bg-switch&gt;
+                        </bg-code>
+
+                        <bg-code lang="javascript">
+                            onChange(event: any) {{ "{" }} console.log(event.target.checked); {{ "}" }}
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+        </div>
+    </div>
+</div>
