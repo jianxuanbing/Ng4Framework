@@ -155,8 +155,8 @@ module.exports = function(options) {
             ),
             // 复制插件，复制指定目录或文件到指定路径，主要用于复制静态资源文件
             new CopyWebpackPlugin([{
-                from: 'src/assets',
-                to: 'assets'
+                from: 'src/assets/images',
+                to: 'assets/images'
             }, {
                 from: 'src/plugins',
                 to: 'plugins'
