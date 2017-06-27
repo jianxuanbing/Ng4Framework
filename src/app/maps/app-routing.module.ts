@@ -1,3 +1,6 @@
+import { DemoHighlightJsComponent } from './../containers/demo-highlight-js/demo-highlight-js.component';
+import { DemoCountDownComponent } from './../containers/demo-countdown/demo-countdown.component';
+import { DemoUEditorComponent } from './../containers/demo-ueditor/demo-ueditor.component';
 import { DemoFormComponent } from './../containers/demo-form/demo-form.component';
 import { DemoDropdownComponent } from './../containers/demo-dropdown/demo-dropdown.component';
 import { DemoChipComponent } from './../containers/demo-chip/demo-chip.component';
@@ -37,6 +40,9 @@ const childRoutes:Routes=[
     {path:'chip',component:DemoChipComponent},
     {path:'dropdown',component:DemoDropdownComponent},
     {path:'input',component:DemoFormComponent},
+    {path:'ueditor',component:DemoUEditorComponent},
+    {path:'countdown',component:DemoCountDownComponent},
+    {path:'highlight-js',component:DemoHighlightJsComponent},
     {path:'',component:MainComponent}
 ]
 /**
