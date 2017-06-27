@@ -5,7 +5,7 @@ const webpack = require('webpack');
 
 // webpack plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 //const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 const AssetsPlugin = require('assets-webpack-plugin');
 const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
@@ -121,11 +121,11 @@ module.exports = function(options) {
                 },
                 {
                     test: /\.(svg|woff|woff2|ttf|eot)$/,
-                    loader: 'file-loader?name=assets/[name].[hash].[ext]'
+                    loader: 'file-loader?name=assets/fonts/[name].[hash].[ext]'
                 },
                 {
                     test: /\.(png|jpe?g|gif|ico)$/,
-                    loader: 'url-loader?limit=8192'
+                    loader: 'url-loader?limit=8192&name=assets/images/[name].[hash].[ext]'
                 }
             ],
         },
@@ -157,6 +157,9 @@ module.exports = function(options) {
             new CopyWebpackPlugin([{
                 from: 'src/assets',
                 to: 'assets'
+            }, {
+                from: 'src/plugins',
+                to: 'plugins'
             }]),
             // Html打包插件，用于简化HTML文件(index.html)的创建，提供访问bundle的服务
             new HtmlWebpackPlugin({

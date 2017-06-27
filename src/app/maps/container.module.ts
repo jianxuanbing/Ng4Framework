@@ -1,3 +1,7 @@
+import { DemoHighlightJsModule } from './../containers/demo-highlight-js/demo-highlight-js.module';
+import { DemoCountDownModule } from './../containers/demo-countdown/demo-countdown.module';
+import { DemoUEditorModule } from './../containers/demo-ueditor/demo-ueditor.module';
+import { UEditorModule } from './../components/ueditor/ueditor.module';
 import { DemoFormModule } from './../containers/demo-form/demo-form.module';
 import { DemoDropdownModule } from './../containers/demo-dropdown/demo-dropdown.module';
 import { DemoChipModule } from './../containers/demo-chip/demo-chip.module';
@@ -45,6 +49,9 @@ import { NgModule } from '@angular/core';
         DemoChipModule,
         DemoDropdownModule,
         DemoFormModule,
+        DemoUEditorModule,
+        DemoCountDownModule,
+        DemoHighlightJsModule,
     ],
     providers:[
     ],

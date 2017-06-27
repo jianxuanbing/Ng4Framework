@@ -5,7 +5,7 @@ import {ControlValueAccessor,NG_VALUE_ACCESSOR} from '@angular/forms';
 
 declare const window:any;
 declare const UE:any;
-
+// 参考地址：https://github.com/cipchk/ngx-ueditor
 export type EventTypes = 'destroy' | 'reset' | 'focus' | 'langReady' | 'beforeExecCommand' | 'afterExecCommand' | 'firstBeforeExecCommand' | 'beforeGetContent' | 'afterGetContent' | 'getAllHtml' | 'beforeSetContent' | 'afterSetContent' | 'selectionchange' | 'beforeSelectionChange' | 'afterSelectionChange';
 
 @Component({
@@ -49,7 +49,7 @@ export class UEditorComponent implements OnDestroy,ControlValueAccessor{
     ngOnInit() {
         this.path=this.defConfig&&this.defConfig.path;
         if(!this.path){
-            this.path='./assets/ueditor/';
+            this.path='./assets/ueditor';
         }
 
         //构建一个虚拟ID

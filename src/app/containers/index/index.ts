@@ -209,6 +209,21 @@ export const menuList =
                         name:"Json视图",
                         desc:"JsonView",
                         route:"json-view"
+                    },
+                    {
+                        name:'富文本编辑器-UEditor',
+                        desc:"ueditor",
+                        route:'ueditor'
+                    },
+                    {
+                        name:'倒计时',
+                        desc:'countdown',
+                        route:'countdown'
+                    },
+                    {
+                        name:'代码高亮',
+                        desc:'highlight-js',
+                        route:'highlight-js'
                     }
                 ]
             },

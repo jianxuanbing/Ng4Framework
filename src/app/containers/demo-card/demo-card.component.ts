@@ -1,6 +1,5 @@
 import { fadeInUp } from './../../utils/animations';
 import { Component, OnInit, HostBinding } from '@angular/core';
-const myJpg = require("./../../../assets/images/001.jpg");
 @Component({
     selector:'bg-demo-card',
     templateUrl:'./demo-card.component.html',
@@ -9,11 +8,9 @@ const myJpg = require("./../../../assets/images/001.jpg");
 })
 export class DemoCardComponent implements OnInit{
     @HostBinding('@fadeInUpState') fadeInUpState:any;
-    @HostBinding('style.display') display='block';
-    img:string;
+    @HostBinding('style.display') display='block';    
 
     constructor(){}
-    ngOnInit() {
-        this.img=myJpg;
+    ngOnInit() {        
     }
 }
