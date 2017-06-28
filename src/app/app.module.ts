@@ -1,3 +1,4 @@
+import { LoadingModule } from './components/loading/loading.module';
 import { AppRoutingModule } from './maps/app-routing.module';
 import { ContainerModule } from './maps/container.module';
 import { NgModule } from '@angular/core';
@@ -19,7 +20,7 @@ const MODULE_IMPORTS=[
     ReactiveFormsModule,
     HttpModule,
     ContainerModule,
-    AppRoutingModule
+    AppRoutingModule,
 ];
 
 @NgModule({

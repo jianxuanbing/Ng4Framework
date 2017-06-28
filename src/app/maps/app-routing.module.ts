@@ -1,3 +1,5 @@
+import { DemoLoadingComponent } from './../containers/demo-loading/demo-loading.component';
+import { DemoAutoSizeComponent } from './../containers/demo-autosize/demo-autosize.component';
 import { DemoIconComponent } from './../containers/demo-icon/demo-icon.component';
 import { DemoChartsEChartsComponent } from './../containers/demo-echarts/demo-charts-echarts.component';
 import { DemoSpinnerComponent } from './../containers/demo-spinner/demo-spinner.component';
@@ -65,6 +67,8 @@ const childRoutes:Routes=[
     {path:'shrink',component:DemoShrinkComponent},
     {path:'echarts',component:DemoChartsEChartsComponent},
     {path:'icon',component:DemoIconComponent},
+    {path:'autosize',component:DemoAutoSizeComponent},
+    {path:'loading',component:DemoLoadingComponent},
     {path:'',component:MainComponent}
 ]
 /**

@@ -1,0 +1,93 @@
+<div class="main-container">
+    <div class="row">
+        <div bGrid="6" class="bg-demo-board">
+            <p>
+                加载组件是一个覆盖，可以防止用户在指示活动时进行交互，以显示任务的进度，或等待任务完成。
+            </p>
+            <ul class="bg-ul-padding">
+                <li>丰富的类型选择</li>
+            </ul>
+            <hr>
+            <h3 class="bg-head-title">API 选项</h3>
+
+            <div class="bg-demo-row">
+                <h3 class="bg-title">bg-loading</h3>
+                <p>一个loading。</p>
+                <bg-table>
+                    <bg-table-header>
+                        <bg-table-row>
+                            <bg-table-head>属性</bg-table-head>
+                            <bg-table-head>类型</bg-table-head>
+                            <bg-table-head>描述</bg-table-head>
+                        </bg-table-row>
+                    </bg-table-header>
+
+                    <bg-table-body>
+                        <bg-table-row>
+                            <bg-table-cell>color</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>String</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>可选，用来设置Loading的样式(lightblue、green、yellow、red、blue)</bg-table-cell>
+                        </bg-table-row>
+                        <bg-table-row>
+                            <bg-table-cell>type</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>String</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>可选，用来设置Loading的类型(circleLine、circleLineSpin、circleRoundFade、 lineSquare、lineRound、lineBounce、circleSpin)
+                            </bg-table-cell>
+                        </bg-table-row>
+                    </bg-table-body>
+                </bg-table>
+            </div>
+        </div>
+
+        <div class="bg-demo-board" bGrid="6">
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Default</h3>
+                <bg-tab-group direction="right">
+                    <bg-tab header="PREVIEW">
+                        <bg-loading></bg-loading>
+                        <bg-loading type="circleLine"></bg-loading>
+                        <bg-loading type="circleLineSpin"></bg-loading>
+                        <bg-loading type="circleRoundFade"></bg-loading>
+                        <bg-loading type="lineSquare"></bg-loading>
+                        <bg-loading type="lineRound"></bg-loading>
+                        <bg-loading type="lineBounce"></bg-loading>
+                        <bg-loading type="circleSpin"></bg-loading>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-loading&gt;&lt;/bg-loading&gt; &lt;bg-loading type="circleLine"&gt;&lt;/bg-loading&gt; &lt;bg-loading type="circleLineSpin"&gt;&lt;/bg-loading&gt; &lt;bg-loading type="circleRoundFade"&gt;&lt;/bg-loading&gt; &lt;bg-loading type="lineSquare"&gt;&lt;/bg-loading&gt;
+                            &lt;bg-loading type="lineRound"&gt;&lt;/bg-loading&gt; &lt;bg-loading type="lineBounce"&gt;&lt;/bg-loading&gt; &lt;bg-loading type="circleSpin"&gt;&lt;/bg-loading&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Default</h3>
+                <bg-tab-group direction="right">
+                    <bg-tab header="PREVIEW">
+                        <bg-loading color="green"></bg-loading>
+                        <bg-loading type="circleLine" color="blue"></bg-loading>
+                        <bg-loading type="circleLineSpin" color="lightblue"></bg-loading>
+                        <bg-loading type="circleRoundFade" color="yellow"></bg-loading>
+                        <bg-loading type="lineSquare" color="red"></bg-loading>
+                        <bg-loading type="lineRound" color="purple"></bg-loading>
+                        <bg-loading type="lineBounce" color="brown"></bg-loading>
+                        <bg-loading type="circleSpin" color="pink"></bg-loading>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-loading color="green"&gt;&lt;/bg-loading&gt; &lt;bg-loading type="circleLine" color="blue"&gt;&lt;/bg-loading&gt; &lt;bg-loading type="circleLineSpin" color="lightblue"&gt;&lt;/bg-loading&gt; &lt;bg-loading type="circleRoundFade" color="yellow"&gt;&lt;/bg-loading&gt;
+                            &lt;bg-loading type="lineSquare" color="red"&gt;&lt;/bg-loading&gt; &lt;bg-loading type="lineRound" color="purple"&gt;&lt;/bg-loading&gt; &lt;bg-loading type="lineBounce" color="brown"&gt;&lt;/bg-loading&gt; &lt;bg-loading
+                            type="circleSpin" color="pink"&gt;&lt;/bg-loading&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+        </div>
+    </div>
+</div>

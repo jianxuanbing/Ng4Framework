@@ -1,3 +1,5 @@
+import { DemoLoadingModule } from './../containers/demo-loading/demo-loading.module';
+import { DemoAutoSizeModule } from './../containers/demo-autosize/demo-autosize.module';
 import { DemoIconModule } from './../containers/demo-icon/demo-icon.module';
 import { DemoChartsEChartsModule } from './../containers/demo-echarts/demo-charts-echarts.module';
 import { DemoToastModule } from './../containers/demo-toast/demo-toast.module';
@@ -74,6 +76,8 @@ import { DemoShrinkModule } from '../containers/demo-shrink/demo-shrink.module';
         DemoShrinkModule,
         DemoChartsEChartsModule,
         DemoIconModule,
+        DemoAutoSizeModule,
+        DemoLoadingModule,
     ],
     providers:[
     ],

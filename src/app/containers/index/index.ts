@@ -244,6 +244,11 @@ export const menuList =
                         name:'图表',
                         desc:'ECharts',
                         route:'echarts'
+                    },
+                    {
+                        name:'TextArea自适应高度',
+                        desc:'autosize',
+                        route:'autosize'
                     }
                 ]
             },
