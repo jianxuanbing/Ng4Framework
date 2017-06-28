@@ -1,14 +1,14 @@
 import { ECharts, EChartOption } from './echarts.api';
 import * as echarts from 'echarts';
-import { Component, AfterViewInit, OnDestroy, Input, EventEmitter,ElementRef,Output,NgZone,ViewChild } from '@angular/core';
+import { Component, AfterViewInit, OnDestroy, Input, EventEmitter, ElementRef, Output, NgZone, ViewChild } from '@angular/core';
 
 // 参考地址：https://git.oschina.net/twp0217/echarts-ng2/
 @Component({
-    selector:'bg-echarts',
-    templateUrl:'./echarts.component.html'
+  selector: 'bg-echarts',
+  templateUrl: './echarts.component.html'
 })
-export class EChartsComponent implements AfterViewInit,OnDestroy,ECharts{
-    private chart: ECharts;
+export class EChartsComponent implements AfterViewInit, OnDestroy, ECharts {
+  private chart: ECharts;
   private _option: EChartOption;
   private opts = { 'height': 400 };
   private _group: string;

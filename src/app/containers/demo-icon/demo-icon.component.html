@@ -1,0 +1,91 @@
+<div class="main-container">
+    <div class="row">
+        <div bGrid="6" class="bg-demo-board">
+            <p>
+                Icon组件将渲染您项目中包含的任何样式表中定义的任何图标。
+            </p>
+            <hr>
+            <h3 class="bg-head-title">API 选项</h3>
+
+            <div class="bg-demo-row">
+                <h3 class="bg-title">bg-icon</h3>
+                <p>字体图标</p>
+                <bg-table>
+                    <bg-table-header>
+                        <bg-table-row>
+                            <bg-table-head>属性</bg-table-head>
+                            <bg-table-head>类型</bg-table-head>
+                            <bg-table-head>描述</bg-table-head>
+                        </bg-table-row>
+                    </bg-table-header>
+
+                    <bg-table-body>
+                        <bg-table-row>
+                            <bg-table-cell>type</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>String</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template>
+                                    必选，图标名称 (当前使用<a href="http://fontawesome.io/icons/" target="_blank">FontAwesome</a>)
+                                </ng-template>
+                            </bg-table-cell>
+                        </bg-table-row>
+                        <bg-table-row>
+                            <bg-table-cell>size</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>Number|String</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template>
+                                    图标的大小，单位是 px
+                                </ng-template>
+                            </bg-table-cell>
+                        </bg-table-row>
+                        <bg-table-row>
+                            <bg-table-cell>color</bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template><code>String</code></ng-template>
+                            </bg-table-cell>
+                            <bg-table-cell>
+                                <ng-template>
+                                    图标的颜色
+                                </ng-template>
+                            </bg-table-cell>
+                        </bg-table-row>
+                    </bg-table-body>
+                </bg-table>
+            </div>
+        </div>
+
+        <div class="bg-demo-board" bGrid="6">
+            <div class="bg-card-board">
+                <h3 class="bg-toolbar">Default</h3>
+                <bg-tab-group direction="right">
+                    <bg-tab header="PREVIEW">
+                        <bg-icon type="home" size="20"></bg-icon>
+                        <bg-icon type="user" color="red"></bg-icon>
+                        <bg-icon type="bars"></bg-icon>
+                        <bg-icon type="cog"></bg-icon>
+                        <bg-icon type="angle-down"></bg-icon>
+                        <bg-icon type="angle-left"></bg-icon>
+                        <bg-icon type="angle-right"></bg-icon>
+                        <bg-icon type="angle-up"></bg-icon>
+                        <bg-icon type="trash"></bg-icon>
+                        <bg-icon type="tag"></bg-icon>
+                        <bg-icon type="tags"></bg-icon>
+                        <bg-icon type="bell"></bg-icon>
+                        <bg-icon type="folder"></bg-icon>
+                    </bg-tab>
+                    <bg-tab header="CODE">
+                        <bg-code lang="html">
+                            &lt;bg-icon type="home"&gt;&lt;/bg-icon&gt; &lt;bg-icon type="user"&gt;&lt;/bg-icon&gt; &lt;bg-icon type="bars"&gt;&lt;/bg-icon&gt; &lt;bg-icon type="cog"&gt;&lt;/bg-icon&gt; &lt;bg-icon type="angle-down"&gt;&lt;/bg-icon&gt; &lt;bg-icon type="angle-left"&gt;&lt;/bg-icon&gt;
+                            &lt;bg-icon type="angle-right"&gt;&lt;/bg-icon&gt; &lt;bg-icon type="angle-up"&gt;&lt;/bg-icon&gt; &lt;bg-icon type="trash"&gt;&lt;/bg-icon&gt; &lt;bg-icon type="tag"&gt;&lt;/bg-icon&gt; &lt;bg-icon type="tags"&gt;&lt;/bg-icon&gt;
+                            &lt;bg-icon type="bell"&gt;&lt;/bg-icon&gt; &lt;bg-icon type="folder"&gt;&lt;/bg-icon&gt;
+                        </bg-code>
+                    </bg-tab>
+                </bg-tab-group>
+            </div>
+        </div>
+    </div>
+</div>

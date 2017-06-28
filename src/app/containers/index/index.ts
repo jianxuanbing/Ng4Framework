@@ -239,6 +239,11 @@ export const menuList =
                         name:'收缩',
                         desc:'shrink',
                         route:'shrink'
+                    },
+                    {
+                        name:'图表',
+                        desc:'ECharts',
+                        route:'echarts'
                     }
                 ]
             },

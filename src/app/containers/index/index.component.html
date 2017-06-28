@@ -4,7 +4,7 @@
             <ul class="left-menu-item" *ngIf="menu.isSingle">
                 <li bRipple>
                     <a routerLink="{{menu.menu.route}}" routerLinkActive="active">
-                        <bg-icon icon="{{menu.menu.icon}}"></bg-icon>
+                        <bg-icon type="{{menu.menu.icon}}"></bg-icon>
                         <span class="accordion-toggle-title">{{menu.menu.name}}</span>
                     </a>
                 </li>
@@ -51,7 +51,7 @@
     </nav>
 </div>
 <div class="theme-setting">
-    <bg-icon icon="cogs" [spin]="true"></bg-icon>
+    <bg-icon type="cogs" [spin]="true"></bg-icon>
 </div>
 <main class="main-layout-container">
     <router-outlet (activate)="onActivate($event)" (deactivate)="onDeactivate($evnet)"></router-outlet>

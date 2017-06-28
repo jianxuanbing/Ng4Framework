@@ -5,10 +5,32 @@ import { Component, OnInit, AfterViewInit, Input, ViewChild, ElementRef, Rendere
     styleUrls:['./icon.component.scss']
 })
 export class IconComponent implements OnInit,AfterViewInit{
-    @Input() icon:string;
+
+    /**
+     * 图标名
+     * @type {string}@memberof IconComponent
+     */
+    @Input() type:string;
+
+    /**
+     * 是否旋转
+     * @type {boolean}@memberof IconComponent
+     */
     @Input() spin:boolean;
-    @Input() size:string;
-    iconClass:any;
+
+    /**
+     * 图标大小
+     * @type {(string|number)}@memberof IconComponent
+     */
+    @Input() size:string|number;
+
+    /**
+     * 颜色
+     * @type {string}@memberof IconComponent
+     */
+    @Input() color:string;
+
+    private iconClass:any;
     @ViewChild('container') container:ElementRef;
 
     constructor(private renderer2:Renderer2){}
@@ -22,7 +44,10 @@ export class IconComponent implements OnInit,AfterViewInit{
     ngAfterViewInit() {
         const _container=this.container.nativeElement;
         if(this.size)        {
-            this.renderer2.addClass(_container,'fa-'+this.size+'x');
+            this.renderer2.setStyle(_container,'font-size',`${this.size}px`);
+        }
+        if(this.color){
+            this.renderer2.setStyle(_container,'color',this.color);
         }
     }
 }
