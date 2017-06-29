@@ -40,10 +40,10 @@ import { DemoShrinkComponent } from '../containers/demo-shrink/demo-shrink.compo
 const childRoutes:Routes=[
     {path:'grid',component:DemoGridComponent},
     {path:'json-view',component:DemoJsonViewComponent},
-    {path:'tabs',component:DemoTabComponent},
-    {path:'accordion',component:DemoAccordionComponent},
+    {path:'tabs',component:DemoTabComponent,data:{title:'选项卡'}},
+    {path:'accordion',component:DemoAccordionComponent,data:{title:'面板'}},
     {path:'theme',component:DemoThemeComponent,data:{title:'主题'}},
-    {path:'getting-started',component:DemoStartComponent},
+    {path:'getting-started',component:DemoStartComponent,data:{title:'开始使用'}},
     {path:'badge',component:DemoBadgeComponent},
     {path:'breadcrumb',component:DemoBreadcrumbComponent},
     {path:'buttons',component:DemoButtonsComponent},

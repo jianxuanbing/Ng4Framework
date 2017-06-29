@@ -1,5 +1,7 @@
+import { Title } from '@angular/platform-browser';
+import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { ButtonModule } from './components/button/button.module';
-import { Component, ViewEncapsulation, ViewContainerRef } from '@angular/core';
+import { Component, ViewEncapsulation, ViewContainerRef, OnInit } from '@angular/core';
 
 @Component({
     selector: 'app',
@@ -7,7 +9,7 @@ import { Component, ViewEncapsulation, ViewContainerRef } from '@angular/core';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
     /**
      * 菜单是否收缩
      * @type {boolean}
@@ -22,7 +24,11 @@ export class AppComponent {
      */
     optionIsInited: boolean = false;
 
-    constructor() {
+    constructor(
+        private router: Router,
+        private titleService: Title,
+        private activatedRoute: ActivatedRoute
+    ) {
         console.log('初始化组件!');
     }
 
@@ -79,6 +85,24 @@ export class AppComponent {
     // 初始化时重置路由
     ngOnInit() {
         console.log('Ng初始化事件!');
+        // Ng监听路由变化状态：https://segmentfault.com/a/1190000009971757
+        this.router.events
+            .filter(event => event instanceof NavigationEnd)
+            .map(() => this.activatedRoute)
+            .map(route=>{
+                while(route.firstChild){
+                    route=route.firstChild;
+                }
+                return route;
+            })
+            .filter(route=>route.outlet==='primary')// 过滤出未命名的outlet,<router-outlet>
+            .mergeMap(route=>route.data)// 获取路由配置数据
+            .subscribe((event) => {
+                console.log('NavigationEnd', event);
+                if(event['title']){
+                    this.titleService.setTitle('BingNg-'+event.title);
+                }
+            });
     }
 
     showSb() {
